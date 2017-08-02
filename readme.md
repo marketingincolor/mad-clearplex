@@ -9,7 +9,7 @@ This GitHub repository includes only the required theme and plugins to be instal
 ### Project Details
 Project Manager: MaryKay Scott
 
-Primary Developer: Edd Twilbeck
+Primary Developer: Nathan Manship Beers
 
 Start Date:
 
