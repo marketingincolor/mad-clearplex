@@ -1,0 +1,260 @@
+// =======================================
+// ========== Table of Contents ==========
+// =======================================
+/*
+
+1.) General Styles
+2.) Navigation Styles
+3.) Home
+4.) 
+5.) 
+6.) 
+7.) 
+8.) 
+9.) FAQ
+10.) 
+11.) 
+12.) 404
+13.) Search Results
+14.) Footer
+
+*/
+
+// =======================================
+// ========= 1.) General Styles ==========
+// =======================================
+h1,h2,h3,h4,h5,p,li,a{
+	@include montserrat(300);
+}
+p{
+	@include font(18);
+}
+h2{
+	@include font(36);
+}
+.blue-heading{
+	color: $blue;
+}
+.white-heading{
+	color: $white;
+}
+.gray-p {
+	color: $gray;
+}
+.gray-p {
+	color: $white;
+}
+
+
+// =======================================
+// ======= 2.) Navigation Styles =========
+// =======================================
+
+.top-bar{
+	background-color:$clear;
+	position: absolute;
+	width: 100%;
+	transition: opacity 0.25s ease-in-out;
+	z-index: 10;
+	padding-top: 1%;
+	&.slide-down{
+		top: 0;
+		width: 100%;
+		opacity:1;
+		position:fixed;
+		background-color: #2a2a2a;
+		@media(max-width: 943px){
+			height: 100px;
+		}
+		@media(max-width: 400px){
+			height: 80px;
+		}
+		.top-bar-left {
+			top: 10px;
+			@media(max-width: 400px){
+				top: 10px;
+			}
+			@media(max-width: 375px){
+				top: 13px;
+			}
+		}
+		.top-bar-left,.top-bar-right {
+		  @media(max-width: 943px){
+		  	width: auto !important;
+		  }
+		}
+		.cheeseburger{
+			top: 13px !important;
+			@media(max-width: 400px){
+				top: 7px !important;
+				font-size: 20px !important;
+			}
+		}
+	}
+	.current_page_item{
+		border-bottom: 2px solid #f6c831;
+	}
+	ul{
+		background-color: $clear;
+	}
+	ul a{
+		color:$white;
+		@include font(15);
+	}
+	.top-bar-left{
+		@media(max-width: 943px){
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			width: auto !important;
+		}
+		.top-bar-title img{
+			@media(max-width: 400px){
+				width: 215px;
+			}
+			@media(max-width: 360px){
+				width: 175px;
+			} 
+		}
+	}
+	.top-bar-right{
+		margin-top: 20px;
+		position: relative;
+		@media(max-width: 943px){
+			text-align: right;
+		}
+		.cheeseburger{
+			color: white;
+			@include font(22);
+			position: absolute;
+	    top: 32px;
+	    right: 30px;
+	    cursor: pointer;
+	    @media(max-width: 400px){
+	    	top: 26px;
+	    }
+	    @media(max-width: 360px){
+				@include font(17);
+				top: 24px;
+			}
+			@media(min-width: 944px){
+				display: none;
+				visibility: hidden;
+			}
+			&:focus{
+				outline: none;
+			}
+		}
+		.login{
+			position: absolute;
+			right: 0;
+			@include font(12);
+			top: -23px;
+			a{
+				color: $white;
+			}
+		}
+	}
+	#menu-header-menu li:last-child{
+		border-bottom: none;
+	}
+	#menu-header-menu li:last-child a{
+		@extend %orange-btn;
+		text-transform: uppercase;
+	}
+}
+body:not(.home):not(.page-template-page-products) .top-bar .top-bar-left {
+	top: 20px;
+	@media(max-width: 400px){
+		top: 25px;
+	}
+	@media(max-width: 360px){
+		top: 27px;
+	}
+}
+body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-left{
+	top: 10px;
+}
+body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .cheeseburger {
+	top: 22px;
+}
+body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-right .cheeseburger{
+	@media(max-width: 360px){
+		top: 5px !important;
+		font-size: 16px !important;
+	}
+}
+
+// =======================================
+// ============= 3.) Home  ===============
+// =======================================
+
+.home-hero{
+	.item{
+		position: relative;
+	}
+	.slide-meta{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $white;
+		h1{
+			@include font(14);
+			text-transform: uppercase;
+		}
+		h2{
+			line-height: 40px;
+		}
+		.btn{
+			@extend %orange-btn;
+			padding: 7px 20px;
+			color: $white;
+			text-transform: uppercase;
+			@include font(13);
+		}
+	}
+	.owl-nav{
+		position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+	}
+	.owl-prev,.owl-next{
+		border: 2px solid $orange;
+		padding: 1px 5px 2px;
+		border-radius: 50%;
+		i{
+			color: $white;
+		}
+	}
+	.owl-prev{
+		@include margin(10,bottom);
+	}
+}
+
+.vehicle-types{
+	.orbit-previous,.orbit-next{
+		padding: 5px 8px;
+		background-color: white;
+		border-radius: 50%;
+		cursor: pointer;
+		i{
+			color: $orange;
+		}
+	}
+	.orbit-previous{
+		left: 30px;
+	}
+	.orbit-next{
+		right: 30px;
+	}
+	.orbit-slide{
+		padding: 10% 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+
+

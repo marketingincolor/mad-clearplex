@@ -1,0 +1,9 @@
+%orange-btn{
+	border: 2px solid #ff794a;
+	border-radius: 25px;
+	transition: all 0.25s ease-in-out;
+	&:hover{
+		color: $white;
+		background-color: $orange;
+	}
+}
