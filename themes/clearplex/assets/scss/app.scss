@@ -6,17 +6,18 @@
 1.) General Styles
 2.) Navigation Styles
 3.) Home
-4.) 
+4.) Product
 5.) 
 6.) 
 7.) 
 8.) 
-9.) FAQ
+9.) 
 10.) 
 11.) 
-12.) 404
-13.) Search Results
-14.) Footer
+12.) 
+13.) 
+14.)
+15.) Footer
 
 */
 
@@ -59,7 +60,7 @@ h2{
 	width: 100%;
 	transition: opacity 0.25s ease-in-out;
 	z-index: 10;
-	padding-top: 1%;
+	padding-top: 3%;
 	&.slide-down{
 		top: 0;
 		width: 100%;
@@ -67,6 +68,7 @@ h2{
 		position:fixed;
 		background-color: #064579;
 		z-index: 99;
+		padding-top: 1%;
 		@media(max-width: 943px){
 			height: 100px;
 		}
@@ -126,7 +128,7 @@ h2{
 		}
 	}
 	.top-bar-right{
-		margin-top: 20px;
+		margin-top: 30px;
 		position: relative;
 		@media(max-width: 943px){
 			text-align: right;
@@ -191,6 +193,9 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		top: 5px !important;
 		font-size: 16px !important;
 	}
+}
+.top-bg{
+	height: 200px;
 }
 
 // =======================================
@@ -319,10 +324,30 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		}
 	}
 }
-
-
-
-
+// =======================================
+// ============ 4.) Product  =============
+// =======================================
+.best-windshield{
+	padding: 7% 0;
+	h2{
+		@include margin(50,bottom);
+	}
+}
+.product-types{
+	padding: 9% 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	a{
+		@extend %orange-btn;
+		@extend %learn-more;
+		color: $gray;
+		font-weight: 500;
+	}
+}
+.product-benefits{
+	padding: 9% 0;
+}
 // =======================================
 // ============ 15.) Footer  =============
 // =======================================

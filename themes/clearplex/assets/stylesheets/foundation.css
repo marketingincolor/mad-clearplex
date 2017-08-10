@@ -10073,16 +10073,16 @@ body#tinymce {
   src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url(https://fonts.gstatic.com/s/montserrat/v10/q2OIMsAtXEkOulLQVdSl03XcDWh-RbO457623Zi1kyw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
-.btn, .top-bar #menu-header-menu li:last-child a {
+.btn, .top-bar #menu-header-menu li:last-child a, .product-types a {
   border: 2px solid #ff794a;
   border-radius: 25px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out; }
-  .btn:hover, .top-bar #menu-header-menu li:last-child a:hover {
+  .btn:hover, .top-bar #menu-header-menu li:last-child a:hover, .product-types a:hover {
     color: #FFF !important;
     background-color: #ff794a; }
 
-.btn {
+.btn, .product-types a {
   padding: 7px 20px;
   color: #FFF;
   text-transform: uppercase;
@@ -10094,17 +10094,18 @@ body#tinymce {
 1.) General Styles
 2.) Navigation Styles
 3.) Home
-4.) 
+4.) Product
 5.) 
 6.) 
 7.) 
 8.) 
-9.) FAQ
+9.) 
 10.) 
 11.) 
-12.) 404
-13.) Search Results
-14.) Footer
+12.) 
+13.) 
+14.)
+15.) Footer
 
 */
 h1, h2, h3, h4, h5, p, li, a {
@@ -10138,14 +10139,15 @@ h2 {
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
   z-index: 10;
-  padding-top: 1%; }
+  padding-top: 3%; }
   .top-bar.slide-down {
     top: 0;
     width: 100%;
     opacity: 1;
     position: fixed;
     background-color: #064579;
-    z-index: 99; }
+    z-index: 99;
+    padding-top: 1%; }
     @media (max-width: 943px) {
       .top-bar.slide-down {
         height: 100px; } }
@@ -10194,7 +10196,7 @@ h2 {
     .top-bar .top-bar-left .top-bar-title img {
       width: 175px; } }
   .top-bar .top-bar-right {
-    margin-top: 20px;
+    margin-top: 30px;
     position: relative; }
     @media (max-width: 943px) {
       .top-bar .top-bar-right {
@@ -10253,6 +10255,9 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
   body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-right .cheeseburger {
     top: 5px !important;
     font-size: 16px !important; } }
+
+.top-bg {
+  height: 200px; }
 
 .home-hero .item {
   position: relative;
@@ -10360,6 +10365,24 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
         border: none;
         position: relative;
         top: 2px; }
+
+.best-windshield {
+  padding: 7% 0; }
+  .best-windshield h2 {
+    margin-bottom: 50px; }
+
+.product-types {
+  padding: 9% 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .product-types a {
+    color: #787878;
+    font-weight: 500; }
+
+.product-benefits {
+  padding: 9% 0; }
 
 .footer-container {
   border-top: none;
