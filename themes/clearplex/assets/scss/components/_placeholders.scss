@@ -3,7 +3,14 @@
 	border-radius: 25px;
 	transition: all 0.25s ease-in-out;
 	&:hover{
-		color: $white;
+		color: $white !important;
 		background-color: $orange;
 	}
+}
+%learn-more{
+	padding: 7px 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
