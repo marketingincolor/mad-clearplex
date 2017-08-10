@@ -1,13 +1,5 @@
 <?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the "off-canvas-wrap" div and all content after.
- *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
- */
-
+	$options = get_option('mic_theme_options');
 ?>
 
 		</section>
@@ -29,12 +21,19 @@
 					</div>
 					<div class="large-2 columns">
 						<ul class="social-links">
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
+						<?php if ($options['facebook_link']) { ?>
+							<li><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['facebook_link']; ?>">Facebook</a></li>
+						<? }if($options['twitter_link']){ ?>
+							<li><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['twitter_link']; ?>">Twitter</a></li>
+						<? }if($options['gplus_link']){ ?>
+							<li><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['gplus_link']; ?>">Google+</a></li>
+						<? }if($options['linkedin_link']){ ?>
+							<li><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['linkedin_link']; ?>">LinkedIn</a></li>
+						<? }if($options['instagram_link']){ ?>
+							<li><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['instagram_link']; ?>">Instagram</a></li>
+						<? }if($options['youtube_link']){ ?>
+							<li><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['youtube_link']; ?>">YouTube</a></li>
+						<? } ?>
 						</ul>
 					</div>
 				</div>

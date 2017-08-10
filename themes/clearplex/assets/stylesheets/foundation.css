@@ -10144,7 +10144,7 @@ h2 {
     width: 100%;
     opacity: 1;
     position: fixed;
-    background-color: #2a2a2a;
+    background-color: #064579;
     z-index: 99; }
     @media (max-width: 943px) {
       .top-bar.slide-down {
@@ -10369,19 +10369,20 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
     margin-bottom: 30px; }
   .footer-container address p:first-of-type, .footer-container .terms {
     margin-bottom: 0px; }
-  .footer-container a {
+  .footer-container a, .footer-container i {
     color: #346094;
     font-weight: 400; }
   .footer-container a, .footer-container p, .footer-container li {
     font-size: 13px;
     font-size: 0.8125rem;
     font-style: normal; }
-
-#menu-footer-menu li {
-  float: left;
-  width: 50%;
-  padding: 10px 0; }
-  #menu-footer-menu li a {
-    padding: 0; }
+  .footer-container #menu-footer-menu li {
+    float: left;
+    width: 50%;
+    padding: 10px 0; }
+    .footer-container #menu-footer-menu li a {
+      padding: 0; }
+  .footer-container .social-links li {
+    padding: 6px 0; }
 
 /*# sourceMappingURL=foundation.css.map */
