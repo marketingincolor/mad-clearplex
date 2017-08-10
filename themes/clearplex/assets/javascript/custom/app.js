@@ -19,6 +19,9 @@ function owlCarousel(){
 	  animateIn: 'slideInUp',
 	  navText: ["<i class='fa fa-chevron-up'></i>","<i class='fa fa-chevron-down'></i>"]
 	});
+	$('.owl-prev').on('click',function(){
+		
+	});
 }
 
 // makes nav slide down after scrolling past 1st section

@@ -197,9 +197,14 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 // ============= 3.) Home  ===============
 // =======================================
 
+
 .home-hero{
 	.item{
 		position: relative;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
 	}
 	.slide-meta{
 		position: absolute;
@@ -315,3 +320,41 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 
+
+
+
+// =======================================
+// ============ 15.) Footer  =============
+// =======================================
+.footer-container{
+	border-top: none;
+	margin-top: 0;
+	padding: 3% 0;
+	img,address{
+		@include margin(30,bottom);
+	}
+	address p:first-of-type, .terms{
+			@include margin(0,bottom);
+	}
+	a{
+		color: #346094;
+		font-weight: 400;
+	}
+	a,p,li{
+		@include font(13);
+		font-style: normal;
+	}
+}
+#menu-footer-menu{
+	li{
+		float: left;
+		width: 50%;
+		padding: 10px 0;
+		a{
+			padding: 0;
+		}
+	}
+	// li:nth-child(even){
+	// 	float: right;
+	// }
+}
