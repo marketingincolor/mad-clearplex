@@ -27,26 +27,31 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
-			<div class="title-bar-left">
-				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</span>
-			</div>
-		</div>
 		<nav class="site-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</div>
-			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+			<div class="row">
+				<div class="small-12 columns">
+					<div class="top-bar-left">
+						<div class="site-desktop-title top-bar-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/images/nav-logo.png" alt="Protection Pro"></a>
+						</div>
+					</div>
+					<div class="top-bar-right">
+						<?php foundationpress_top_bar_r(); ?>
 
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
+						<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
+							<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+						<?php endif; ?>
+						<i class="fa fa-bars cheeseburger" data-toggle="mobile-menu" aria-hidden="true"></i>
+						<!-- Mobile menu fullscreen modal -->
+						<div class="full reveal" id="mobile-menu" data-reveal  data-animation-in="slide-in-down bounce" data-animation-out="slide-out-up bounce">
+								<!-- Display Mobile Menu -->
+						  	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu','menu_id' => 'mobile-menu-modal','menu_class' => 'mobile-menu-list','container' => 'ul' )); ?>
+						  <button class="close-button" data-close aria-label="Close reveal" type="button">
+						    <span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</nav>
 	</header>

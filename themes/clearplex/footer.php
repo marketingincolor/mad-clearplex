@@ -11,23 +11,37 @@
 ?>
 
 		</section>
+
 		<div class="footer-container" data-sticky-footer>
 			<footer class="footer">
-				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
-				<?php do_action( 'foundationpress_after_footer' ); ?>
+				<div class="row">
+					<div class="large-4 columns">
+						<img src="<?php bloginfo('template_directory'); ?>/assets/images/footer-logo.png" alt="ClearPlex by Madico">
+						<address>
+							<p>PO BOX 216, Draper, UT 84020</p>
+							<p>(801) 571-8243</p>
+						</address>
+						<p class="terms"><a href="#!">Terms and Conditions</a> | <a href="#!">Privacy Policy</a></p>
+						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
+					</div>
+					<div class="large-4 large-offset-2 columns">
+						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' )); ?>
+					</div>
+					<div class="large-2 columns">
+						<ul class="social-links">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
 			</footer>
 		</div>
 
-		<?php do_action( 'foundationpress_layout_end' ); ?>
-
-<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-		</div><!-- Close off-canvas content -->
-	</div><!-- Close off-canvas wrapper -->
-<?php endif; ?>
-
-
 <?php wp_footer(); ?>
-<?php do_action( 'foundationpress_before_closing_body' ); ?>
+
 </body>
 </html>

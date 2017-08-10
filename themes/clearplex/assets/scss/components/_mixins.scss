@@ -1,0 +1,11 @@
+@mixin font($font){
+	font-size: #{$font}px;
+	font-size: #{$font / 16}rem;
+}
+@mixin montserrat($weight){
+	font-family: 'Montserrat',sans-serif;
+	font-weight: $weight;
+}
+@mixin margin($size,$position){
+	margin-#{$position}: $size#{px};
+}
