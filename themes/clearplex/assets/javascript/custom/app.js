@@ -1,12 +1,34 @@
 $(document).ready(function(){
 	owlCarousel();
 	navSlideDown();
+	benefitsCarousel();
 });
 
 $(window).scroll(function(){
 	navSlideDown();
 });
 
+//product benefits carousel
+function benefitsCarousel(){
+	$('.benefits-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+      0:{
+        items:1
+      },
+      640:{
+        items:2
+      },
+      1024:{
+      	items:3
+      }
+    }
+	});
+}
+
+// home page verticl carousel
 function owlCarousel(){
 	$(".owl-carousel").owlCarousel({
 	  loop: true,
