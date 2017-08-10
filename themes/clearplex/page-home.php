@@ -8,8 +8,7 @@
 
 <section class="home-hero">
 	<div class="owl-carousel owl-theme">
-	  <div class="item">
-	  	<img src="<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg" alt="">
+	  <div class="item" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg)">
 	  	<div class="row">
 	  		<div class="medium-9 columns">
 	  			<div class="slide-meta">
@@ -21,8 +20,7 @@
 	  		</div>
 	  	</div>
 	  </div>
-	  <div class="item">
-	  	<img src="<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg" alt="">
+	  <div class="item" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg)">
 	  	<div class="row">
 	  		<div class="medium-9 columns">
 	  			<div class="slide-meta">
@@ -34,8 +32,7 @@
 	  		</div>
 	  	</div>
 	  </div>
-	  <div class="item">
-	  	<img src="<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg" alt="">
+	  <div class="item" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg)">
   		<div class="row">
   			<div class="medium-9 columns">
   				<div class="slide-meta">
