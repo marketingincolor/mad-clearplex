@@ -1,7 +1,11 @@
 $(document).ready(function(){
-	owlCarousel();
+	if ($('body').hasClass('home')) {
+		owlCarousel();
+	}
+	if ($('body').hasClass('page-template-page-product')) {
+		benefitsCarousel();
+	}
 	navSlideDown();
-	benefitsCarousel();
 });
 
 $(window).scroll(function(){
@@ -10,10 +14,16 @@ $(window).scroll(function(){
 
 //product benefits carousel
 function benefitsCarousel(){
-	$('.benefits-carousel').owlCarousel({
+	$('.owl-carousel').owlCarousel({
     loop:true,
-    margin:10,
+    margin:50,
+    nav:true,
+    navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
     responsiveClass:true,
+    stagePadding:50,
+    autoPlay:true,
+    autoplaySpeed:5000,
+    autoplayTimeout: 5000,
     responsive:{
       0:{
         items:1
@@ -28,7 +38,7 @@ function benefitsCarousel(){
 	});
 }
 
-// home page verticl carousel
+// home page vertical carousel
 function owlCarousel(){
 	$(".owl-carousel").owlCarousel({
 	  loop: true,

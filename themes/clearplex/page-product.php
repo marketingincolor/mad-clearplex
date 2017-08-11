@@ -32,7 +32,7 @@
 <section class="product-benefits">
 	<div class="row">
 		<div class="large-12 columns">
-			<div class="owl-theme benefits-carousel">
+			<div class="owl-carousel owl-theme">
 			    <div class="item text-center">
 			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
 			    	<h5>Scratch Resistant</h5>
@@ -80,6 +80,21 @@
 			    </div>
 			</div>
 		</div>
+	</div>
+</section>
+
+<?php get_template_part('template-parts/testimonials-section'); ?>
+
+<section class="product-faqs">
+	<div class="row">
+		<div class="large-12 columns text-center">
+			<h2 class="blue-heading">FAQs</h2>
+		</div>
+		<!-- Query custom post type faqs -->
+		<?php 
+
+		$count_pages = wp_count_posts('page');
+		?>
 	</div>
 </section>
 
