@@ -27,6 +27,17 @@ function foundationpress_sidebar_widgets() {
 		'before_title' => '<h6>',
 		'after_title' => '</h6>',
 	));
+
+	register_sidebar( array(
+		'name' => __( 'About Sidebar'),
+		'id' => 'sidebar-about',
+		'description' => __( 'Sidebar that appears on the about page.'),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
 }
 
 add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );
