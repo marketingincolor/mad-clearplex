@@ -280,6 +280,9 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 }
 
 // testimonials section
+.home .home-testimonials .white-quote{
+	display: none;
+}
 .home-testimonials{
 	padding: 8% 0;
 	.read-more{
@@ -347,6 +350,52 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 }
 .product-benefits{
 	padding: 9% 0;
+	.owl-carousel .owl-item img{
+		width: auto;
+		margin: 0 auto 20px;
+	}
+	.item p{
+		@include font(16);
+		color: $gray;
+	}
+	.item h5{
+		color: $gray;
+		@include font(18);
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	.owl-prev,.owl-next{
+		@include vertical-center;
+		i{
+			color: $orange;
+			@include font(18);
+			cursor: pointer;
+		}
+	}
+	.owl-next{
+		right: 0;
+	}
+}
+.page-template-page-product .home-testimonials{
+	background-image: url(../images/testimonial-bg.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	h2,p,address.gray-p{
+		color: $white;
+	}
+	.gray-quote{
+		display: none;
+	}
+	.orbit-bullets button{
+		background-color: transparent;
+		&.is-active{
+			background-color: $orange;
+		}
+	}
+}
+.product-faqs{
+	padding: 8% 0;
 }
 // =======================================
 // ============ 15.) Footer  =============

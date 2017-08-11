@@ -10330,6 +10330,9 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
   background-repeat: no-repeat;
   background-position: center center; }
 
+.home .home-testimonials .white-quote {
+  display: none; }
+
 .home-testimonials {
   padding: 8% 0; }
   .home-testimonials .read-more {
@@ -10383,6 +10386,50 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
 
 .product-benefits {
   padding: 9% 0; }
+  .product-benefits .owl-carousel .owl-item img {
+    width: auto;
+    margin: 0 auto 20px; }
+  .product-benefits .item p {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #787878; }
+  .product-benefits .item h5 {
+    color: #787878;
+    font-size: 18px;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 500; }
+  .product-benefits .owl-prev, .product-benefits .owl-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+    .product-benefits .owl-prev i, .product-benefits .owl-next i {
+      color: #ff794a;
+      font-size: 18px;
+      font-size: 1.125rem;
+      cursor: pointer; }
+  .product-benefits .owl-next {
+    right: 0; }
+
+.page-template-page-product .home-testimonials {
+  background-image: url(../images/testimonial-bg.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .page-template-page-product .home-testimonials h2, .page-template-page-product .home-testimonials p, .page-template-page-product .home-testimonials address.gray-p {
+    color: #FFF; }
+  .page-template-page-product .home-testimonials .gray-quote {
+    display: none; }
+  .page-template-page-product .home-testimonials .orbit-bullets button {
+    background-color: transparent; }
+    .page-template-page-product .home-testimonials .orbit-bullets button.is-active {
+      background-color: #ff794a; }
+
+.product-faqs {
+  padding: 8% 0; }
 
 .footer-container {
   border-top: none;
