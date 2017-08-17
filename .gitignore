@@ -9,3 +9,7 @@ node_modules/
 bower_components/
 ai1wm-backups/
 packaged/
+foundation.js
+foundation.css
+Foundation.css.map
+gulpfile.js
