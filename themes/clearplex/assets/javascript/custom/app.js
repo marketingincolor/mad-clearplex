@@ -2,7 +2,7 @@ $(document).ready(function(){
 	if ($('body').hasClass('home')) {
 		owlCarousel();
 	}
-	if ($('body').hasClass('page-template-page-product')) {
+	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial')) {
 		benefitsCarousel();
 	}
 	navSlideDown();

@@ -10089,6 +10089,12 @@ body#tinymce {
   font-size: 13px;
   font-size: 0.8125rem; }
 
+.home-hero, .page-template-page-consumer .home-testimonials, .page-template-page-commercial .home-testimonials, .find-dealer {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center center; }
+
 /*
 
 1.) General Styles
@@ -10112,6 +10118,10 @@ h1, h2, h3, h4, h5, p, li, a {
   font-family: 'Montserrat',sans-serif;
   font-weight: 300; }
 
+.menu a {
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 400; }
+
 p {
   font-size: 18px;
   font-size: 1.125rem; }
@@ -10131,6 +10141,9 @@ h2 {
 
 .white-p {
   color: #FFF; }
+
+.btn {
+  font-weight: 500; }
 
 .top-bar {
   background-color: transparent;
@@ -10259,45 +10272,39 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
 .top-bg {
   height: 200px; }
 
-.home-hero .item {
-  position: relative;
-  height: 100vh;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center center; }
-
-.home-hero .slide-meta {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #FFF; }
-  .home-hero .slide-meta h1 {
-    font-size: 14px;
-    font-size: 0.875rem;
-    text-transform: uppercase; }
-  .home-hero .slide-meta h2 {
-    line-height: 40px; }
-
-.home-hero .owl-nav {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
-
-.home-hero .owl-prev, .home-hero .owl-next {
-  border: 2px solid #ff794a;
-  padding: 1px 5px 2px;
-  border-radius: 50%; }
-  .home-hero .owl-prev i, .home-hero .owl-next i {
+.home-hero {
+  height: 100vh; }
+  .home-hero .item {
+    position: relative;
+    height: 100vh; }
+  .home-hero .slide-meta {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     color: #FFF; }
-
-.home-hero .owl-prev {
-  margin-bottom: 10px; }
+    .home-hero .slide-meta h1 {
+      font-size: 14px;
+      font-size: 0.875rem;
+      text-transform: uppercase; }
+    .home-hero .slide-meta h2 {
+      line-height: 40px; }
+  .home-hero .owl-nav {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .home-hero .owl-prev, .home-hero .owl-next {
+    border: 2px solid #ff794a;
+    padding: 1px 5px 2px;
+    border-radius: 50%; }
+    .home-hero .owl-prev i, .home-hero .owl-next i {
+      color: #FFF; }
+  .home-hero .owl-prev {
+    margin-bottom: 10px; }
 
 .vehicle-types .orbit-previous, .vehicle-types .orbit-next {
   padding: 5px 8px;
@@ -10413,22 +10420,32 @@ body:not(.home):not(.page-template-page-products) .top-bar .top-bar-right .chees
   .product-benefits .owl-next {
     right: 0; }
 
-.page-template-page-product .home-testimonials {
-  background-image: url(../images/testimonial-bg.jpg);
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
-  .page-template-page-product .home-testimonials h2, .page-template-page-product .home-testimonials p, .page-template-page-product .home-testimonials address.gray-p {
+.page-template-page-consumer .home-testimonials, .page-template-page-commercial .home-testimonials {
+  background-image: url(../images/testimonial-bg.jpg); }
+  .page-template-page-consumer .home-testimonials h2, .page-template-page-consumer .home-testimonials p, .page-template-page-consumer .home-testimonials address.gray-p, .page-template-page-commercial .home-testimonials h2, .page-template-page-commercial .home-testimonials p, .page-template-page-commercial .home-testimonials address.gray-p {
     color: #FFF; }
-  .page-template-page-product .home-testimonials .gray-quote {
+  .page-template-page-consumer .home-testimonials .gray-quote, .page-template-page-commercial .home-testimonials .gray-quote {
     display: none; }
-  .page-template-page-product .home-testimonials .orbit-bullets button {
+  .page-template-page-consumer .home-testimonials .orbit-bullets button, .page-template-page-commercial .home-testimonials .orbit-bullets button {
     background-color: transparent; }
-    .page-template-page-product .home-testimonials .orbit-bullets button.is-active {
+    .page-template-page-consumer .home-testimonials .orbit-bullets button.is-active, .page-template-page-commercial .home-testimonials .orbit-bullets button.is-active {
       background-color: #ff794a; }
 
 .product-faqs {
+  padding: 8% 0; }
+  .product-faqs .blue-heading {
+    margin-bottom: 50px; }
+  .product-faqs .question {
+    color: #346094;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 500; }
+  .product-faqs .answer {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-bottom: 50px; }
+
+.find-dealer {
   padding: 8% 0; }
 
 .footer-container {

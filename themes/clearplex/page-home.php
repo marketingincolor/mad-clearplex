@@ -6,44 +6,16 @@
 	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
 ?>
 
-<section class="home-hero">
-	<div class="owl-carousel owl-theme">
-	  <div class="item" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg)">
-	  	<div class="row">
-	  		<div class="medium-9 columns">
-	  			<div class="slide-meta">
-	  				<h1>CLEARPLEX&reg; Windshield Protection Film</h1>
-	  				<h2>High Performance Cars Deserve the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
-	  				<p>Because your vehicle is more than a car, it's a prized possession.</p>
-	  				<a href="#!" class="btn">Learn More</a>
-	  			</div>
-	  		</div>
-	  	</div>
-	  </div>
-	  <div class="item" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg)">
-	  	<div class="row">
-	  		<div class="medium-9 columns">
-	  			<div class="slide-meta">
-	  				<h6>CLEARPLEX&reg; Windshield Protection Film</h6>
-	  				<h2>High Performance Cars Deserve the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
-	  				<p>Because your vehicle is more than a car, it's a prized possession.</p>
-	  				<a href="#!" class="btn">Learn More</a>
-	  			</div>
-	  		</div>
-	  	</div>
-	  </div>
-	  <div class="item" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/hero-slide1.jpg)">
-  		<div class="row">
-  			<div class="medium-9 columns">
-  				<div class="slide-meta">
-  					<h6>CLEARPLEX&reg; Windshield Protection Film</h6>
-  					<h2>High Performance Cars Deserve the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
-  					<p>Because your vehicle is more than a car, it's a prized possession.</p>
-  					<a href="#!" class="btn">Learn More</a>
-  				</div>
-  			</div>
-  		</div>
-	  </div>
+<section class="home-hero" style="background-image: url(<?php echo $bg_img; ?>);">
+	<div class="row">
+		<div class="medium-9 columns">
+			<div class="slide-meta">
+				<h1>CLEARPLEX&reg; Windshield Protection Film</h1>
+				<h2>High Performance Cars Deserve the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
+				<p>Because your vehicle is more than a car, it's a prized possession.</p>
+				<a href="#!" class="btn">Learn More</a>
+			</div>
+		</div>
 	</div>
 </section>
 

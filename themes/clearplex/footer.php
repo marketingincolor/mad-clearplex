@@ -23,17 +23,17 @@
 						<ul class="social-links">
 						<?php if ($options['facebook_link']) { ?>
 							<li><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['facebook_link']; ?>">Facebook</a></li>
-						<? }if($options['twitter_link']){ ?>
+						<?php }if($options['twitter_link']){ ?>
 							<li><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['twitter_link']; ?>">Twitter</a></li>
-						<? }if($options['gplus_link']){ ?>
+						<?php }if($options['gplus_link']){ ?>
 							<li><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['gplus_link']; ?>">Google+</a></li>
-						<? }if($options['linkedin_link']){ ?>
+						<?php }if($options['linkedin_link']){ ?>
 							<li><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['linkedin_link']; ?>">LinkedIn</a></li>
-						<? }if($options['instagram_link']){ ?>
+						<?php }if($options['instagram_link']){ ?>
 							<li><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['instagram_link']; ?>">Instagram</a></li>
-						<? }if($options['youtube_link']){ ?>
+						<?php }if($options['youtube_link']){ ?>
 							<li><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['youtube_link']; ?>">YouTube</a></li>
-						<? } ?>
+						<?php } ?>
 						</ul>
 					</div>
 				</div>
