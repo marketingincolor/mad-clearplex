@@ -33,51 +33,30 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="owl-carousel owl-theme">
+
+			    <!-- Query custom post type benefits -->
+			    <?php 
+
+			    	$args = array(
+			    		'post_type'      => 'benefits',
+			    		'posts_per_page' => -1,
+			    	);
+			    	
+			    	$the_query = new WP_Query($args);
+
+			    	if ( $the_query->have_posts() ) {
+			    		while ( $the_query->have_posts() ) {
+			    			$the_query->the_post();
+			    	?>
+
 			    <div class="item text-center">
 			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
+			    	<h5><?php the_title(); ?></h5>
+			    	<?php the_content(); ?>
 			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
-			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
-			    	<h5>Scratch Resistant</h5>
-			    	<p>Stands up to everyday abrasions like windshield wipers.</p>
-			    </div>
+
+			    <?php }} wp_reset_postdata(); ?>
+			    
 			</div>
 		</div>
 	</div>
@@ -88,7 +67,7 @@
 <section class="product-faqs">
 	<div class="row">
 		<div class="large-12 columns text-center">
-			<h2 class="blue-heading">Frequently Asked Questions</h2>
+			<h2 class="blue-heading">FAQ<small>s</small></h2>
 		</div>
 		<div class="medium-5 medium-offset-1 columns">
 		<!-- Query custom post type faq -->
@@ -122,12 +101,12 @@
 	</div>
 </section>
 
-<section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-consumer.jpg);">
+<section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-bg.jpg);">
 	<div class="row">
 		<div class="large-5 large-offset-7 medium-8 medium-offset-4 columns">
-			<h2 class="white-heading">Find a ClearPlex Windshield protection Film Dealer</h2>
-			<p class="white-p">Madico's Dealer Directory is the quickest way to locate the nearest ClearPlex dealer to you.</p>
-			<a href="http://dealerdirectory.madico.com" class="btn">Find A Dealer</a>
+			<h2 class="white-heading"><?php the_field('find_dealer_heading'); ?></h2>
+			<p class="white-p"><?php the_field('find_dealer_body'); ?></p>
+			<a href="<?php the_field('find_dealer_button_link'); ?>" class="btn"><?php the_field('find_dealer_button_text'); ?></a>
 		</div>
 	</div>
 </section>
