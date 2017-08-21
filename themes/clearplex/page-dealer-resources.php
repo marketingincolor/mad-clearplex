@@ -97,18 +97,6 @@
 							<p class="doc-body"><?php echo get_the_content(); ?></p></li>
 						<li class="one-fifth"><a href="<?php the_field('download_button_link'); ?>" class="button"><?php the_field('download_button_text'); ?> <i class="fa fa-download" aria-hidden="true"></i></a></li>
 					</ul>
-					<!-- <div class="medium-2 columns">
-						<?php the_post_thumbnail(); ?>
-					</div>
-					<div class="medium-8 columns">
-						<div class="doc-meta">
-							<h5 class="doc-title"><?php the_title(); ?></h5>
-							<p class="doc-body"><?php echo get_the_content(); ?></p>
-						</div>
-					</div>
-					<div class="medium-2 columns">
-						<a href="<?php the_field('download_button_link'); ?>" class="button"><?php the_field('download_button_text'); ?> <i class="fa fa-download" aria-hidden="true"></i></a>
-					</div> -->
 				</div>
 
 			<?php endwhile;endif;wp_reset_postdata(); ?>

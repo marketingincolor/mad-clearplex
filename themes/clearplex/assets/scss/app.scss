@@ -521,6 +521,41 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 // =======================================
+// ========= 15.) Testimonials  ==========
+// =======================================
+.testimonials-page{
+	padding: 10% 0;
+	.blue-heading{
+		margin-bottom: 7%;
+	}
+	.test-body{
+		@include font(16);
+	}
+	.test-row{
+		@include margin(50,bottom);
+		@include breakpoint(small only){
+			@include margin(0,bottom);
+		}
+	}
+	address{
+		font-weight: 600;
+		font-style: normal;
+		@include font(14);
+		.author{
+			text-transform: uppercase;
+		}
+	}
+	.read-more{
+		text-transform: uppercase;
+		@include font(14);
+		a{
+			color: #ff794a;
+			font-weight: 500;
+		}
+	}
+}
+
+// =======================================
 // ============ 15.) Footer  =============
 // =======================================
 .footer-container{
