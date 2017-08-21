@@ -27,6 +27,9 @@
 h1,h2,h3,h4,h5,p,li,a{
 	@include montserrat(300);
 }
+.menu a{
+	@include montserrat(400);
+}
 p{
 	@include font(18);
 }
@@ -48,6 +51,7 @@ h2{
 .btn{
 	@extend %orange-btn;
 	@extend %learn-more;
+	font-weight: 500;
 }
 
 // =======================================
@@ -204,12 +208,11 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 
 
 .home-hero{
+	height: 100vh;
+	@extend %bg_center_cover;
 	.item{
 		position: relative;
 		height: 100vh;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
 	}
 	.slide-meta{
 		position: absolute;
@@ -376,11 +379,9 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		right: 0;
 	}
 }
-.page-template-page-product .home-testimonials{
+.page-template-page-consumer .home-testimonials,.page-template-page-commercial .home-testimonials{
 	background-image: url(../images/testimonial-bg.jpg);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+	@extend %bg_center_cover;
 	h2,p,address.gray-p{
 		color: $white;
 	}
@@ -396,6 +397,23 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 }
 .product-faqs{
 	padding: 8% 0;
+	.blue-heading{
+		@include margin(50,bottom);
+	}
+	.question{
+		color: #346094;
+		@include font(16);
+		font-weight: 500;
+	}
+	.answer{
+		@include font(14);
+		@include margin(50,bottom);
+	}
+}
+
+.find-dealer{
+	padding: 8% 0;
+	@extend %bg_center_cover;
 }
 // =======================================
 // ============ 15.) Footer  =============
@@ -408,7 +426,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		@include margin(30,bottom);
 	}
 	address p:first-of-type, .terms{
-			@include margin(0,bottom);
+		@include margin(0,bottom);
 	}
 	a,i{
 		color: #346094;
