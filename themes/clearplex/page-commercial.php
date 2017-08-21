@@ -2,9 +2,8 @@
 	/*
 	Template Name: Commercial
 	*/
-	get_header(); 
-	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
-	get_template_part('template-parts/top-bg-truck');
+	get_header();
+	get_template_part('template-parts/top-bg');
 ?>
 
 <section class="best-windshield">
@@ -89,7 +88,7 @@
 				<h5 class="question">Q. <?php the_title(); ?></h5>
 				<div class="answer">A. <?php echo get_the_content(); ?></div>
 				<?php if ($count == floor($count_faqs / 2)) { ?>
-					</div><div class="medium-5 columns">	
+					</div><div class="medium-5 columns end">	
 				<?php } ?>
 			
 				<?php if ($count == $count_faqs) { ?>

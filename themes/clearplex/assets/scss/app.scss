@@ -6,8 +6,8 @@
 1.) General Styles
 2.) Navigation Styles
 3.) Home
-4.) Product
-5.) 
+4.) Consumer/Commercial
+5.) Dealer
 6.) 
 7.) 
 8.) 
@@ -33,14 +33,20 @@ h1,h2,h3,h4,h5,p,li,a{
 p{
 	@include font(18);
 }
-h2{
+h1,h2{
 	@include font(36);
 }
 .blue-heading{
 	color: $blue;
+	small{
+		color: $blue;
+	}
 }
 .white-heading{
 	color: $white;
+	small{
+		color: $white;
+	}
 }
 .gray-p {
 	color: $gray;
@@ -331,7 +337,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 // =======================================
-// ============ 4.) Product  =============
+// ====== 4.) Consumer/Commercial  =======
 // =======================================
 .best-windshield{
 	padding: 7% 0;
@@ -415,6 +421,140 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	padding: 8% 0;
 	@extend %bg_center_cover;
 }
+// =======================================
+// ============= 4.) Dealer  =============
+// =======================================
+.dealer-intro{
+	padding: 10% 0;
+}
+.dealer-videos{
+	padding: 10% 0;
+	@extend %bg_center_cover;
+	.video-head-body{
+		margin-bottom: 7%;
+	}
+	img{
+		@include margin(20,bottom);
+		width: 100%;
+	}
+	.video-title{
+		@include font(18);
+		font-weight: 500;
+	}
+	.video-body{
+		@include font(14);
+	}
+}
+.sales-opp{
+	padding: 10% 0;
+	background-color: #f2f2f2;
+	.large-7{
+		@include breakpoint(small only){
+			@include margin(60,bottom);
+		}
+	}
+	.btn{
+		color: $gray;
+	}
+}
+
+.download-docs{
+	padding: 10% 0;
+	.doc-subhead{
+		margin-bottom: 7%;
+	}
+	.doc-row{
+		position: relative;
+		padding: 30px 0;
+		border-top: 1px solid #d1d1d1;
+		border-bottom: 1px solid #d1d1d1;
+		.doc-list{
+			display: flex;
+			list-style-type: none;
+			align-items: center;
+			li{
+				margin-right: 30px;
+			}
+			.one-fifth{
+				flex-basis: 17.5%;
+				text-align: center
+			}
+			.three-fifths{
+				flex-basis: 65%;
+			}
+		}
+	}
+	.doc-title{
+		color: $gray;
+		@include font(18);
+		font-weight: 500;
+	}
+	.doc-body{
+		@include font(14);
+		@include margin(0,bottom);
+	}
+	.columns .button{
+		background-color: $blue;
+		border-radius: 25px;
+		color: $white;
+		text-transform: uppercase;
+		@include font(13);
+		font-weight: 500;
+		@include margin(0,bottom);
+	}
+}
+.page-template-page-dealer-resources{
+	.product-faqs{
+		background-color: #f2f2f2;
+	}
+	.blue-heading{
+		@include margin(10,bottom);
+	}
+	.faq-body{
+		@include margin(50,bottom);
+	}
+	.white-quote{
+		display: none;
+	}
+	.home-testimonials{
+		border-bottom: 2px solid #d1d1d1;
+	}
+}
+// =======================================
+// ========= 15.) Testimonials  ==========
+// =======================================
+.testimonials-page{
+	padding: 10% 0;
+	.blue-heading{
+		margin-bottom: 7%;
+	}
+	.test-body{
+		@include font(16);
+	}
+	.test-row{
+		@include margin(50,bottom);
+		@include breakpoint(small only){
+			@include margin(0,bottom);
+		}
+	}
+	address{
+		font-weight: 600;
+		font-style: normal;
+		@include font(14);
+		.author{
+			text-transform: uppercase;
+		}
+	}
+	.read-more{
+		text-transform: uppercase;
+		@include font(14);
+		a{
+			color: #ff794a;
+			font-weight: 500;
+		}
+	}
+}
+
 // =======================================
 // ============ 15.) Footer  =============
 // =======================================
