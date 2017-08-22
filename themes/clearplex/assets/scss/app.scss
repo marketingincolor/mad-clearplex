@@ -206,6 +206,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 }
 .top-bg{
 	height: 200px;
+	@extend %bg_center_cover;
 }
 
 // =======================================
@@ -422,7 +423,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	@extend %bg_center_cover;
 }
 // =======================================
-// ============= 4.) Dealer  =============
+// ============= 5.) Dealer  =============
 // =======================================
 .dealer-intro{
 	padding: 10% 0;
@@ -521,7 +522,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 // =======================================
-// ========= 15.) Testimonials  ==========
+// ========== 6.) Testimonials  ==========
 // =======================================
 .testimonials-page{
 	padding: 10% 0;
