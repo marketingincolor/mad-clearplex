@@ -1,0 +1,45 @@
+// =======================================
+// ========== Table of Contents ==========
+// =======================================
+/*
+
+1.) General Styles
+2.) Sidebar Styles
+3.) 
+4.) 
+5.) 
+
+*/
+// =======================================
+// ========= 1.) General Styles ==========
+// =======================================
+
+.sub-head {
+  @include grid-row();
+  margin-top: 1rem;
+  text-align:center;
+  @include breakpoint(medium) {
+    margin-top: 3rem;
+  }
+}
+
+// =======================================
+// ========= 1.) Sidebar Styles ==========
+// =======================================
+
+.widget_sidenav {
+	ul {
+		text-transform:uppercase;
+		li {
+			list-style-image: url(../images/side-nav-bullet.gif);
+			list-style-position:inside;
+			border-left:2px solid #d1d1d1;
+			
+			a { padding:0.5em 0.5em; display:inline-block; }
+		}
+	}
+}
+
+.widget_testimonial {
+
+}

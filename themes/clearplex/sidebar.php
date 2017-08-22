@@ -8,7 +8,9 @@
 
 ?>
 <aside class="sidebar">
+	<div class="small-10 small-offset-2">
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
 	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>
+	</div>
 </aside>

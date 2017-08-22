@@ -1,3 +1,4 @@
+.gitignore
 advanced-cache.php 
 backup-db/ 
 backups/ 
