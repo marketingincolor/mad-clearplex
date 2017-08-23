@@ -100,7 +100,7 @@
 	</div>
 </section>
 
-<section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-bg.jpg);">
+<section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-consumer.jpg);">
 	<div class="row">
 		<div class="large-5 large-offset-7 medium-8 medium-offset-4 columns">
 			<h2 class="white-heading"><?php the_field('find_dealer_heading'); ?></h2>

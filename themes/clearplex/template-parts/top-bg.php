@@ -6,7 +6,7 @@ $root = get_bloginfo('template_directory').'/assets/images/';
 if (is_single()) {
 	if (is_single('case-studies')) {
 		$img = 'top-bg-case-studies.jpg';
-	} elseif (is_single('videos')) {
+	}if (is_single('videos')) {
 		$img = 'top-bg-videos.jpg';
 	}
 } else{
@@ -17,7 +17,9 @@ if (is_single()) {
 		case 'dealer-resources':
 			$img = 'top-bg-windshield.jpg';
 			break;
-		case 'commercial':case 'consumer':case 'product':
+		case 'commercial':
+		case 'consumer':
+		case 'product':
 			$img = 'top-bg-truck.jpg';
 			break;
 		case 'about':
@@ -31,7 +33,7 @@ if (is_single()) {
 			break;
 		case 'case-studies':
 			$img = 'top-bg-case-studies.jpg';
-			break
+			break;
 		case 'contact':
 			$img = 'top-bg-contact.jpg';
 			break;
@@ -52,7 +54,7 @@ if (is_single()) {
 			break;
 
 		default:
-			# code...
+			$img = 'top-bg-about.jpg';
 			break;
 	}
 }
