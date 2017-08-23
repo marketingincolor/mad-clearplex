@@ -12,9 +12,9 @@ get_header(); ?>
 	$data = $_GET['hidden'];
 	echo 'hidden = '.$data;
 	if ($data == 'video-gallery') {
-		get_template_part('videos-search');
+		get_template_part('/template-parts/videos-search');
 	} else{
-		get_template_part('everything-else-search');
+		get_template_part('/template-parts/everything-else-search');
 	}
 ?>
 
