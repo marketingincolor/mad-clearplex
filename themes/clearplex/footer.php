@@ -13,7 +13,7 @@
 							<p>PO BOX 216, Draper, UT 84020</p>
 							<p>(801) 571-8243</p>
 						</address>
-						<p class="terms"><a href="#!">Terms and Conditions</a> | <a href="#!">Privacy Policy</a></p>
+						<p class="terms"><a href="<?php echo site_url(); ?>/terms-and-conditions">Terms and Conditions</a> | <a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
 						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
 					</div>
 					<div class="large-4 large-offset-2 columns">

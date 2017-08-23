@@ -54,6 +54,9 @@
 				</div>
 			</div>
 		</nav>
+		<script>
+			templateURL = '<?php bloginfo("template_directory"); ?>';
+		</script>
 	</header>
 
 	<section class="container">

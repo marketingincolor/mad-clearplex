@@ -6,6 +6,8 @@ $(document).ready(function(){
 		benefitsCarousel();
 	}
 	navSlideDown();
+	videoMeta();
+	// ajaxVideoSearch();
 });
 
 $(window).scroll(function(){
@@ -35,6 +37,42 @@ function benefitsCarousel(){
       	items:3
       }
     }
+	});
+}
+
+// Add video metadeta to modal
+function videoMeta(){
+	$('.column-block').find('a').on('click',function(){
+		var that = this;
+		$('#video-modal').bind('open.zf.reveal',function(){
+			var videoSrc   = $(that).parent().data('video');
+			var videoTitle = $(that).parent().data('title');
+			$('video').attr('src',videoSrc);
+			$('#video-modal').find('h1').text(videoTitle);
+		});
+		$('#video-modal').foundation('open');
+	})
+}
+
+function ajaxVideoSearch(){
+	$(document).on('click','#searchsubmit',function(e){
+		e.preventDefault();
+		var $form    = $(this).parent().parent();
+    var $input   = $form.find('input[name="s"]');
+    var query    = $input.val();
+    var $content = $('.gallery-container');
+
+		$.ajax({
+			url: templateURL + '/page-templates/ajax-search.php',
+			type: 'POST',
+			data: {query : query},
+			beforeSend: function() {
+        $content.addClass('loading');
+      },
+			success: function(response) {
+        $content.html(response);
+      }
+		});
 	});
 }
 

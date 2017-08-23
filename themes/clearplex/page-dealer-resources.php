@@ -23,34 +23,9 @@
 			<h2 class="white-heading"><?php the_field('dealer_video_title'); ?></h2>
 			<p class="white-p video-head-body"><?php the_field('dealer_video_body'); ?></p>
 		</div>
-		<div class="medium-10 medium-offset-1 columns end">
-			<div class="row medium-up-3">
-				
-			<!-- query video post format -->
-			<?php
-			$video_query = new WP_Query( array(
-				'posts_per_page' => 6,
-		    'tax_query'      => array(
-	        array(                
-	          'taxonomy' => 'post_format',
-	          'field' => 'slug',
-	          'terms' => array('post-format-video')
-	        )
-		    )
-			));
-			if ($video_query->have_posts()) : while ($video_query->have_posts()) : $video_query->the_post();
-			?>
 
-			<div class="column column-block">
-				<?php the_post_thumbnail(); ?>
-				<h5 class="video-title white-heading"><?php the_title(); ?></h5>
-				<p class="video-body white-p"><?php echo get_the_content(); ?></p>
-			</div>			
-
-			<?php endwhile;endif;wp_reset_postdata(); ?>
-
-			</div>
-		</div>
+		<?php get_template_part('template-parts/video-gallery'); ?>
+		
 	</div>
 </section>
 
@@ -144,5 +119,7 @@
 </section>
 
 <?php get_template_part('template-parts/testimonials-section'); ?>
+
+<?php get_template_part('template-parts/video-modal'); ?>
 
 <?php get_footer(); ?>

@@ -10,9 +10,9 @@
 5.) Dealer Resources
 6.) Testimonials
 7.) Product
-8.) 
-9.) 
-10.) 
+8.) Terms & Conditions
+9.) Video Gallery
+10.) 404 Page
 11.) 
 12.) 
 13.) 
@@ -59,6 +59,36 @@ h1,h2{
 	@extend %orange-btn;
 	@extend %learn-more;
 	font-weight: 500;
+}
+
+// Video Modal Styles
+#video-modal{
+	padding: 0;
+	.close-button{
+		color: $white;
+	}
+}
+
+//form placeholder text
+::-webkit-input-placeholder,input { /* Chrome/Opera/Safari */
+  color: $gray !important;
+  @include montserrat(300);
+  @include font(18);
+}
+::-moz-placeholder,input { /* Fir,inputefox 19+ */
+  color: $gray !important;
+  @include montserrat(300);
+  @include font(18);
+}
+:-ms-input-placeholder,input { /*,input IE 10+ */
+  color: $gray !important;
+  @include montserrat(300);
+  @include font(18);
+}
+:-moz-placeholder,input { /* Fire,inputfox 18- */
+  color: $gray !important;
+  @include montserrat(300);
+  @include font(18);
 }
 
 // =======================================
@@ -628,6 +658,114 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 
 .product-optimize{
 	padding: 10% 0;
+}
+
+// =======================================
+// ======= 8.) Terms & Conditions ========
+// =======================================
+.terms-conditions{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	h2{
+		margin-bottom: 5%;
+	}
+	.subhead{
+		color: #8db8e9;
+		@include font(24);
+	}
+	p{
+		@include font(16);
+		@include margin(30,bottom);
+		color: $gray;
+  }
+	.first-word{
+		text-transform: uppercase;
+		color: #346094;
+		font-weight: 500;
+	}
+}
+
+// =======================================
+// ========= 9.) Video Gallery ===========
+// =======================================
+.video-gallery{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	.wp-post-image{
+		@include margin(30,bottom);
+		width: 100%;
+	}
+	.gray-p,form{
+		margin-bottom: 6%;
+	}
+	.blue-heading{
+		margin-bottom: 3%;
+	}
+	.white-heading{
+		color: $blue;
+		@include font(18);
+		font-weight: 500;
+	}
+	.white-p{
+		color: $gray;
+		@include font(14);
+	}
+	.input-group{
+		position: relative;
+	}
+	#searchsubmit{
+		color: $gray;
+		background-color: $clear;
+    position: absolute;
+    right: 5px;
+    top: 0;
+	}
+}
+// =======================================
+// ============ 10.) 404 Page ============
+// =======================================
+.page-error{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	h2{
+		@include margin(20,bottom);
+	}
+	.gray-p{
+		margin-bottom: 5%
+	}
+	form{
+		@include margin(40,bottom);
+	}
+	.input-group{
+		position: relative;
+	}
+	#searchsubmit{
+		color: $gray;
+		background-color: $clear;
+    position: absolute;
+    right: 5px;
+    top: 0;
+	}
+	ul{
+		list-style-type: none;
+		li{
+			display: inline-block;
+			margin-right: 10px;
+			a{
+				background-color: $blue;
+				color: $white;
+				text-transform: uppercase;
+				@include font(13);
+				font-weight: 500;
+				padding: 5px 15px;
+				border-radius: 20px;
+				transition: background-color 0.25s ease-in-out;
+				&:hover{
+					background-color: $orange;
+				}
+			}
+		}
+	}
 }
 
 // =======================================
