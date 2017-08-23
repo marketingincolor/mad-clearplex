@@ -9,7 +9,7 @@
 <div class="sub-head">
 	<div class="sub-img small-10 small-centered">
 		<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'fp-large' );  ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h2 class="blue-heading"><?php ( the_field('contactus_title') ? the_field('contactus_title') : the_title() ); ?></h2>
 	</div>
 </div>
 <!-- standard loop -->
@@ -23,7 +23,7 @@
 			<?php //get_template_part( 'template-parts/content', get_post_format() ); ?>
 
 		<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-		<div class="entry-content">
+		<div class="entry-content large-11">
 			<?php the_content(); ?>
 		</div>
 		<?php endwhile; ?>
