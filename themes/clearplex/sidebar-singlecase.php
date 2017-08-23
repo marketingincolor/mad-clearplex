@@ -1,6 +1,6 @@
 <?php
 /**
- * The specific sidebar for the Contact Us page
+ * The specific sidebar for the Single Case Study page
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
@@ -9,15 +9,12 @@
 ?>
 <aside class="sidebar about-sidebar">
 	<div class="small-11 small-offset-1">
-	<article id="contact" class="widget widget_contact">
-		<h5 class="ca-title">Window Film Headquarters:</h5>
-		<p class="contact-address">Madico Window Films<br>
-		2630 Fairfield Ave South<br>
-		St. Petersburg, FL 33712<br>
-		(727)-372-2544</p>
-	</article>
 	<article id="testimonial" class="widget widget_testimonial">
 		<?php get_template_part('template-parts/testimonials-side'); ?>
+	</article>
+	<article id="links" class="widget widget_links">
+		<p><button>Become A Dealer</button></p>
+		<p><button>Become A Distributor</button></p>
 	</article>
 	</div>
 </aside>

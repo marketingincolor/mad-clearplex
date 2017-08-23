@@ -6,36 +6,49 @@
 	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
 	get_template_part('template-parts/top-bg');
 ?>
-
-
 <div class="sub-head">
 	<div class="sub-img small-10 small-centered">
 		<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'fp-large' );  ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h2 class="blue-heading"><?php ( the_field('faq_title') ? the_field('faq_title') : the_title() ); ?></h2>
 	</div>
 </div>
 <!-- standard loop -->
 <div class="main-wrap" role="main">
 	<div class="small-10 small-centered">
 	<article class="main-content">
-<?php 
 
-	$args = array(
-		'post_type'      => 'faqs',
-		'posts_per_page' => -1,
-	);
-	$count = 1;
-	$the_query = new WP_Query($args);
-
-	if ( $the_query->have_posts() ) {
-		while ( $the_query->have_posts() ) {
-			$the_query->the_post();
-	?>
-		<div class="entry-content">
-			<?php the_content(); ?>
+		<div class="product-faqs consumer">
+			<h2 class="ltblue-heading">Consumer</h2>
+			<?php 
+			$args = array( 
+				'post_type' => 'faq', 
+				'posts_per_page' => -1 
+			);
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			<div class="entry-content large-11">
+				<h5 class="question"><?php the_title(); ?></h5>
+				<div class="answer"><?php the_content(); ?></div>
+			</div>
+			<?php endwhile; wp_reset_postdata(); ?>
 		</div>
 
-<?php }} wp_reset_postdata(); ?>
+		<div class="product-faqs commercial">
+			<h2 class="ltblue-heading">Commercial</h2>
+			<?php 
+			$args = array( 
+				'post_type' => 'faq', 
+				'category_name' => 'commercial, general',
+				'posts_per_page' => -1
+			);
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			<div class="entry-content large-11">
+				<h5 class="question"><?php the_title(); ?></h5>
+				<div class="answer"><?php the_content(); ?></div>
+			</div>
+			<?php endwhile; wp_reset_postdata(); ?>
+		</div>
 
 	</article>
 	<?php get_sidebar('faq'); ?>

@@ -8,16 +8,16 @@
 
 ?>
 <aside class="sidebar about-sidebar">
-	<div class="small-10 small-offset-2">
+	<div class="small-11 small-offset-1">
 	<article id="side-nav" class="widget widget_sidenav">
-		<ul>
-			<li><a href="<?php echo site_url('/'); ?>consumer">consumer</a></li>
-			<li><a href="<?php echo site_url('/'); ?>commercial">commercial</a></li>
-			<li><a href="<?php echo site_url('/'); ?>dealer-resources">dealer</a></li>
-		</ul>
+		<nav class="page-buttons">
+			<button><a href="<?php echo site_url('/'); ?>consumer" class="alt">consumer</a></button>
+			<button><a href="<?php echo site_url('/'); ?>commercial" class="alt">commercial</a></button>
+			<button><a href="<?php echo site_url('/'); ?>dealer-resources" class="alt">dealer</a></button>
+		</nav>
 	</article>
 	<article id="testimonial" class="widget widget_testimonial">
-		Insert Testimonial Widget
+		<?php get_template_part('template-parts/testimonials-side'); ?>
 	</article>
 	</div>
 </aside>
