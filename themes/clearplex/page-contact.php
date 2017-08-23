@@ -4,7 +4,7 @@
 	*/
 	get_header(); 
 	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
-	get_template_part('template-parts/top-bg-truck');
+	get_template_part('template-parts/top-bg');
 ?>
 <div class="sub-head">
 	<div class="sub-img small-10 small-centered">
