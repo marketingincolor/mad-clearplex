@@ -5,6 +5,7 @@
 	get_header();
 	get_template_part('template-parts/top-bg');
 	$options = get_option('mic_theme_options');
+	$slug    = get_post_field( 'post_name', get_post() );
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -30,11 +31,31 @@
 				<?php } ?>
 			</ul>
 			<ul class="link-list">
-				<li><a href="<?php echo site_url();the_field('left_button_link'); ?>"><?php the_field('left_button_text') ?>&nbsp;&nbsp;<?php the_field('left_button_icon') ?></a></li>
-				<li><a href="<?php echo site_url();the_field('middle_button_link'); ?>"><?php the_field('middle_button_text') ?>&nbsp;&nbsp;<?php the_field('middle_button_icon') ?></a></li>
-				<li><a href="<?php echo site_url();the_field('right_button_link'); ?>"><?php the_field('right_button_text') ?>&nbsp;&nbsp;<?php the_field('right_button_icon') ?></a></li>
+
+				<?php if(get_field('middle_button_link')) { ?>
+
+					<li><a href="<?php echo site_url();the_field('left_button_link'); ?>"><?php the_field('left_button_text') ?>&nbsp;&nbsp;<?php the_field('left_button_icon') ?></a></li>
+
+				<?php }if(get_field('middle_button_link')) { ?>
+
+					<li><a href="<?php echo site_url();the_field('middle_button_link'); ?>"><?php the_field('middle_button_text') ?>&nbsp;&nbsp;<?php the_field('middle_button_icon') ?></a></li>
+				
+				<?php }if(get_field('right_button_link')) { ?>
+
+					<li><a href="<?php echo site_url();the_field('right_button_link'); ?>"><?php the_field('right_button_text') ?>&nbsp;&nbsp;<?php the_field('right_button_icon') ?></a></li>
+
+				<?php } ?>
+
 			</ul>
-		</div>
+	  </div>
+	  	
+	  	<?php if ($slug == 'review-success') { ?>
+	  		<div class="small-12 columns text-center">
+	  			<h2 class="blue-heading read-test">Read Testimonials</h2>
+	  		</div>
+	  		<?php get_template_part('template-parts/testimonials-section'); ?>
+	  	<?php } ?>
+
 	</div>
 </section>
 

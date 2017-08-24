@@ -910,7 +910,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 .success{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
-	h1{
+	h1,.read-test{
 		@include font(60);
 		@include breakpoint(small only){
 			@include font(36);
@@ -933,6 +933,15 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 				@include font(30);
 			}
 		}
+	}
+	.read-test{
+		@include margin(50,top);
+	}
+	.white-quote{
+		display: none;
+	}
+	.home-testimonials{
+		padding: 0;
 	}
 	.link-list{
 		li{
