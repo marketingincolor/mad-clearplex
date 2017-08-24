@@ -9,7 +9,7 @@
 <div class="sub-head">
 	<div class="sub-img small-10 small-centered">
 		<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'fp-large' );  ?>
-		<h2 class="blue-heading"><?php ( the_field('faq_title') ? the_field('faq_title') : the_title() ); ?></h2>
+		<h2 class="blue-heading"><?php echo ( get_post_meta( $post->ID, 'faq_title', true) ? get_post_meta( $post->ID, 'faq_title', true) : get_the_title() ); ?></h2>
 	</div>
 </div>
 <!-- standard loop -->
@@ -22,6 +22,7 @@
 			<?php 
 			$args = array( 
 				'post_type' => 'faq', 
+				'category_name' => 'consumer',
 				'posts_per_page' => -1 
 			);
 			$loop = new WP_Query( $args );
@@ -38,7 +39,24 @@
 			<?php 
 			$args = array( 
 				'post_type' => 'faq', 
-				'category_name' => 'commercial, general',
+				'category_name' => 'commercial',
+				'posts_per_page' => -1
+			);
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			<div class="entry-content large-11">
+				<h5 class="question"><?php the_title(); ?></h5>
+				<div class="answer"><?php the_content(); ?></div>
+			</div>
+			<?php endwhile; wp_reset_postdata(); ?>
+		</div>
+
+		<div class="product-faqs dealer" style="display:none;">
+			<h2 class="ltblue-heading">Dealers</h2>
+			<?php 
+			$args = array( 
+				'post_type' => 'faq', 
+				'category_name' => 'dealer',
 				'posts_per_page' => -1
 			);
 			$loop = new WP_Query( $args );

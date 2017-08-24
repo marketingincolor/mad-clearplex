@@ -18,6 +18,7 @@
   @include grid-row();
   margin-top: 1rem;
   text-align:center;
+  .sub-img img { margin-bottom:3rem; }
   @include breakpoint(medium) {
     margin-top: 3rem;
   }
@@ -54,33 +55,44 @@
 		display:inline-block;
 		border-left:2px solid #d1d1d1;
 		margin-left:1rem;
-		button {
-			background-color:#fff;
-			border:2px solid #d1d1d1;
-			border-radius:50%;
-			width:1.2rem;
-			height:1.2rem;
-			display:block;
-			margin:2rem 0rem;
+		a {
+			width:100%;
+			text-transform:uppercase;
 			position:relative;
-			left:-0.65rem;
-			a {
-				padding-left:2.5rem;
-				width:100%;
-				text-transform:uppercase;
+			top:-2px;
+			color: #ff794a;
+    		font-weight: 500;
+    		display:inline-block;
+    		margin:1.5rem 0rem;
+    		button {
+    			background-color:#fff;
+				border:2px solid #d1d1d1;
+				border-radius:50%;
+				width:1.2rem;
+				height:1.2rem;
+				display:inline-block;
 				position:relative;
-				top:-2px;
-				color: #ff794a;
-	    		font-weight: 500;
-			}
-			a:hover {
-				color: #ff794a;
-	    		font-weight: 500;
-			}
+				left:-0.65rem;
+				vertical-align:middle;
+    		}
+    		span {
+
+    		}
+		}
+		a:hover {
+			color: #ff794a;
+    		font-weight: 500;
 		}
 	}
 }
-
+.widget_links {
+	a button { 
+		cursor:pointer; 
+		border:2px solid #ff794a;
+		padding:0.825rem 1.5rem;
+		border-radius:25px;
+	}
+}
 .widget_testimonial {
 	padding:1.5rem 0rem;
 	.white-quote { display:none; }

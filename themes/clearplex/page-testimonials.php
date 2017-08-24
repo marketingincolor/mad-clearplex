@@ -9,7 +9,7 @@
 <section class="testimonials-page">
 	<div class="row">
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns text-center">
-			<h2 class="blue-heading"><?php the_field('testimonials_title'); ?></h2>
+			<h2 class="blue-heading"><?php echo ( get_post_meta( $post->ID, 'testimonials_title', true) ? get_post_meta( $post->ID, 'testimonials_title', true) : get_the_title() ); ?></h2>
 		</div>
 		<div class="large-12 columns">
 			<div class="row test-row">
