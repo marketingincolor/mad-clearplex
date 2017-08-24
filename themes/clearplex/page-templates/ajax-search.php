@@ -1,11 +1,16 @@
-<?php if($_POST['query']) { ?>
-<h1>Search Query: <?php echo $_POST['query']; ?></h1>
-<?php } ?>
+<?php 
+
+include_once $_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php';
+header("HTTP/1.1 200 OK"); 
+
+?>
+
 <div class="row medium-up-3">
 
 	<!-- query video post format -->
 	<?php
 	  $query  = $_POST['query'];
+	  
 		$search = new WP_Query( array(
 	    's'         => $query,
 	    'tax_query' => array(
@@ -16,9 +21,6 @@
 	      )
 	    ),
 		));
-	  // ob_start();
-
-	  echo $query;
 
 	  if($search->have_posts()) { while($search->have_posts()) { $search->the_post(); 
 	?>
@@ -31,11 +33,8 @@
 
 	<?php }
 	
-  }else{echo '<p>hello</p>';}
+  }else{echo '<h3 class="blue-heading">Sorry, no videos match that search. Please try again.</p>';}
 
-	 //  $content = ob_get_clean();
-		// echo $content;
-		// die();
 	?>
 
 </div>

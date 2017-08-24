@@ -1,11 +1,11 @@
-<section class="search-results" id="search-results">
+<section class="search-results-section" id="search-results">
 	<div class="row">
 		<div class="medium-10 medium-offset-1 columns end">
 			<article <?php post_class(); ?>>
 				<header>
-				  <h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
+				  <h1 class="blue-heading"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
 				</header>
-			    <hr class="yellow-line">
+			    <hr>
 			    <div class="clearfix"></div>
 			    <?php get_search_form(); ?>
 
@@ -17,7 +17,7 @@
 
 				    $args = array(
 				    	's' => $s,
-				    	'showposts' => 5,
+				    	'showposts' => 10,
 				    	'post_type' => array('post','page','case_studies'),
 				    	'paged' => $paged,
 				    	'post__not_in' => array(190)
@@ -35,7 +35,7 @@
 						<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 						<article class="result-block">
 							<h5><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></h5>
-							<p><?php echo $content; ?></p>
+							<p class="gray-p"><?php echo $content; ?></p>
 						</article>
 					<?php endwhile; ?>
 

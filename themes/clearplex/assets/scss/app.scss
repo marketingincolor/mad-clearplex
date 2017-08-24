@@ -13,8 +13,8 @@
 8.) Terms & Conditions
 9.) Video Gallery
 10.) 404 Page
-11.) 
-12.) 
+11.) Search Results
+12.) Case Studies
 13.) 
 14.)
 15.) Footer
@@ -764,6 +764,88 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 					background-color: $orange;
 				}
 			}
+		}
+	}
+}
+
+// =======================================
+// ========= 11.) Search Results =========
+// =======================================
+.search-results-section{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	hr,form{
+		@include margin(50,bottom);
+	}
+	.result-block{
+		a{
+			color: $blue;
+		}
+	}
+}
+
+// =======================================
+// ========== 12.) Case Studies ==========
+// =======================================
+.case-study-feed{
+	padding: 10% 0;
+	ul.tabs{
+		border: none;
+		@include margin(50,bottom);
+	}
+	.tabs-title{
+		float: none;
+		background-color: $clear;
+		display: inline-block;
+	}
+	.tabs-title > a:focus, .tabs-title > a[aria-selected='true']{
+		background-color: $clear;
+	}
+	a{
+		transition: color 0.25s ease-in-out;
+		font-weight: 400;
+		&:hover{
+			color: #dc582a;
+		}	
+	}
+	.is-active a{
+		color: #dc582a;
+		font-weight: 700;
+	}
+	.is-active .study-link{
+		color: $white;
+		@include font(13);
+		text-transform: uppercase;
+		font-weight: 500;
+		background-color: $blue;
+		padding: 7px 20px;
+		border-radius: 25px;
+		transition: background-color 0.25s ease-in-out;
+		&:hover{
+			background-color: #ff794a;
+		}
+	}
+	.tabs-title > a{
+		padding: 1.25rem 0.6rem;
+	}
+	.tabs-content{
+		border: none;
+	}
+	h5{
+		@include font(18);
+		font-weight: 500;
+	}
+	p{
+		@include font(14);
+	}
+	.case-study-row{
+		@include breakpoint(medium){
+			 @include margin(50,bottom);
+		}
+	}
+	.medium-4.columns{
+		@include breakpoint(small only){
+			@include margin(40,bottom);
 		}
 	}
 }
