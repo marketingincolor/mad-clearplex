@@ -14,6 +14,16 @@ $(window).scroll(function(){
 	navSlideDown();
 });
 
+// Adds a disabled option to the beginning of <select> elements on Contact Page
+// in contact forms, since Ninja Forms can't do it.
+setTimeout(function(){
+	(function addDisabledSelect(){
+		var $form = $('#nf-form-1-cont');
+		$form.find('#nf-field-5').find('option').removeAttr("selected");
+		$form.find('#nf-field-5').find('option:first').before('<option disabled="disabled" selected="selected">Please Choose One</option>');
+	})();
+},550);
+
 //product benefits carousel
 function benefitsCarousel(){
 	$('.owl-carousel').owlCarousel({

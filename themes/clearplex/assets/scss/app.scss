@@ -15,8 +15,8 @@
 10.) 404 Page
 11.) Search Results
 12.) Case Studies
-13.) 
-14.)
+13.) Form Styles
+14.) Success
 15.) Footer
 
 */
@@ -55,12 +55,22 @@ h1,h2{
 .white-p {
 	color: $white;
 }
+label{
+	@include font(14);
+	color: $gray;
+	@include montserrat(400);
+	font-weight: 400 !important;
+}
 .btn{
 	@extend %orange-btn;
 	@extend %learn-more;
 	font-weight: 500;
 }
-
+.sidebar{
+	@include breakpoint(medium){
+		@include margin(0,top);
+	}
+}
 // Video Modal Styles
 #video-modal{
 	padding: 0;
@@ -850,6 +860,110 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 
+// =======================================
+// ========== 13.) Form Styles ===========
+// =======================================
+.nf-form-fields-required{
+	display: none;
+}
+#ninja_forms_required_items, .nf-field-container{
+	@include margin(20,bottom);
+}
+#nf-form-1-cont{
+	input,select,textarea{
+		border: 2px solid $blue;
+		border-radius: 3px;
+		height: 45px;
+		padding-left: 10px;
+		@include font(14);
+		color: $gray;
+		font-family: 'Montserrat';
+	}
+	textarea{
+		height: 180px;
+		resize: none;
+	}
+	.ninja-forms-req-symbol{
+		color: $gray;
+	}
+	input[type=button]{
+		background-color: #8db8e9;
+		width: 100%;
+		border-radius: 25px;
+		margin-top: 15px;
+		border: none;
+		text-transform: uppercase;
+		color: $blue !important;
+		font-weight: 400;
+		transition: all 0.25s ease-in-out;
+		cursor: pointer;
+		&:hover{
+			color: $white !important;
+			background-color: $orange;
+		}
+	}
+}
+
+// =======================================
+// ============ 14.) Success =============
+// =======================================
+.success{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	h1,.read-test{
+		@include font(60);
+		@include breakpoint(small only){
+			@include font(36);
+		}
+	}
+	.blue-heading,.gray-p{
+		@include margin(40,bottom);
+	}
+	ul{
+		list-style-type: none;
+		margin: 0;
+		li{display: inline-block;}
+	}
+	.social-logos {
+		@include margin(40,bottom)
+		li{
+			@include margin(25,right);
+			a,i{
+				color: $blue;
+				@include font(30);
+			}
+		}
+	}
+	.read-test{
+		@include margin(50,top);
+	}
+	.white-quote{
+		display: none;
+	}
+	.home-testimonials{
+		padding: 0;
+	}
+	.link-list{
+		li{
+			@include margin(15,right);
+			a,i{
+				color: $white;
+				@include font(13);
+				font-weight: 500;
+			}
+			a{
+				background-color: $blue;
+				padding: 7px 20px;
+				border-radius: 20px;
+				text-transform: uppercase;
+				transition: background-color 0.25s ease-in-out;
+				&:hover{
+					background-color: $orange;
+				}
+			}
+		}
+	}
+}
 // =======================================
 // ============= 15.) Footer =============
 // =======================================
