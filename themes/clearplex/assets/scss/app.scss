@@ -16,7 +16,7 @@
 11.) Search Results
 12.) Case Studies
 13.) Form Styles
-14.)
+14.) Success
 15.) Footer
 
 */
@@ -904,6 +904,57 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 
+// =======================================
+// ============ 14.) Success =============
+// =======================================
+.success{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	h1{
+		@include font(60);
+		@include breakpoint(small only){
+			@include font(36);
+		}
+	}
+	.blue-heading,.gray-p{
+		@include margin(40,bottom);
+	}
+	ul{
+		list-style-type: none;
+		margin: 0;
+		li{display: inline-block;}
+	}
+	.social-logos {
+		@include margin(40,bottom)
+		li{
+			@include margin(25,right);
+			a,i{
+				color: $blue;
+				@include font(30);
+			}
+		}
+	}
+	.link-list{
+		li{
+			@include margin(15,right);
+			a,i{
+				color: $white;
+				@include font(13);
+				font-weight: 500;
+			}
+			a{
+				background-color: $blue;
+				padding: 7px 20px;
+				border-radius: 20px;
+				text-transform: uppercase;
+				transition: background-color 0.25s ease-in-out;
+				&:hover{
+					background-color: $orange;
+				}
+			}
+		}
+	}
+}
 // =======================================
 // ============= 15.) Footer =============
 // =======================================
