@@ -6,16 +6,12 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header(); 
+get_template_part('template-parts/top-bg');
+?>
 
 <?php
-	$data = $_GET['hidden'];
-	echo 'hidden = '.$data;
-	if ($data == 'video-gallery') {
-		get_template_part('/template-parts/videos-search');
-	} else{
-		get_template_part('/template-parts/everything-else-search');
-	}
+	get_template_part('/template-parts/everything-else-search');
 ?>
 
 <?php get_footer();

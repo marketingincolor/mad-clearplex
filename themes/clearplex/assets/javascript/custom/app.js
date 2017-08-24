@@ -7,7 +7,7 @@ $(document).ready(function(){
 	}
 	navSlideDown();
 	videoMeta();
-	// ajaxVideoSearch();
+	ajaxVideoSearch();
 });
 
 $(window).scroll(function(){
@@ -55,7 +55,7 @@ function videoMeta(){
 }
 
 function ajaxVideoSearch(){
-	$(document).on('click','#searchsubmit',function(e){
+	$('.video-gallery').find('#s').on('keyup',function(e){
 		e.preventDefault();
 		var $form    = $(this).parent().parent();
     var $input   = $form.find('input[name="s"]');
@@ -66,9 +66,6 @@ function ajaxVideoSearch(){
 			url: templateURL + '/page-templates/ajax-search.php',
 			type: 'POST',
 			data: {query : query},
-			beforeSend: function() {
-        $content.addClass('loading');
-      },
 			success: function(response) {
         $content.html(response);
       }
