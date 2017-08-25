@@ -255,9 +255,8 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 // ============= 3.) Home  ===============
 // =======================================
 
-
 .home-hero{
-	height: 100vh;
+	height: 700px;
 	@extend %bg_center_cover;
 	.item{
 		position: relative;
@@ -297,26 +296,25 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 
 // vehicle types carousel section
 .vehicle-types{
-	.orbit-previous,.orbit-next{
-		padding: 5px 8px;
+	.move-next,.move-prev{
+		padding: 6px 10px;
 		background-color: white;
 		border-radius: 50%;
 		cursor: pointer;
+		border: 2px solid $orange;
+		margin-right: 5px;
 		i{
-			color: $orange;
+			color: $gray;
 		}
-	}
-	.orbit-previous{
-		left: 30px;
-	}
-	.orbit-next{
-		right: 30px;
 	}
 	.orbit-slide{
 		padding: 10% 0;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
+		a{
+			margin-right: 10px;
+		}
 	}
 	.btn{
 		color: $gray;

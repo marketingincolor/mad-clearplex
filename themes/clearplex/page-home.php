@@ -13,7 +13,7 @@
 				<h1>CLEARPLEX&reg; Windshield Protection Film</h1>
 				<h2>High Performance Cars Deserve the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
 				<p>Because your vehicle is more than a car, it's a prized possession.</p>
-				<a href="#!" class="btn">Learn More</a>
+				<a href="<?php echo site_url(); ?>/#!" class="btn">Learn More</a>
 			</div>
 		</div>
 	</div>
@@ -22,17 +22,13 @@
 <section class="vehicle-types">
 	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
 	  <div class="orbit-wrapper">
-	    <div class="orbit-controls">
-	      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span><i class='fa fa-chevron-left'></i></button>
-	      <button class="orbit-next"><span class="show-for-sr">Next Slide</span><i class='fa fa-chevron-right'></i></button>
-	    </div>
 	    <ul class="orbit-container">
 	      <li class="is-active orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/vehicle-type1.jpg);">
 	        <div class="row">
 	        	<div class="medium-6 medium-offset-6 columns">
 	        		<h2 class="blue-heading">Classic Cars</h2>
 	        		<p class="gray-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac orci enim. Donec ac massa vel leo pellentesque congue. Morbi a dui bibendum, hendrerit orci sit amet.</p>
-	        		<a href="#!" class="btn">Learn More</a>
+	        		<a href="#!" class="btn">Learn More</a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
 	        	</div>
 	        </div>
 	      </li>
@@ -41,7 +37,7 @@
           	<div class="medium-6 medium-offset-6 columns">
           		<h2 class="blue-heading">Performance Cars</h2>
           		<p class="gray-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac orci enim. Donec ac massa vel leo pellentesque congue. Morbi a dui bibendum, hendrerit orci sit amet.</p>
-          		<a href="#!" class="btn">Learn More</a>
+          		<a href="#!" class="btn">Learn More</a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
           	</div>
           </div>
 	      </li>
@@ -50,7 +46,7 @@
           	<div class="medium-6 medium-offset-6 columns">
           		<h2 class="blue-heading">Luxury Cars</h2>
           		<p class="gray-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac orci enim. Donec ac massa vel leo pellentesque congue. Morbi a dui bibendum, hendrerit orci sit amet.</p>
-          		<a href="#!" class="btn">Learn More</a>
+          		<a href="#!" class="btn">Learn More</a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
           	</div>
           </div>
 	      </li>
@@ -59,12 +55,17 @@
 	</div>
 </section>
 
-<section class="fast-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/fast-dealer.jpg);">
+<section class="fast-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/background.jpg);">
 	<div class="row">
-		<div class="medium-6 small-10 columns">
+		<div class="small-10 medium-6 large-5 columns">
 			<h2 class="white-heading">Our Dealer Directory: Fast <br class="hide-for-small-only">and Convenient</h2>
 			<p class="white-p">Madico's Dealer Directory is the quickest way to locate the nearest ClearPlex dealer to you.</p>
-			<a href="#!" class="btn">Find A Dealer</a>
+			<a href="http://dealerdirectory.madico.com/" class="btn">Find A Dealer</a>
+		</div>
+		<div class="small-10 medium-6 large-5 large-offset-2 columns end">
+			<h2 class="white-heading">Become a ClearPlex film Dealer: It's Easy and Profitable</h2>
+			<p class="white-p">Add ClearPlex to your Portfolio and Profits to your Bottom Line.</p>
+			<a href="<?php echo site_url(); ?>/become-dealer" class="btn">Become A Dealer</a>
 		</div>
 	</div>
 </section>
@@ -82,3 +83,12 @@
 </section>
 
 <?php get_footer(); ?>
+
+<script>
+	$('.move-next').on('click',function(){
+		$('.orbit').foundation('changeSlide',true);
+	});
+	$('.move-prev').on('click',function(){
+		$('.orbit').foundation('changeSlide',false);
+	});
+</script>
