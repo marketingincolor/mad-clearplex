@@ -44,38 +44,76 @@
 		margin-right:1em;
 	}
 }
-.page-template-page-become-dealer .container .become-dealer-icons {
-	background-image: url(../images/product-benefits.jpg);
-	@extend %bg_center_cover;
-	max-height:900px;
-	margin:2% 0;
-	padding:5% 0;
-	color:#fff;
-	.doc-subhead {
-		margin:2em 0em;
-		.button {
-			background-color:transparent;
-			border:2px solid #ff794a;
-			border-radius:25px;
-			margin:.5em 2em;
+
+.page-template-page-become-dealer .container {
+	.become-dealer-icons {
+		background-image: url(../images/product-benefits.jpg);
+		@extend %bg_center_cover;
+		max-height:900px;
+		margin:2% 0;
+		padding:5% 0;
+		color:#fff;
+		.doc-subhead {
+			margin:2em 0em;
+			.button {
+				background-color:transparent;
+				border:2px solid #ff794a;
+				border-radius:25px;
+				margin:.5em 2em;
+			}
+		}
+		.icons {
+			@include grid-layout-center-last(3);
 		}
 	}
-}
-.page-template-page-become-dealer .container .product-faqs {
-	background-color:#f2f2f2;
-}
-.page-template-page-become-dealer .container .download-docs {
-	padding:5% 0;
-	.columns .doc-row {
-		border:1px solid #d1d1d1;
+	.home-testimonials {
+		.white-quote { display:none; }
 	}
-}
-.page-template-page-become-dealer .container .download-docs .download-link {
-	margin-top:2em;
-	.button {
-		background-color:#fff;
-		color:inherit;
-		border:2px solid #ff794a;
+	.product-faqs {
+		background-color:#f2f2f2;
+			.button {
+				background-color:transparent;
+				border:2px solid #ff794a;
+				border-radius:25px;
+				margin:.5em 2em;
+				color: inherit;
+				text-transform:uppercase;
+				font-weight:500;
+			}
+	}
+	.download-docs {
+		padding:5% 0;
+		.columns .doc-row {
+			border:1px solid #d1d1d1;
+		}
+		.download-link {
+			margin-top:2em;
+			.button {
+				background-color:#fff;
+				color:inherit;
+				border:2px solid #ff794a;
+			}
+		}
+	}
+	.dealer-form {
+		background:linear-gradient(180deg, #004278, #002a4c);
+		color:#fff;
+		padding:3% 0;
+		.nf-form-content {
+			label { color:#fff; }
+			input:not([type=button]), select, textarea { border-radius:25px; }
+			input[type="button"] {
+				background-color:#8db8e9;
+				border:0;
+				border-radius:25px;
+				padding: 0.7rem 1rem;
+				width:100%;
+				color:#004278 !important;
+				font-weight:500;
+				text-transform:uppercase;
+				cursor:pointer;
+			}
+		}
 	}
 }
 // =======================================

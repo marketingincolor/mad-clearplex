@@ -40,7 +40,7 @@
 			<p class="doc-subhead"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
 		</div>
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns small-centered">
-			<div class="row">
+			<div class="row medium-up-3 iconlist small-centered">
 			    <!-- Query custom post type benefits -->
 			    <?php 
 			    	$args = array(
@@ -55,8 +55,32 @@
 			    			$the_query->the_post();
 			    	?>
 
-			    <div class="medium-4 text-center columns">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/guaranteed-icon-white.png" alt="">
+			    <div class="text-center column column-block icons">
+					<?php 
+						$thispost = get_post( get_the_ID() ); 
+						$link = $thispost->post_name; 
+						switch ($link) {
+							case 'optically-clear':
+								$icon = 'window-icon-white.png';
+								break;
+							case 'absorbs-impact':
+								$icon = 'car-icon-white.png';
+								break;
+							case 'guaranteed':
+								$icon = 'guaranteed-icon-white.png';
+								break;
+							case 'transparent':
+								$icon = 'invisible-icon-white.png';
+								break;
+							case 'scratch-resistant':
+								$icon = 'scratch-icon-white.png';
+								break;
+							default:
+								$icon = 'invisible-icon-white.png';
+								break;
+						}
+					?>
+			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/<?php echo $icon; ?>" alt="">
 			    	<h5><?php the_title(); ?></h5>
 			    	<?php the_content(); ?>
 			    </div>
@@ -150,8 +174,28 @@
 		<?php $count++; }} wp_reset_postdata(); ?> 
 
 	</div>
+
+	</div>
+	<div class="row">
+		<div class="large-12 text-center download-link">
+			<a href="<?php echo site_url('/'); ?>faqs" class="button">view all faqs</a>
+		</div>
+	</div>
+
 </section>
 
 <?php get_template_part('template-parts/video-modal'); ?>
+
+<section class="dealer-form">
+	<div class="row">
+		<div class="large-12 columns text-center">
+			<h2 class="heading"><?php the_field('NEEDS_ACF_VARIABLE'); ?></h2>
+			<p class="form-body"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
+		</div>
+		<div class="medium-8 small-centered columns text-center">
+			<?php echo do_shortcode('[ninja_form id=3]'); ?>
+		</div>
+	</div>
+</section>
 
 <?php get_footer(); ?>
