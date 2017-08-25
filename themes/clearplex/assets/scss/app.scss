@@ -17,7 +17,8 @@
 12.) Case Studies
 13.) Form Styles
 14.) Success
-15.) Footer
+15.) Become Distributor
+16.) Footer
 
 */
 
@@ -867,9 +868,15 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	display: none;
 }
 #ninja_forms_required_items, .nf-field-container{
-	@include margin(20,bottom);
+	margin-bottom: 15px!important;
 }
-#nf-form-1-cont{
+.label-above .nf-field-label{
+	margin-bottom: 5px;
+}
+#nf-form-2-cont{
+	@include margin(40,bottom);
+}
+#nf-form-1-cont,#nf-form-2-cont,#nf-form-3-cont{
 	input,select,textarea{
 		border: 2px solid $blue;
 		border-radius: 3px;
@@ -965,7 +972,23 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 // =======================================
-// ============= 15.) Footer =============
+// ======= 15.) Become Distributor =======
+// =======================================
+.become-distributor{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	.gray-p{
+		margin-bottom: 7%;
+	}
+	a{
+		font-weight: 400;
+		@include font(13);
+		color: $blue;
+	}
+}
+
+// =======================================
+// ============= 16.) Footer =============
 // =======================================
 .footer-container{
 	border-top: none;
