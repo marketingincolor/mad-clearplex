@@ -303,6 +303,12 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		cursor: pointer;
 		border: 2px solid $orange;
 		margin-right: 5px;
+		&:hover{
+			background-color: %orange;
+			i{
+				color: $white;
+			}
+		}
 		i{
 			color: $gray;
 		}
