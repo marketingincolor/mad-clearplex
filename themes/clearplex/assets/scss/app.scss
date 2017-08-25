@@ -304,7 +304,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		border: 2px solid $orange;
 		margin-right: 5px;
 		&:hover{
-			background-color: %orange;
+			background-color: $orange;
 			i{
 				color: $white;
 			}
