@@ -29,7 +29,7 @@
 				<?php else : ?>
 					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php endif; // End have_posts() check. ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
@@ -131,7 +131,7 @@
 
 
 			<div class="large-12 text-center download-link">
-				<a href="<?php echo site_url('/'); ?>dealer-resources" class="button">view our dealer resources</a>
+				<a href="<?php echo site_url('/'); ?>/dealer-resources" class="button">View our dealer resources</a>
 			</div>
 		</div>
 	</div>
@@ -189,7 +189,7 @@
 <section class="dealer-form">
 	<div class="row">
 		<div class="large-12 columns text-center">
-			<h2 class="heading"><?php the_field('NEEDS_ACF_VARIABLE'); ?></h2>
+			<h2 class="white-heading"><?php the_field('NEEDS_ACF_VARIABLE'); ?></h2>
 			<p class="form-body"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
 		</div>
 		<div class="medium-8 small-centered columns text-center">

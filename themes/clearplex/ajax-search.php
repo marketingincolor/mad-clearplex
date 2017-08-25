@@ -1,6 +1,6 @@
 <?php 
 
-require('../../../wp-blog-header.php');
+include_once $_SERVER['DOCUMENT_ROOT'].'/wp-blog-header.php';
 header("HTTP/1.1 200 OK"); 
 
 ?>

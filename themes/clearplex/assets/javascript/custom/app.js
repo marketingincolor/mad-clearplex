@@ -73,7 +73,7 @@ function ajaxVideoSearch(){
     var $content = $('.gallery-container');
 
 		$.ajax({
-			url: templateURL + '/page-templates/ajax-search.php',
+			url: templateURL + '/ajax-search.php',
 			type: 'POST',
 			data: {query : query},
 			success: function(response) {
