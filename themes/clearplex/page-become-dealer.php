@@ -8,28 +8,15 @@
 
 <div class="sub-head">
 	<div class="sub-img small-10 small-centered">
-		<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'fp-large' );  ?>
-		<h2 class="blue-heading"><?php echo ( get_post_meta( $post->ID, 'NEEDS_ACF_VARIABLE', true) ? get_post_meta( $post->ID, 'NEEDS_ACF_VARIABLE', true) : get_the_title() ); ?></h2>
+		<h1 class="blue-heading"><?php the_field('top_section_heading'); ?></h1>
 	</div>
 </div>
 
 <section class="become-dealer-content">
 	<div class="row">
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns text-center">
-			<?php if ( have_posts() ) : ?>
-
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-				<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-				<div class="entry-content large-12">
-					<?php the_content(); ?>
-				</div>
-				<?php endwhile; ?>
-
-				<?php else : ?>
-					<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-			<?php endif; ?>
+			<p class="gray-p"><?php the_field('top_section_body') ?></p>
+			<a href="#!" id="dealer-video"><img src="<?php the_field('top_section_video_img'); ?>" alt=""></a>
 		</div>
 	</div>
 </section>
@@ -37,7 +24,7 @@
 <section class="become-dealer-icons">
 	<div class="row">
 		<div class="large-8 medium-10 columns text-center small-centered">
-			<p class="doc-subhead"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
+			<p class="doc-subhead"><?php the_field('benefits_opening_paragraph'); ?></p>
 		</div>
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns small-centered">
 			<div class="row medium-up-3 iconlist small-centered">
@@ -140,8 +127,7 @@
 <section class="product-faqs">
 	<div class="row">
 		<div class="large-12 columns text-center">
-			<h2 class="blue-heading"><?php the_field('NEEDS_ACF_VARIABLE'); ?></h2>
-			<p class="faq-body gray-p"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
+			<h2 class="blue-heading"><?php the_field('dealer_faq_heading'); ?></h2>
 		</div>
 		<div class="medium-5 medium-offset-1 columns">
 

@@ -18,9 +18,12 @@ $(window).scroll(function(){
 // in contact forms, since Ninja Forms can't do it.
 setTimeout(function(){
 	(function addDisabledSelect(){
-		var $form = $('#nf-form-1-cont');
-		$form.find('#nf-field-5').find('option').removeAttr("selected");
-		$form.find('#nf-field-5').find('option:first').before('<option disabled="disabled" selected="selected">Please Choose One</option>');
+		var $form1 = $('#nf-form-1-cont');
+		var $form3 = $('#nf-form-3-cont');
+		$form1.find('#nf-field-5').find('option').removeAttr("selected");
+		$form1.find('#nf-field-5').find('option:first').before('<option disabled="disabled" selected="selected">Please Choose One</option>');
+		$form3.find('#nf-field-22').find('option').removeAttr("selected");
+		$form3.find('#nf-field-22').find('option:first').before('<option disabled="disabled" selected="selected">Please Choose One</option>');
 	})();
 },550);
 
@@ -50,7 +53,7 @@ function benefitsCarousel(){
 	});
 }
 
-// Add video metadeta to modal
+// Add video metadata to modal
 function videoMeta(){
 	$('.column-block').find('a').on('click',function(){
 		var that = this;
@@ -61,7 +64,10 @@ function videoMeta(){
 			$('#video-modal').find('h1').text(videoTitle);
 		});
 		$('#video-modal').foundation('open');
-	})
+	});
+	$('#dealer-video').click(function(){
+		$('#video-modal').foundation('open');
+	});
 }
 
 function ajaxVideoSearch(){
