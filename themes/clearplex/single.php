@@ -1,48 +1,64 @@
 <?php
-/**
- * The template for displaying all single posts and attachments
- *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
- */
+	get_header();
+	get_template_part('template-parts/top-bg');
+?>
 
-get_header(); ?>
+<section class="single-video">
+	<div class="row">
+		<div class="medium-6 medium-offset-1 columns">
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+		  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			
+			<div id="<?php get_the_ID(); ?>"> class="video-container main-video" title="Play Video" data-title="<?php the_title(); ?>" data-video="<?php the_field('video_link'); ?>">
+				<a href="#!"><?php the_post_thumbnail(); ?></a>
+				<a href="#!"><h2 class="blue-heading"><?php the_title(); ?></h2></a>
+				<p class="gray-p"><?php	the_content(); ?></p>
+			</div>
 
-<div class="main-wrap" role="main">
+		  <?php endwhile;endif; ?>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php foundationpress_entry_meta(); ?>
-		</header>
-		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-		<div class="entry-content">
-			<?php the_content(); ?>
-			<?php edit_post_link( __( 'Edit', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+			<a href="#!" class="btn" id="load-more-videos">Load More Videos <i class="fa fa-video-camera" aria-hidden="true"></i></a>
+
 		</div>
-		<footer>
+		<div class="medium-3 medium-offset-1 columns end">
+			<h5 class="gray-p">Related Videos</h5>
+			<!-- set video tags to get related videos -->
 			<?php
-				wp_link_pages(
-					array(
-						'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-						'after'  => '</p></nav>',
-					)
+				$orig_post = $post;
+				$tags = wp_get_post_tags($post->ID);
+				if ($tags) {
+				  $tag_ids = array();
+				  foreach($tags as $individual_tag){ 
+				  	$tag_ids[] = $individual_tag->term_id;
+				  }
+				  $args = array(
+				  'tag__in' => $tag_ids,
+				  'post__not_in' => array($post->ID),
+				  'posts_per_page'=>2
 				);
-			?>
-			<p><?php the_tags(); ?></p>
-		</footer>
-		<?php the_post_navigation(); ?>
-		<?php do_action( 'foundationpress_post_before_comments' ); ?>
-		<?php //comments_template(); ?>
-		<?php do_action( 'foundationpress_post_after_comments' ); ?>
-	</article>
-<?php endwhile;?>
 
-<?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
-</div>
-<?php get_footer();
+			  $my_query = new wp_query( $args );
+			   
+			  while( $my_query->have_posts() ) {
+			    $my_query->the_post();
+
+			?>
+
+				<div class="video-container" title="Play Video" data-title="<?php the_title(); ?>" data-video="<?php the_field('video_link'); ?>">
+					<a href="#!"><?php the_post_thumbnail(); ?></a>
+					<a href="#!"><h4 class="blue-heading"><?php the_title(); ?></h4></a>
+					<p class="gray-p"><?php	the_content(); ?></p>
+				</div>
+
+			<?php
+		      } 
+		    }
+			  $post = $orig_post;
+			  wp_reset_query();
+			?>
+		</div>
+	</div>
+</section>
+
+<?php get_template_part('template-parts/video-modal'); ?>
+<?php get_footer(); ?>

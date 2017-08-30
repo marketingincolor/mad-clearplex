@@ -3,18 +3,18 @@
 $slug = get_post_field( 'post_name', get_post());
 $root = get_bloginfo('template_directory').'/assets/images/';
 
-if (is_single()) {
+// if (is_single()) {
 	if (is_single('case-studies')) {
 		$img = 'top-bg-case-studies.jpg';
-	}if (is_single('videos')) {
-		$img = 'top-bg-videos.jpg';
-	}
+	//}//if (is_single('videos')) {
+		//$img = 'top-bg-videos.jpg';
+	//}
 } else{
 	switch ($slug) {
 		case 'testimonials':
 			$img = 'top-bg-testimonials.jpg';
 			break;
-		case 'dealer-resources':
+		case 'dealer':
 			$img = 'top-bg-windshield.jpg';
 			break;
 		case 'commercial':

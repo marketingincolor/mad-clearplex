@@ -77,7 +77,7 @@
 		<div class="medium-6 small-10 columns">
 			<h2 class="white-heading">About Madico</h2>
 			<p class="white-p">ClearPlex Windhshield Protection Film is brought to you by Madico, a pioneer and world leader in the development of window protection systems. As an award-winning organization, we have been manufacturing high performance, complex, multilayer films engineered to exceed customer expectations since 1903.</p>
-			<a href="/about" class="btn">More About Madico</a>
+			<a href="<?php echo site_url(); ?>/about" class="btn">More About Madico</a>
 		</div>
 	</div>
 </section>

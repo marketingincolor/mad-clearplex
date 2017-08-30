@@ -42,7 +42,7 @@
             <?php $count++; }} wp_reset_postdata(); ?> 
 
 			    </ul>
-			    <div class="large-8 large-offset-1 columns end">
+			    <div class="large-8 columns end">
 			    	<div class="row">
 			    		<div class="large-11 columns end" style="padding-left:0;">
 			    			<nav class="orbit-bullets">

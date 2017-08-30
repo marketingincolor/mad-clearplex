@@ -23,7 +23,7 @@
 			$args = array( 
 				'post_type' => 'faq', 
 				'category_name' => 'consumer',
-				'posts_per_page' => -1 
+				'posts_per_page' => -1
 			);
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>

@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="large-8 large-offset-2 columns">
 				<h2 class="blue-heading text-center"><?php the_title(); ?></h2>
-				<p class="subhead"><?php the_field('terms_subheading'); ?></p>
+				<p class="subhead subheading"><?php the_field('terms_subheading'); ?></p>
 				<?php the_content(); ?>
 			</div>
 		</div>

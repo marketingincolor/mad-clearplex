@@ -55,7 +55,7 @@ function benefitsCarousel(){
 
 // Add video metadata to modal
 function videoMeta(){
-	$('.column-block').find('a').on('click',function(){
+	$('.video-container').find('a').on('click',function(){
 		var that = this;
 		$('#video-modal').bind('open.zf.reveal',function(){
 			var videoSrc   = $(that).parent().data('video');
@@ -67,6 +67,22 @@ function videoMeta(){
 	});
 	$('#dealer-video').click(function(){
 		$('#video-modal').foundation('open');
+	});
+}
+
+function ajaxLoadMoreVideos(){
+	$('#load-more-videos').on('click',function(e){
+		e.preventDefault();
+    
+
+		$.ajax({
+			url: templateURL + '/load-more-videos.php',
+			type: 'POST',
+			data: {query : query},
+			success: function(response) {
+        $content.html(response);
+      }
+		});
 	});
 }
 

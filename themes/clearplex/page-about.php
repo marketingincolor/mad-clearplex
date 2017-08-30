@@ -9,6 +9,8 @@
 <div class="sub-head">
 	<div class="sub-img small-10 small-centered">
 		<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'fp-large' );  ?>
+	</div>
+	<div class="sub-img small-10 large-8 small-centered">
 		<h2 class="blue-heading"><?php echo ( get_post_meta( $post->ID, 'about_title', true) ? get_post_meta( $post->ID, 'about_title', true) : get_the_title() ); ?></h2>
 	</div>
 </div>

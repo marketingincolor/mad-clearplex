@@ -12,7 +12,7 @@
 			<h2 class="blue-heading"><?php the_field('top_heading'); ?></h2>
 		</div>
 		<div class="large-10 large-offset-1 columns text-center end">
-			<p class="gray-p"><?php the_field('top_body'); ?></p>
+			<p class="gray-p subheading"><?php the_field('top_body'); ?></p>
 		</div>
 	</div>
 </section>

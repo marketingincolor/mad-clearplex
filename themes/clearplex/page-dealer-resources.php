@@ -12,11 +12,11 @@
 			<h1 class="blue-heading"><?php the_field('dealer_intro_title'); ?></h1>
 		</div>
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns text-center end">
-			<?php the_field('dealer_intro_body'); ?>
+			<p class="gray-p subheading"><?php the_field('dealer_intro_body'); ?></p>
 		</div>
 	</div>
 </section>
-
+f
 <section class="dealer-videos" style="background-image: url(<?php the_field('dealer_video_bg'); ?>);">
 	<div class="row">
 		<div class="large-12 columns text-center">
@@ -52,6 +52,7 @@
 
 			<!-- query link post format -->
 			<?php
+			$count = 0;
 			$link_query = new WP_Query( array(
 				'posts_per_page' => 3,
 		    'tax_query'      => array(
@@ -65,7 +66,7 @@
 			if ($link_query->have_posts()) : while ($link_query->have_posts()) : $link_query->the_post();
 			?>
 
-				<div class="row doc-row">
+				<div class="row doc-row<?php if($count == 0 || $count == 1){echo ' no-border-bottom';} ?>">
 					<ul class="doc-list">
 						<li class="one-fifth"><?php the_post_thumbnail(); ?></li>
 						<li class="three-fifths"><h5 class="doc-title"><?php the_title(); ?></h5>
@@ -74,7 +75,7 @@
 					</ul>
 				</div>
 
-			<?php endwhile;endif;wp_reset_postdata(); ?>
+			<?php $count++;endwhile;endif;wp_reset_postdata(); ?>
 		</div>
 	</div>
 </section>

@@ -15,7 +15,7 @@
 <section class="become-dealer-content">
 	<div class="row">
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns text-center">
-			<p class="gray-p"><?php the_field('top_section_body') ?></p>
+			<p class="gray-p subheading"><?php the_field('top_section_body') ?></p>
 			<a href="#!" id="dealer-video"><img src="<?php the_field('top_section_video_img'); ?>" alt=""></a>
 		</div>
 	</div>
@@ -23,10 +23,8 @@
 
 <section class="become-dealer-icons">
 	<div class="row">
-		<div class="large-8 medium-10 columns text-center small-centered">
+		<div class="small-10 columns small-centered">
 			<p class="doc-subhead"><?php the_field('benefits_opening_paragraph'); ?></p>
-		</div>
-		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns small-centered">
 			<div class="row medium-up-3 iconlist small-centered">
 			    <!-- Query custom post type benefits -->
 			    <?php 
@@ -75,7 +73,7 @@
 			</div>
 		</div>
 		<div class="large-8 medium-10 columns text-center small-centered">
-			<p class="doc-subhead"><a href="" class="button">Become A Dealer</a> <a href="" class="button">View Case Studies</a></p>
+			<p class="doc-subhead"><a href="#dealer-form" class="btn" style="margin-right:10px">Become A Dealer</a> <a href="<?php echo site_url(); ?>/case-studies" class="btn">View Case Studies</a></p>
 		</div>
 	</div>
 </section>
@@ -85,13 +83,14 @@
 <section class="download-docs">
 	<div class="row">
 		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns text-center">
-			<h2 class="blue-heading"><?php the_field('NEEDS_ACF_VARIABLE'); ?></h2>
-			<p class="gray-p doc-subhead"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
+			<h2 class="blue-heading"><?php the_field('dealer_documents_heading'); ?></h2>
+			<p class="gray-p doc-subhead"><?php the_field('dealer_documents_body'); ?></p>
 		</div>
 		<div class="medium-10 medium-offset-1 columns end">
 
 			<!-- query link post format -->
 			<?php
+			$count = 0;
 			$link_query = new WP_Query( array(
 				'posts_per_page' => 3,
 		    'tax_query'      => array(
@@ -105,20 +104,20 @@
 			if ($link_query->have_posts()) : while ($link_query->have_posts()) : $link_query->the_post();
 			?>
 
-				<div class="row doc-row">
+				<div class="row doc-row<?php if($count == 0 || $count == 1){echo ' no-border-bottom';}if($count == 2){echo ' btm-margin';} ?>">
 					<ul class="doc-list">
 						<li class="one-fifth"><?php the_post_thumbnail(); ?></li>
 						<li class="three-fifths"><h5 class="doc-title"><?php the_title(); ?></h5>
 							<p class="doc-body"><?php echo get_the_content(); ?></p></li>
-						<li class="one-fifth"><a href="<?php the_field('download_button_link'); ?>" class="button"><?php the_field('download_button_text'); ?> <i class="fa fa-download" aria-hidden="true"></i></a></li>
+						<li class="one-fifth"><a href="<?php echo site_url();the_field('download_button_link'); ?>" class="button"><?php the_field('download_button_text'); ?> <i class="fa fa-download" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
 
-			<?php endwhile;endif;wp_reset_postdata(); ?>
+			<?php $count++;endwhile;endif;wp_reset_postdata(); ?>
 
 
 			<div class="large-12 text-center download-link">
-				<a href="<?php echo site_url('/'); ?>/dealer-resources" class="button">View our dealer resources</a>
+				<a href="<?php echo site_url(); ?>/dealer" class="btn">View our dealer resources</a>
 			</div>
 		</div>
 	</div>
@@ -172,11 +171,11 @@
 
 <?php get_template_part('template-parts/video-modal'); ?>
 
-<section class="dealer-form">
+<section class="dealer-form" id="dealer-form">
 	<div class="row">
-		<div class="large-12 columns text-center">
-			<h2 class="white-heading"><?php the_field('NEEDS_ACF_VARIABLE'); ?></h2>
-			<p class="form-body"><?php the_field('NEEDS_ACF_VARIABLE'); ?></p>
+		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns text-center">
+			<h2 class="white-heading"><?php the_field('form_section_heading'); ?></h2>
+			<p class="form-body"><?php the_field('form_section_body'); ?></p>
 		</div>
 		<div class="medium-8 small-centered columns text-center">
 			<?php echo do_shortcode('[ninja_form id=3]'); ?>
@@ -185,3 +184,7 @@
 </section>
 
 <?php get_footer(); ?>
+
+<script>
+	$('#menu-item-18').find('a').attr('href',location.href + '#dealer-form');
+</script>

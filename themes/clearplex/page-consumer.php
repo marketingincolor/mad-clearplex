@@ -2,18 +2,17 @@
 	/*
 	Template Name: Consumer
 	*/
-	get_header();
+	get_header('find-dealer');
 	get_template_part('template-parts/top-bg');
 ?>
 
 <section class="best-windshield">
 	<div class="row">
 		<div class="large-6 large-offset-3 medium-8 medium-offset-2 columns text-center">
-			<h2 class="blue-heading"><?php the_field('heading'); ?></h2>
+			<h2 class="blue-heading"><?php the_field('top_section_heading'); ?></h2>
 		</div>
 		<div class="large-10 large-offset-1 columns text-center end">
-			<p class="gray-p"><?php the_field('first_paragraph'); ?></p>
-			<p class="gray-p"><?php the_field('second_paragraph'); ?></p>
+			<p class="gray-p subheading"><?php the_field('top_section_first_paragraph'); ?></p>
 		</div>
 	</div>
 </section>
