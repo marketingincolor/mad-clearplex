@@ -368,7 +368,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 address.gray-p{
 	@include font(16);
 	font-style: normal;
-	color: #787878;
+	color: $gray;
 	.author{
 		font-weight: 600;
 		text-transform: uppercase;
@@ -502,6 +502,7 @@ address.gray-p{
 		font-family: 'Montserrat';
 		li{
 			font-weight: 400;
+			line-height: 1.5;
 		}
 	}
 }
@@ -844,7 +845,7 @@ address.gray-p{
 				text-transform: uppercase;
 				@include font(13);
 				font-weight: 500;
-				padding: 5px 15px;
+				padding: 9px 20px;
 				border-radius: 20px;
 				transition: background-color 0.25s ease-in-out;
 				&:hover{
@@ -1102,6 +1103,7 @@ address.gray-p{
 	}
 	address p:first-of-type, .terms{
 		@include margin(0,bottom);
+		a:hover{color: $orange}
 	}
 	a,i{
 		color: #346094;
@@ -1113,7 +1115,7 @@ address.gray-p{
 	}
 	li:hover{
 		a,i{
-			color: #787878;
+			color: $orange;
 		}
 	}
 	#menu-footer-menu{

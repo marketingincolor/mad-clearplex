@@ -24,13 +24,15 @@
 	padding-top:0;
 	.ltblue-heading {
 		color:#8db8e9;
+		@include font(24);
 	}
 	.question:before { content:"Q. "; }
 	.answer p:before { content:"A. "; }
-	.answer {
-		font-size:1.125rem;
-		p { display:inline; font-size:1.125rem; }
-		}
+}
+.page-template-page-faqs{
+	.product-faqs .answer{
+		@include margin(40,bottom);
+	}
 }
 .entry-content p{
 	@include font(16);
@@ -49,7 +51,7 @@
 .page-template-page-become-dealer .container {
 	.become-dealer-content{
 		padding-bottom: 10%;
-		.subheading{
+		.subheading {
 			margin-bottom: 30px;
 		}
 	}
@@ -57,7 +59,6 @@
 		background-image: url(../images/product-benefits.jpg);
 		@extend %bg_center_cover;
 		max-height:900px;
-		margin:2% 0;
 		padding:5% 0;
 		color:#fff;
 		h5{
@@ -161,6 +162,12 @@
 		background-color: $orange !important;
 	}
 }
+.about-sidebar{
+	.ca-title{
+		@include font(18);
+		font-weight: 500;
+	}
+}
 .widget_sidenav {
 	padding-bottom:1.5rem;
 	.page-buttons {
@@ -207,9 +214,8 @@
 	padding:1.5rem 0rem;
 	.white-quote { display:none; }
 	.gray-quote { margin-bottom:1rem; }
-	.read-more { 
-	color: #dc582a;
-  	font-weight: 500;
+	.gray-p { 
+	  @include font(14);
   }
   .orbit-bullets {
   	text-align: left;
@@ -234,7 +240,8 @@
 }
 .widget_contact{
 	.contact-address{
-		font-weight: 500;
+		font-weight: 300;
 		color: $gray;
+		@include font(14);
 	}
 }

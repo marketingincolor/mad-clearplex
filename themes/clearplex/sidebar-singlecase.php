@@ -12,9 +12,5 @@
 	<article id="testimonial" class="widget widget_testimonial">
 		<?php get_template_part('template-parts/testimonials-side'); ?>
 	</article>
-	<article id="links" class="widget widget_links">
-		<p><a href="<?php echo site_url(); ?>/become-dealer"><button>Become A Dealer</button></a></p>
-		<p><a href="<?php echo site_url(); ?>/become-distributor"><button>Become A Distributor</button></a></p>
-	</article>
 	</div>
 </aside>

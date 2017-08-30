@@ -27,7 +27,7 @@
 				<?php }if($options['linkedin_link']){ ?>
 					<li><a href="<?php echo $options['linkedin_link']; ?>"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 				<?php }if($options['youtube_link']){ ?>
-					<li><a href="<?php echo $options['youtube_link']; ?>"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					<li><a href="<?php echo $options['youtube_link']; ?>"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
 				<?php } ?>
 			</ul>
 			<ul class="link-list">
@@ -48,14 +48,6 @@
 
 			</ul>
 	  </div>
-	  	
-	  	<?php if ($slug == 'review-success') { ?>
-	  		<div class="small-12 columns text-center">
-	  			<h2 class="blue-heading read-test" style="opacity:0">Read Testimonials</h2>
-	  		</div>
-	  		<?php get_template_part('template-parts/testimonials-section'); ?>
-	  	<?php } ?>
-
 	</div>
 </section>
 

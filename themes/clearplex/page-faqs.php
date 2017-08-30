@@ -52,11 +52,11 @@
 		</div>
 
 		<div id="dealer" class="product-faqs dealer">
-			<h2 class="ltblue-heading">Dealers</h2>
+			<h2 class="ltblue-heading">Dealer</h2>
 			<?php 
 			$args = array( 
 				'post_type' => 'faq', 
-				'category_name' => 'dealer',
+				'category_name' => 'dealer, become-dealer',
 				'posts_per_page' => -1
 			);
 			$loop = new WP_Query( $args );

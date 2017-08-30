@@ -3,16 +3,10 @@
 			<!-- Query custom post type faq -->
 			<?php
 				$slug = get_post_field( 'post_name', get_post() );
-				$pos  = strpos($slug, 'dealer');
-				if ($pos !== false) {
-					$cat = 'dealer';
-				} else{
-					$cat = $slug;
-				}
 				$args = array(
 					'post_type'      => 'faq',
 					'posts_per_page' => -1,
-					'category_name'  => $cat
+					'category_name'  => $slug
 				);
 				$count = 1;
 				$the_query = new WP_Query($args);

@@ -5,16 +5,20 @@ $(document).ready(function(){
 	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial') || $('body').hasClass('page-template-page-become-dealer')) {
 		benefitsCarousel();
 	}
+	if ($('body').hasClass('page-template-page-faqs')){
+		faqMenuSlider();
+	}
 	navSlideDown();
 	videoMeta();
 	ajaxVideoSearch();
-	faqMenuSlider();
 	smoothScrollSidebar();
 });
 
 $(window).scroll(function(){
 	navSlideDown();
-	faqMenuSlider();
+	if ($('body').hasClass('page-template-page-faqs')){
+		faqMenuSlider();
+	}
 });
 
 // Adds a disabled option to the beginning of <select> elements on Contact Page
@@ -38,9 +42,6 @@ function smoothScrollSidebar(){
 		var scrollToEle    = $('#'+idFirst);
 		var scrollToEleTop = scrollToEle.offset().top;
 		var sideNavFromTop = 235;
-
-		console.log('Scroll to element = '+scrollToEle);
-		console.log('Scroll to element position = '+scrollToEleTop);
 
 		$('html, body').animate({
       scrollTop: scrollToEleTop - sideNavFromTop

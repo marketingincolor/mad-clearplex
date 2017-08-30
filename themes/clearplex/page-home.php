@@ -11,9 +11,9 @@
 		<div class="medium-9 columns">
 			<div class="slide-meta">
 				<h1>CLEARPLEX<sup>&reg;</sup> Windshield Protection Film</h1>
-				<h2>High Performance Cars Deserve the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
-				<p>Because your vehicle is more than a car, it's a prized possession.</p>
-				<a href="<?php echo site_url(); ?>/#!" class="btn">Learn More</a>
+				<h2>Enhance your Vehicle with the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
+				<p>Because it's more than a car, it's a prized possession.</p>
+				<a href="<?php echo site_url(); ?>/product" class="btn">Learn More</a>
 			</div>
 		</div>
 	</div>
@@ -26,8 +26,8 @@
 	      <li class="is-active orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/performance-vehicle.jpg);">
 	        <div class="row">
 	        	<div class="medium-4 medium-offset-8 columns">
-	        		<h2 class="blue-heading">Performance Cars Heading Goes Here</h2>
-	        		<p class="gray-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac orci enim. Donec ac massa vel leo pellentesque congue. Morbi a dui bibendum, hendrerit orci sit amet.</p>
+	        		<h2 class="blue-heading">The Ideal Solution for Performance Cars</h2>
+	        		<p class="gray-p">With ClearPlex get the performance you expect. High-performance protection for your high-performance vehicle.</p>
 	        		<a href="<?php echo site_url(); ?>/product" class="btn">Learn More</a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
 	        	</div>
 	        </div>
@@ -35,8 +35,8 @@
 	      <li class="orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/commercial-vehicles.jpg);">
           <div class="row">
           	<div class="medium-4 medium-offset-8 columns">
-          		<h2 class="blue-heading">Keep Fleets on The Road&mdash;And Off The Repair List</h2>
-          		<p class="gray-p">With ClearPlex, windshields and bottom lines are protected.</p>
+          		<h2 class="blue-heading">The Ideal Solution for Fleets</h2>
+          		<p class="gray-p">Keep fleets on the road&mdash;and off the pepair list. With ClearPlex, windshields and bottom lines are protected.</p>
           		<a href="<?php echo site_url(); ?>/product" class="btn">Learn More</a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
           	</div>
           </div>
@@ -44,7 +44,7 @@
 	      <li class="orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/luxury-classic.jpg);">
           <div class="row">
           	<div class="medium-4 medium-offset-8 columns">
-          		<h2 class="blue-heading">The Ideal Solution for All Vehicles: Luxury &amp; Classic Cars</h2>
+          		<h2 class="blue-heading">The Ideal Solution for Luxury &amp; Classic Cars</h2>
           		<p class="gray-p">With ClearPlex, you'll get more than protection, you'll get peace of mind.</p>
           		<a href="<?php echo site_url(); ?>/product" class="btn">Learn More</a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
           	</div>
@@ -58,9 +58,9 @@
 <section class="fast-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/fast-dealer.jpg);">
 	<div class="row">
 		<div class="small-10 medium-6 large-5 columns">
-			<h2 class="white-heading">Our Dealer Directory: Fast <br class="hide-for-small-only">and Convenient</h2>
-			<p class="white-p">Madico's Dealer Directory is the quickest way to locate the nearest ClearPlex dealer to you.</p>
-			<a href="<?php echo site_url(); ?>/contact" class="btn">Find A Dealer</a>
+			<h2 class="white-heading">Expand Your Portfolio and Improve Profits with ClearPlex Windshield Protection Film.</h2>
+			<p class="white-p">ClearPlex film is a natural, easy tie-in if you currently sell paint protection film and/or window film.</p>
+			<a href="<?php echo site_url(); ?>/become-dealer" class="btn">Become A Dealer</a>
 		</div>
 	</div>
 </section>

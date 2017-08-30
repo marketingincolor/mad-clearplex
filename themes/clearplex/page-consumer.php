@@ -22,7 +22,7 @@
 		<div class="large-4 large-offset-8 columns">
 			<h2 class="blue-heading"><?php the_field('vehicle_type_heading'); ?></h2>
 			<p class="gray-p"><?php the_field('vehicle_type_body'); ?></p>
-			<a href="<?php the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
+			<a href="<?php echo site_url();the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
 		</div>
 	</div>
 </section>
