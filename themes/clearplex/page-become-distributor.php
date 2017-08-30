@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="large-8 small-10 small-centered text-center">
 			<h1 class="blue-heading"><?php the_field('distributor_heading'); ?></h1>
-			<p class="gray-p"><?php the_field('distributor_body'); ?></p>
+			<p class="gray-p subheading"><?php the_field('distributor_body'); ?></p>
 		</div>
 		<div class="large-6 medium-8 small-10 small-centered">
 			<?php echo do_shortcode('[ninja_form id=2]'); ?>

@@ -2,16 +2,23 @@ $(document).ready(function(){
 	if ($('body').hasClass('home')) {
 		owlCarousel();
 	}
-	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial')) {
+	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial') || $('body').hasClass('page-template-page-become-dealer')) {
 		benefitsCarousel();
+	}
+	if ($('body').hasClass('page-template-page-faqs')){
+		faqMenuSlider();
 	}
 	navSlideDown();
 	videoMeta();
 	ajaxVideoSearch();
+	smoothScrollSidebar();
 });
 
 $(window).scroll(function(){
 	navSlideDown();
+	if ($('body').hasClass('page-template-page-faqs')){
+		faqMenuSlider();
+	}
 });
 
 // Adds a disabled option to the beginning of <select> elements on Contact Page
@@ -26,6 +33,56 @@ setTimeout(function(){
 		$form3.find('#nf-field-22').find('option:first').before('<option disabled="disabled" selected="selected">Please Choose One</option>');
 	})();
 },550);
+
+//smooth scroll on sidebar click
+function smoothScrollSidebar(){
+	$('.about-sidebar').find('a').on('click',function(){
+		var id             = $(this).find('button').attr('id');
+		var idFirst        = id.split('-')[0];
+		var scrollToEle    = $('#'+idFirst);
+		var scrollToEleTop = scrollToEle.offset().top;
+		var sideNavFromTop = 235;
+
+		$('html, body').animate({
+      scrollTop: scrollToEleTop - sideNavFromTop
+    }, 500);
+
+	});
+}
+
+//faq menu slider sidebar thingy
+function faqMenuSlider(){
+	var consumerTop    = $('.product-faqs.consumer').offset().top;
+	var commercialTop  = $('.product-faqs.commercial').offset().top;
+	var dealerTop      = $('.product-faqs.dealer').offset().top;
+	var $sidebar       = $('#side-nav');
+	var $buttons       = $('#consumer-button, #dealer-button, #commercial-button');
+	var sideNavFromTop = $('#side-nav').offset().top - $(window).scrollTop();
+
+	if($(window).scrollTop() < consumerTop / 2){
+		$sidebar.removeClass('sidebar-fixed');
+		$buttons.removeClass('active-button');
+	} 
+	if ($(window).scrollTop() >= consumerTop / 2) {
+		$sidebar.addClass('sidebar-fixed').css({'top':consumerTop / 2});
+		$('#commercial-button,#dealer-button').removeClass('active-button');
+		$('#consumer-button').addClass('active-button');
+	} 
+	if ($(window).scrollTop() >= commercialTop - sideNavFromTop - 100) {
+		$('#consumer-button,#dealer-button').removeClass('active-button');
+		$('#commercial-button').addClass('active-button');
+	} 
+	if ($(window).scrollTop() >= dealerTop - sideNavFromTop - 100) {
+		$('#consumer-button,#commercial-button').removeClass('active-button');
+		$('#dealer-button').addClass('active-button');
+	}
+	if ($(window).scrollTop() >= $('.container').outerHeight() - 300 - $('#side-nav').outerHeight()) {
+		$sidebar.addClass('sidebar-absolute').removeClass('sidebar-fixed').css({'top':$('.container').outerHeight() - 300});
+	}
+	if ($(window).scrollTop() <= $('.container').outerHeight() - 300 - $('#side-nav').outerHeight() && $(window).scrollTop() >= consumerTop / 2) {
+		$sidebar.addClass('sidebar-fixed').removeClass('sidebar-absolute').css({'top':consumerTop / 2});
+	}
+}
 
 //product benefits carousel
 function benefitsCarousel(){
@@ -67,6 +124,22 @@ function videoMeta(){
 	});
 	$('#dealer-video').click(function(){
 		$('#video-modal').foundation('open');
+	});
+}
+
+function ajaxLoadMoreVideos(){
+	$('#load-more-videos').on('click',function(e){
+		e.preventDefault();
+    
+
+		$.ajax({
+			url: templateURL + '/load-more-videos.php',
+			type: 'POST',
+			data: {query : query},
+			success: function(response) {
+        $content.html(response);
+      }
+		});
 	});
 }
 

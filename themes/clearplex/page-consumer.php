@@ -2,18 +2,17 @@
 	/*
 	Template Name: Consumer
 	*/
-	get_header();
+	get_header('find-dealer');
 	get_template_part('template-parts/top-bg');
 ?>
 
 <section class="best-windshield">
 	<div class="row">
 		<div class="large-6 large-offset-3 medium-8 medium-offset-2 columns text-center">
-			<h2 class="blue-heading"><?php the_field('heading'); ?></h2>
+			<h2 class="blue-heading"><?php the_field('top_section_heading'); ?></h2>
 		</div>
 		<div class="large-10 large-offset-1 columns text-center end">
-			<p class="gray-p"><?php the_field('first_paragraph'); ?></p>
-			<p class="gray-p"><?php the_field('second_paragraph'); ?></p>
+			<p class="gray-p subheading"><?php the_field('top_section_first_paragraph'); ?></p>
 		</div>
 	</div>
 </section>
@@ -23,7 +22,7 @@
 		<div class="large-4 large-offset-8 columns">
 			<h2 class="blue-heading"><?php the_field('vehicle_type_heading'); ?></h2>
 			<p class="gray-p"><?php the_field('vehicle_type_body'); ?></p>
-			<a href="<?php the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
+			<a href="<?php echo site_url();the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
 		</div>
 	</div>
 </section>
@@ -65,39 +64,14 @@
 
 <section class="product-faqs">
 	<div class="row">
-		<div class="large-12 columns text-center">
+		<div class="medium-10 small-centered columns text-center">
 			<h2 class="blue-heading">FAQ<small>s</small></h2>
 		</div>
-		<div class="medium-5 medium-offset-1 columns">
-		<!-- Query custom post type faq -->
-		<?php 
+		<div class="medium-10 small-centered columns">
 
-			$args = array(
-				'post_type'      => 'faq',
-				'posts_per_page' => 5,
-			);
-			$count = 1;
-			$the_query = new WP_Query($args);
-
-			if ( $the_query->have_posts() ) {
-				while ( $the_query->have_posts() ) {
-					$the_query->the_post();
-					$count_faqs = wp_count_posts('faq')->publish;
-			?>
-
-				<h5 class="question">Q. <?php the_title(); ?></h5>
-				<div class="answer">A. <?php echo get_the_content(); ?></div>
-				<?php if ($count == floor($count_faqs / 2)) { ?>
-					</div><div class="medium-5 columns end">	
-				<?php } ?>
+			<?php get_template_part('template-parts/dealer-faqs'); ?>
 			
-				<?php if ($count == $count_faqs) { ?>
-					</div>
-				<?php } ?>
-			
-		<?php $count++; }} wp_reset_postdata(); ?> 
-
-	</div>
+		</div>
 </section>
 
 <section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-consumer.jpg);">

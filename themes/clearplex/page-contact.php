@@ -15,7 +15,7 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 			
 			<div class="entry-content large-11">
-				<p class="gray-p"><?php echo get_the_content(); ?></p>
+				<p class="gray-p subheading"><?php echo get_the_content(); ?></p>
 			</div>
 			<?php endwhile; ?>
 

@@ -30,13 +30,15 @@ h1,h2,h3,h4,h5,p,li,a{
 	line-height: 1.3;
 }
 .menu a{
-	@include montserrat(400);
+	@include montserrat(600);
 }
 p{
 	@include font(18);
+	@include margin(25,bottom);
 }
 h1,h2{
 	@include font(36);
+	@include margin(15,bottom);
 }
 .blue-heading{
 	color: $blue;
@@ -51,10 +53,15 @@ h1,h2{
 	}
 }
 .gray-p {
+	line-height: 1.6;
 	color: $gray;
 }
 .white-p {
 	color: $white;
+}
+.subheading{
+	line-height: 1.6;
+	color: #787878;
 }
 label{
 	@include font(14);
@@ -71,6 +78,9 @@ label{
 	@include breakpoint(medium){
 		@include margin(0,top);
 	}
+}
+.orbit-container:focus{
+	outline: none;
 }
 // Video Modal Styles
 #video-modal{
@@ -118,7 +128,7 @@ label{
 		width: 100%;
 		opacity:1;
 		position:fixed;
-		background-color: #064579;
+		background-color: $blue;
 		z-index: 99;
 		padding-top: 1%;
 		@media(max-width: 943px){
@@ -149,8 +159,9 @@ label{
 			}
 		}
 	}
-	.current_page_item{
-		border-bottom: 2px solid #f6c831;
+	.current_page_item a{
+		color: $orange;
+		font-weight: 700;
 	}
 	ul{
 		background-color: $clear;
@@ -217,12 +228,15 @@ label{
 			}
 		}
 	}
-	#menu-header-menu li:last-child{
+	#menu-header-menu li:last-child,#menu-header-consumer:last-child{
 		border-bottom: none;
 	}
-	#menu-header-menu li:last-child a{
+	#menu-header-menu li:last-child a,#menu-header-consumer li:last-child a{
 		@extend %orange-btn;
 		text-transform: uppercase;
+		font-size: 0.8em;
+		margin-left: 10px;
+		color: $white;
 	}
 }
 body:not(.home):not(.page-template-page-products) .top-bar .top-bar-left {
@@ -274,6 +288,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		h2{
 			line-height: 40px;
 		}
+		p{margin-bottom: 25px}
 	}
 	.owl-nav{
 		position: absolute;
@@ -297,12 +312,13 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 // vehicle types carousel section
 .vehicle-types{
 	.move-next,.move-prev{
-		padding: 6px 10px;
+		padding: 6px 11px;
 		background-color: white;
 		border-radius: 50%;
 		cursor: pointer;
 		border: 2px solid $orange;
 		margin-right: 5px;
+		transition: all 0.25s ease-in-out;
 		&:hover{
 			background-color: $orange;
 			i{
@@ -311,13 +327,23 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		}
 		i{
 			color: $gray;
+			position: relative;
 		}
+	}
+	.move-next i{
+		left: 2px;
+	}
+	.move-prev i{
+		right: 2px;
 	}
 	.orbit-slide{
 		padding: 10% 0;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
+		p{
+			@include margin(30,bottom);
+		}
 		a{
 			margin-right: 10px;
 		}
@@ -339,20 +365,29 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 .home .home-testimonials .white-quote{
 	display: none;
 }
+address.gray-p{
+	@include font(16);
+	font-style: normal;
+	color: $gray;
+	.author{
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
 .home-testimonials{
 	padding: 8% 0;
 	.read-more{
 		color: $orange;
 		text-transform: uppercase;
 		font-weight: 500;
+		font-size: 0.8em;
+	}
+	.large-1.columns{
+		padding: 0;
+		padding-top: 10px;
 	}
 	address.gray-p{
 		@include font(14);
-		font-style: normal;
-		.author{
-			font-weight: 600;
-			text-transform: uppercase;
-		}
 	}
 	i {
 		color: $blue;
@@ -393,19 +428,21 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 }
 .product-types{
-	padding: 9% 0;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+	padding: 10% 0;
+	@extend %bg_center_cover;
+	.gray-p{
+		margin-bottom: 30px;
+	}
 	a{
 		@extend %orange-btn;
 		@extend %learn-more;
 		color: $gray;
 		font-weight: 500;
 	}
+
 }
 .product-benefits{
-	padding: 9% 0;
+	padding: 10% 0;
 	.owl-carousel .owl-item img{
 		width: auto;
 		margin: 0 auto 20px;
@@ -461,12 +498,21 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	.answer{
 		@include font(14);
 		@include margin(50,bottom);
+		color: $gray;
+		font-family: 'Montserrat';
+		li{
+			font-weight: 400;
+			line-height: 1.5;
+		}
 	}
 }
 
 .find-dealer{
 	padding: 8% 0;
 	@extend %bg_center_cover;
+	.white-p{
+		margin-bottom: 30px;
+	}
 }
 // =======================================
 // ============= 5.) Dealer  =============
@@ -513,8 +559,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	.doc-row{
 		position: relative;
 		padding: 30px 0;
-		border-top: 1px solid #d1d1d1;
-		border-bottom: 1px solid #d1d1d1;
+		border: 1px solid #d1d1d1;
 		.doc-list{
 			display: flex;
 			list-style-type: none;
@@ -529,7 +574,13 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 			.three-fifths{
 				flex-basis: 65%;
 			}
+			img{
+				box-shadow: 0 0 5px 1px #ccc;
+			}
 		}
+	}
+	.no-border-bottom{
+		border-bottom: none;
 	}
 	.doc-title{
 		color: $gray;
@@ -547,15 +598,17 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		text-transform: uppercase;
 		@include font(13);
 		font-weight: 500;
+		padding: 9px 20px;
 		@include margin(0,bottom);
+		transition: background-color 0.25s ease-in-out;
+		&:hover{
+			background-color: $orange;
+		}
 	}
 }
 .page-template-page-dealer-resources{
 	.product-faqs{
 		background-color: #f2f2f2;
-	}
-	.blue-heading{
-		@include margin(10,bottom);
 	}
 	.faq-body{
 		@include margin(50,bottom);
@@ -641,6 +694,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	td,th{
 		padding: 1.5% 2%;
 		width: 25%;
+		font-family: 'Montserrat';
 	}
 	table{
 		border-collapse: collapse;
@@ -673,6 +727,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 
 .product-optimize{
 	padding: 10% 0;
+	@extend %bg_center_cover;
 }
 
 // =======================================
@@ -707,7 +762,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
 	.wp-post-image{
-		@include margin(30,bottom);
+		@include margin(20,bottom);
 		width: 100%;
 	}
 	.gray-p,form{
@@ -724,6 +779,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	.white-p{
 		color: $gray;
 		@include font(14);
+		line-height: 1.5;
 	}
 	.input-group{
 		position: relative;
@@ -734,6 +790,23 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
     position: absolute;
     right: 5px;
     top: 0;
+	}
+	form #s{
+		box-shadow: none;
+    border-radius: 3px;
+    border-width: 2px;
+	}
+}
+.single-video{
+	padding: 10% 0;
+	.btn{
+		background-color: $blue;
+		border: 2px solid $blue;
+		transition: all 0.25s ease-in-out;
+		&:hover{
+			background-color: $orange;
+		  border: 2px solid $orange;
+		}
 	}
 }
 // =======================================
@@ -772,7 +845,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 				text-transform: uppercase;
 				@include font(13);
 				font-weight: 500;
-				padding: 5px 15px;
+				padding: 9px 20px;
 				border-radius: 20px;
 				transition: background-color 0.25s ease-in-out;
 				&:hover{
@@ -804,6 +877,9 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 // =======================================
 .case-study-feed{
 	padding: 10% 0;
+	.blue-heading{
+		margin-bottom: 20px;
+	}
 	ul.tabs{
 		border: none;
 		@include margin(50,bottom);
@@ -819,9 +895,13 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	a{
 		transition: color 0.25s ease-in-out;
 		font-weight: 400;
+		color: $gray;
 		&:hover{
 			color: #dc582a;
 		}	
+	}
+	.gray-p{
+		margin-bottom: 30px;
 	}
 	.is-active a{
 		color: #dc582a;
@@ -833,7 +913,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		text-transform: uppercase;
 		font-weight: 500;
 		background-color: $blue;
-		padding: 7px 20px;
+		padding: 9px 20px;
 		border-radius: 25px;
 		transition: background-color 0.25s ease-in-out;
 		&:hover{
@@ -875,12 +955,12 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	margin-bottom: 15px!important;
 }
 .label-above .nf-field-label{
-	margin-bottom: 5px;
+	margin-bottom: 1px !important;
 }
 #nf-form-2-cont{
 	@include margin(40,bottom);
 }
-#nf-form-1-cont,#nf-form-2-cont,#nf-form-3-cont{
+#nf-form-1-cont,#nf-form-2-cont,#nf-form-3-cont,#nf-form-4-cont{
 	input,select,textarea{
 		border: 2px solid $blue;
 		border-radius: 3px;
@@ -905,7 +985,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		border: none;
 		text-transform: uppercase;
 		color: $blue !important;
-		font-weight: 400;
+		font-weight: 500;
 		transition: all 0.25s ease-in-out;
 		cursor: pointer;
 		&:hover{
@@ -913,6 +993,19 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 			background-color: $orange;
 		}
 	}
+	.nf-error-msg{
+		font-family: 'Montserrat';
+	}
+	.nf-error-msg.nf-error-required-error{
+		text-align: left;
+		font-family: 'Montserrat';
+	}
+}
+#nf-form-3-cont input,#nf-form-3-cont textarea{
+	border-radius: 6px;
+}
+#nf-form-3-cont label, #nf-form-3-cont .ninja-forms-req-symbol{
+	color: $white;
 }
 
 // =======================================
@@ -928,7 +1021,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		}
 	}
 	.blue-heading,.gray-p{
-		@include margin(40,bottom);
+		@include margin(20,bottom);
 	}
 	ul{
 		list-style-type: none;
@@ -938,10 +1031,17 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	.social-logos {
 		@include margin(40,bottom)
 		li{
-			@include margin(25,right);
+			@include margin(15,right);
 			a,i{
 				color: $blue;
 				@include font(30);
+			}
+			i{
+				@include font(46);
+				transition: color 0.25s ease-in-out;
+				&:hover{
+					color: $orange;
+				}
 			}
 		}
 	}
@@ -1003,6 +1103,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	}
 	address p:first-of-type, .terms{
 		@include margin(0,bottom);
+		a:hover{color: $orange}
 	}
 	a,i{
 		color: #346094;
@@ -1011,6 +1112,11 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 	a,p,li{
 		@include font(13);
 		font-style: normal;
+	}
+	li:hover{
+		a,i{
+			color: $orange;
+		}
 	}
 	#menu-footer-menu{
 		li{

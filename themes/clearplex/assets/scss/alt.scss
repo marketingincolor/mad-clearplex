@@ -16,24 +16,27 @@
 
 .sub-head {
   @include grid-row();
-  margin-top: 1rem;
+  margin-top: 10%;
   text-align:center;
   .sub-img img { margin-bottom:3rem; }
-  @include breakpoint(medium) {
-    margin-top: 3rem;
-  }
 }
 .main-content .product-faqs {
 	padding-top:0;
 	.ltblue-heading {
 		color:#8db8e9;
+		@include font(24);
 	}
 	.question:before { content:"Q. "; }
 	.answer p:before { content:"A. "; }
-	.answer {
-		font-size:1.125rem;
-		p { display:inline; font-size:1.125rem; }
-		}
+}
+.page-template-page-faqs{
+	.product-faqs .answer{
+		@include margin(40,bottom);
+	}
+}
+.entry-content p{
+	@include font(16);
+	line-height: 1.6;
 }
 .cs-functions {
 	.blue-button { 
@@ -46,24 +49,51 @@
 }
 
 .page-template-page-become-dealer .container {
+	.become-dealer-content{
+		padding-bottom: 10%;
+		.subheading {
+			margin-bottom: 30px;
+		}
+	}
 	.become-dealer-icons {
 		background-image: url(../images/product-benefits.jpg);
 		@extend %bg_center_cover;
 		max-height:900px;
-		margin:2% 0;
 		padding:5% 0;
 		color:#fff;
+		h5{
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+		p{
+			@include font(16);
+		}
+		img{
+			margin: 0 auto 20px;
+			width: auto;
+		}
+		.owl-prev,.owl-next{
+			@include vertical-center;
+			i{
+				@include font(18);
+				cursor: pointer;
+			}
+		}
+		.owl-next{
+			right: 0;
+		}
 		.doc-subhead {
-			margin:2em 0em;
+			margin:2em 0em 3em;
+			@include font(24);
 			.button {
-				background-color:transparent;
-				border:2px solid #ff794a;
-				border-radius:25px;
-				margin:.5em 2em;
+				@extend %orange-btn;
 			}
 		}
 		.icons {
 			@include grid-layout-center-last(3);
+		}
+		.owl-carousel{
+			@include margin(50,bottom);
 		}
 	}
 	.home-testimonials {
@@ -73,7 +103,7 @@
 		background-color:#f2f2f2;
 			.button {
 				background-color:transparent;
-				border:2px solid #ff794a;
+				border:2px solid #dc582a;
 				border-radius:25px;
 				margin:.5em 2em;
 				color: inherit;
@@ -85,41 +115,59 @@
 		padding:5% 0;
 		.columns .doc-row {
 			border:1px solid #d1d1d1;
+			&:last-child{
+				margin-bottom: 8%;
+			}
+		}
+		.columns .no-border-bottom{
+			border-bottom: none;
+		}
+		.columns .btm-margin{
+			margin-bottom: 7%;
 		}
 		.download-link {
 			margin-top:2em;
 			.button {
 				background-color:#fff;
 				color:inherit;
-				border:2px solid #ff794a;
+				border:2px solid #dc582a;
 			}
+		}
+		.btn {
+			color: $black;
 		}
 	}
 	.dealer-form {
 		background:linear-gradient(180deg, #004278, #002a4c);
 		color:#fff;
-		padding:3% 0;
-		.nf-form-content {
-			label { color:#fff; }
-			input:not([type=button]), select, textarea { border-radius:25px; }
-			input[type="button"] {
-				background-color:#8db8e9;
-				border:0;
-				border-radius:25px;
-				padding: 0.7rem 1rem;
-				width:100%;
-				color:#004278 !important;
-				font-weight:500;
-				text-transform:uppercase;
-				cursor:pointer;
-			}
+		padding:10% 0;
+		.form-body{
+			line-height: 1.6;
+			margin-bottom: 50px;
 		}
 	}
 }
 // =======================================
 // ========= 1.) Sidebar Styles ==========
 // =======================================
-
+.sidebar-fixed{
+	position:fixed;
+	.active-button{
+		background-color: $orange !important;
+	}
+}
+.sidebar-absolute{
+	position: absolute;
+	.active-button{
+		background-color: $orange !important;
+	}
+}
+.about-sidebar{
+	.ca-title{
+		@include font(18);
+		font-weight: 500;
+	}
+}
 .widget_sidenav {
 	padding-bottom:1.5rem;
 	.page-buttons {
@@ -131,27 +179,25 @@
 			text-transform:uppercase;
 			position:relative;
 			top:-2px;
-			color: #ff794a;
-    		font-weight: 500;
-    		display:inline-block;
-    		margin:1.5rem 0rem;
-    		button {
-    			background-color:#fff;
-				border:2px solid #d1d1d1;
-				border-radius:50%;
-				width:1.2rem;
-				height:1.2rem;
-				display:inline-block;
-				position:relative;
-				left:-0.65rem;
-				vertical-align:middle;
-    		}
-    		span {
-
-    		}
+			color: #dc582a;
+  		font-weight: 500;
+  		display:inline-block;
+  		margin:1.5rem 0rem;
+  		font-size: 0.9em;
+  		button {
+  			background-color:#fff;
+			border:2px solid #d1d1d1;
+			border-radius:50%;
+			width:1.2rem;
+			height:1.2rem;
+			display:inline-block;
+			position:relative;
+			left:-0.65rem;
+			vertical-align:middle;
+  		}
 		}
 		a:hover {
-			color: #ff794a;
+			color: #dc582a;
     		font-weight: 500;
 		}
 	}
@@ -159,7 +205,7 @@
 .widget_links {
 	a button { 
 		cursor:pointer; 
-		border:2px solid #ff794a;
+		border:2px solid #dc582a;
 		padding:0.825rem 1.5rem;
 		border-radius:25px;
 	}
@@ -168,11 +214,11 @@
 	padding:1.5rem 0rem;
 	.white-quote { display:none; }
 	.gray-quote { margin-bottom:1rem; }
-	.read-more { 
-		color: #ff794a;
-    	font-weight: 500;
-    }
-    	.orbit-bullets {
+	.gray-p { 
+	  @include font(14);
+  }
+  .orbit-bullets {
+  	text-align: left;
 		button {
 			background-color:#fff;
 			border:2px solid #d1d1d1;
@@ -181,11 +227,21 @@
 			width:15px;
 		}
 		button.is-active {
-			background-color:#ff794a;
+			background-color:#dc582a;
 			border:medium none;
 			position:relative;
 			top:2px;
 		}
-
+  }
+}
+.page-template-page-contact .main-wrap,.page-template-page-faqs .container{
+	padding-bottom: 10%;
+	border-bottom: 2px solid #d1d1d1;
+}
+.widget_contact{
+	.contact-address{
+		font-weight: 300;
+		color: $gray;
+		@include font(14);
 	}
 }
