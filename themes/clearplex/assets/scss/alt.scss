@@ -68,7 +68,18 @@
 			@include font(16);
 		}
 		img{
-			margin-bottom: 20px;
+			margin: 0 auto 20px;
+			width: auto;
+		}
+		.owl-prev,.owl-next{
+			@include vertical-center;
+			i{
+				@include font(18);
+				cursor: pointer;
+			}
+		}
+		.owl-next{
+			right: 0;
 		}
 		.doc-subhead {
 			margin:2em 0em 3em;

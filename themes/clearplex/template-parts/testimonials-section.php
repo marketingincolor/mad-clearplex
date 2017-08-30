@@ -7,7 +7,7 @@
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/white-quote-icon.png" alt="" class="white-quote">
         </div>
         <div class="large-11 columns">
-          <h2 class="blue-heading">What They're Saying About ClearPlex® Windshield Protection Film</h2>
+          <h2 class="blue-heading">What They're Saying About ClearPlex Windshield Protection Film</h2>
         </div>
       </div>
 			<div class="orbit" role="region" aria-label="Testimonials" data-orbit data-auto-play="false">
@@ -15,11 +15,21 @@
 			    <ul class="orbit-container">
 
             <?php
-              // Query custom post type 'testimonials'
-              $args = array(
-                'post_type'      => 'testimonials',
-                'posts_per_page' => -1,
-              );
+              // Query custom post type 'testimonials' with category
+              // commercial or consumer depending on current page
+              $slug = get_post_field( 'post_name', get_post() );
+              if ($slug = 'home') {
+                $args = array(
+                  'post_type'      => 'testimonials',
+                  'posts_per_page' => -1,
+                );
+              }else{
+                $args = array(
+                  'post_type'      => 'testimonials',
+                  'posts_per_page' => -1,
+                  'category_name'  => $slug
+                );
+              }
               $count = 1;
               $the_query = new WP_Query($args);
 
@@ -32,7 +42,7 @@
 			      <li class="orbit-slide">
 			        <div class="row">
                 <div class="large-11 large-offset-1 columns">
-  	        			<p class="gray-p"><?php echo get_the_content(); ?> <a href="#!" class="read-more">Read More »</a></p>
+  	        			<p class="gray-p"><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
   	        			<address class="gray-p">
   	        			  <span class="author">-<?php the_field('testimonial_author',$id); ?></span><br>
   	        			  <span class="job"><?php the_field('testimonial_job',$id); ?></span>
@@ -48,9 +58,13 @@
 			    	<div class="row">
 			    		<div class="large-11 columns end" style="padding-left:0;">
 			    			<nav class="orbit-bullets">
-			    			  <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-			    			  <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-			    			  <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+
+                <?php for ($i=1; $i < $count; $i++) { ?>
+                  
+                  <button <?php if($i==1){echo 'class="is-active"';} ?> data-slide="<?php echo $i-1; ?>"></button>
+
+                <?php } ?>
+
 			    			</nav>
 			    		</div>
 			    	</div>

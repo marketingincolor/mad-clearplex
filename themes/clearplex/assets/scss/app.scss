@@ -34,10 +34,11 @@ h1,h2,h3,h4,h5,p,li,a{
 }
 p{
 	@include font(18);
+	@include margin(25,bottom);
 }
 h1,h2{
 	@include font(36);
-	@include margin(20,bottom);
+	@include margin(15,bottom);
 }
 .blue-heading{
 	color: $blue;
@@ -77,6 +78,9 @@ label{
 	@include breakpoint(medium){
 		@include margin(0,top);
 	}
+}
+.orbit-container:focus{
+	outline: none;
 }
 // Video Modal Styles
 #video-modal{
@@ -124,7 +128,7 @@ label{
 		width: 100%;
 		opacity:1;
 		position:fixed;
-		background-color: #064579;
+		background-color: $blue;
 		z-index: 99;
 		padding-top: 1%;
 		@media(max-width: 943px){
@@ -284,6 +288,7 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		h2{
 			line-height: 40px;
 		}
+		p{margin-bottom: 25px}
 	}
 	.owl-nav{
 		position: absolute;
@@ -307,12 +312,13 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 // vehicle types carousel section
 .vehicle-types{
 	.move-next,.move-prev{
-		padding: 6px 10px;
+		padding: 6px 11px;
 		background-color: white;
 		border-radius: 50%;
 		cursor: pointer;
 		border: 2px solid $orange;
 		margin-right: 5px;
+		transition: all 0.25s ease-in-out;
 		&:hover{
 			background-color: $orange;
 			i{
@@ -321,13 +327,23 @@ body:not(.home):not(.page-template-page-products) .top-bar.slide-down .top-bar-r
 		}
 		i{
 			color: $gray;
+			position: relative;
 		}
+	}
+	.move-next i{
+		left: 2px;
+	}
+	.move-prev i{
+		right: 2px;
 	}
 	.orbit-slide{
 		padding: 10% 0;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
+		p{
+			@include margin(30,bottom);
+		}
 		a{
 			margin-right: 10px;
 		}
@@ -557,6 +573,9 @@ address.gray-p{
 			.three-fifths{
 				flex-basis: 65%;
 			}
+			img{
+				box-shadow: 0 0 5px 1px #ccc;
+			}
 		}
 	}
 	.no-border-bottom{
@@ -578,6 +597,7 @@ address.gray-p{
 		text-transform: uppercase;
 		@include font(13);
 		font-weight: 500;
+		padding: 9px 20px;
 		@include margin(0,bottom);
 		transition: background-color 0.25s ease-in-out;
 		&:hover{

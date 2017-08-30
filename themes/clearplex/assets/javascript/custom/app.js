@@ -2,7 +2,7 @@ $(document).ready(function(){
 	if ($('body').hasClass('home')) {
 		owlCarousel();
 	}
-	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial')) {
+	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial') || $('body').hasClass('page-template-page-become-dealer')) {
 		benefitsCarousel();
 	}
 	navSlideDown();
@@ -55,7 +55,7 @@ function benefitsCarousel(){
 
 // Add video metadata to modal
 function videoMeta(){
-	$('.video-container').find('a').on('click',function(){
+	$('.column-block').find('a').on('click',function(){
 		var that = this;
 		$('#video-modal').bind('open.zf.reveal',function(){
 			var videoSrc   = $(that).parent().data('video');

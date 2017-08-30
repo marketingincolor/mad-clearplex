@@ -64,39 +64,14 @@
 
 <section class="product-faqs">
 	<div class="row">
-		<div class="large-12 columns text-center">
+		<div class="medium-10 small-centered columns text-center">
 			<h2 class="blue-heading">FAQ<small>s</small></h2>
 		</div>
-		<div class="medium-5 medium-offset-1 columns">
-		<!-- Query custom post type faq -->
-		<?php 
+		<div class="medium-10 small-centered columns">
 
-			$args = array(
-				'post_type'      => 'faq',
-				'posts_per_page' => 5,
-			);
-			$count = 1;
-			$the_query = new WP_Query($args);
-
-			if ( $the_query->have_posts() ) {
-				while ( $the_query->have_posts() ) {
-					$the_query->the_post();
-					$count_faqs = wp_count_posts('faq')->publish;
-			?>
-
-				<h5 class="question">Q. <?php the_title(); ?></h5>
-				<div class="answer">A. <?php echo get_the_content(); ?></div>
-				<?php if ($count == floor($count_faqs / 2)) { ?>
-					</div><div class="medium-5 columns end">	
-				<?php } ?>
+			<?php get_template_part('template-parts/dealer-faqs'); ?>
 			
-				<?php if ($count == $count_faqs) { ?>
-					</div>
-				<?php } ?>
-			
-		<?php $count++; }} wp_reset_postdata(); ?> 
-
-	</div>
+		</div>
 </section>
 
 <section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-consumer.jpg);">

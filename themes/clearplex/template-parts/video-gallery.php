@@ -1,10 +1,10 @@
 <div class="medium-10 medium-offset-1 columns end gallery-container">
-	<div class="row medium-up-3">
+	<div class="row medium-up-2">
 		
 	<!-- query video post format -->
 	<?php
 	$video_query = new WP_Query( array(
-		'posts_per_page' => 6,
+		'posts_per_page' => 2,
     'tax_query'      => array(
       array(
         'taxonomy' => 'post_format',
@@ -17,8 +17,8 @@
 	?>
 
 	<div class="column column-block" title="Play Video" data-title="<?php the_title(); ?>" data-video="<?php the_field('video_link'); ?>">
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-		<a href="<?php the_permalink(); ?>"><h5 class="video-title white-heading"><?php the_title(); ?></h5></a>
+		<a href="#!"><?php the_post_thumbnail(); ?></a>
+		<a href="#!"><h5 class="video-title white-heading"><?php the_title(); ?></h5></a>
 		<p class="video-body white-p"><?php echo get_the_content(); ?></p>
 	</div>			
 
