@@ -91,6 +91,9 @@
 		.icons {
 			@include grid-layout-center-last(3);
 		}
+		.owl-carousel{
+			@include margin(50,bottom);
+		}
 	}
 	.home-testimonials {
 		.white-quote { display:none; }
@@ -146,7 +149,18 @@
 // =======================================
 // ========= 1.) Sidebar Styles ==========
 // =======================================
-
+.sidebar-fixed{
+	position:fixed;
+	.active-button{
+		background-color: $orange !important;
+	}
+}
+.sidebar-absolute{
+	position: absolute;
+	.active-button{
+		background-color: $orange !important;
+	}
+}
 .widget_sidenav {
 	padding-bottom:1.5rem;
 	.page-buttons {
@@ -214,11 +228,9 @@
 		}
   }
 }
-.page-template-page-contact{
-	.main-wrap{
-		padding-bottom: 10%;
-		border-bottom: 2px solid #d1d1d1;
-	}
+.page-template-page-contact .main-wrap,.page-template-page-faqs .container{
+	padding-bottom: 10%;
+	border-bottom: 2px solid #d1d1d1;
 }
 .widget_contact{
 	.contact-address{

@@ -17,10 +17,10 @@
 	<div class="small-10 small-centered">
 	<article class="main-content">
 
-		<div class="product-faqs consumer">
+		<div id="consumer" class="product-faqs consumer">
 			<h2 class="ltblue-heading">Consumer</h2>
-			<?php 
-			$args = array( 
+			<?php
+			$args = array(
 				'post_type' => 'faq', 
 				'category_name' => 'consumer',
 				'posts_per_page' => -1
@@ -34,7 +34,7 @@
 			<?php endwhile; wp_reset_postdata(); ?>
 		</div>
 
-		<div class="product-faqs commercial">
+		<div id="commercial" class="product-faqs commercial">
 			<h2 class="ltblue-heading">Commercial</h2>
 			<?php 
 			$args = array( 
@@ -51,7 +51,7 @@
 			<?php endwhile; wp_reset_postdata(); ?>
 		</div>
 
-		<div class="product-faqs dealer" style="display:none;">
+		<div id="dealer" class="product-faqs dealer">
 			<h2 class="ltblue-heading">Dealers</h2>
 			<?php 
 			$args = array( 
