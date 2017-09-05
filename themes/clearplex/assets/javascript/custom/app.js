@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	if ($('body').hasClass('home')) {
 		owlCarousel();
+		scrollDown();
 	}
 	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial') || $('body').hasClass('page-template-page-become-dealer')) {
 		benefitsCarousel();
@@ -20,6 +21,16 @@ $(window).scroll(function(){
 		faqMenuSlider();
 	}
 });
+
+// Scroll down to second section on home page
+function scrollDown(){
+	$('.scroll-down').on('click',function(){
+		var height = $('.home-hero').outerHeight();
+		$('html,body').animate({
+      scrollTop: height
+    }, 750);
+	});
+}
 
 // Adds a disabled option to the beginning of <select> elements on Contact Page
 // in contact forms, since Ninja Forms can't do it.

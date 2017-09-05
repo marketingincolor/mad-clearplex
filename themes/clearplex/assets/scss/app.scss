@@ -66,7 +66,7 @@ h1,h2{
 	line-height: 1.6;
 	color: #787878;
 }
-section:not(.top-bg):not(.container){
+section:not(.top-bg):not(.container):not(.vehicle-types){
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -139,6 +139,9 @@ label{
 		z-index: 99;
 		padding-top: 1%;
 		@media(max-width: 890px){
+			height: 130px;
+		}
+		@media(max-width: 414px){
 			height: 100px;
 		}
 		.top-bar-left {
@@ -317,8 +320,7 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 .home-hero{
 	height: 700px;
 	@extend %bg_center_cover;
-	.item{
-		position: relative;
+	@include breakpoint(medium down){
 		height: 100vh;
 	}
 	.slide-meta{
@@ -326,6 +328,9 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		top: 50%;
 		transform: translateY(-50%);
 		color: $white;
+		@include breakpoint(medium down){
+			width: 90%;
+		}
 		h1{
 			@include font(14);
 			text-transform: uppercase;
@@ -334,6 +339,17 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 			line-height: 40px;
 		}
 		p{margin-bottom: 25px}
+	}
+	.scroll-down{
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		img{
+			cursor: pointer;
+			padding: 15px;
+		}
 	}
 	.owl-nav{
 		position: absolute;
@@ -356,6 +372,25 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 
 // vehicle types carousel section
 .vehicle-types{
+	//mobile carousel
+	.orbit,.orbit-wrapper,.orbit-container,.orbit-container li{
+		@include breakpoint(small only){
+			height: 100vh;
+		}
+	}
+	.orbit-container li{
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.row{
+			@include breakpoint(small only){
+				position: absolute;
+				top: 360px;
+				width: 90%;
+			}
+		}
+	}
 	.move-next,.move-prev{
 		padding: 6px 11px;
 		background-color: white;
@@ -364,6 +399,11 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		border: 2px solid $orange;
 		margin-right: 5px;
 		transition: all 0.25s ease-in-out;
+		@include breakpoint(small only){
+			padding: 8px 13px;
+			top: 1px;
+			position: relative;
+		}
 		&:hover{
 			background-color: $orange;
 			i{
@@ -373,6 +413,21 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		i{
 			color: $gray;
 			position: relative;
+		}
+	}
+	#homeslide1{
+		@include breakpoint(small only){
+			background-image: url(../images/performance-vehicle-mobile.jpg)!important;
+		}
+	}
+	#homeslide2{
+		@include breakpoint(small only){
+			background-image: url(../images/fleet-vehicle-mobile.jpg)!important;
+		}
+	}
+	#homeslide3{
+		@include breakpoint(small only){
+			background-image: url(../images/luxury-vehicle-mobile.jpg)!important;
 		}
 	}
 	.move-next i{
@@ -1192,5 +1247,19 @@ address.gray-p{
 	}
 	.social-links li{
 		padding: 6px 0;
+	}
+	&.mobile-footer{
+		i{
+			font-size: 35px;
+		}
+		ul{
+			display: flex;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		li{
+			flex-grow: 1;
+		}
 	}
 }

@@ -15,6 +15,9 @@
 				<p>Because it's more than a car, it's a prized possession.</p>
 				<a href="<?php echo site_url(); ?>/product" class="btn">Learn More</a>
 			</div>
+			<div class="scroll-down">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/scroll-down.png" alt="scroll down" title="scroll-down">
+			</div>
 		</div>
 	</div>
 </section>
@@ -23,7 +26,7 @@
 	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-auto-play="false">
 	  <div class="orbit-wrapper">
 	    <ul class="orbit-container">
-	      <li class="is-active orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/performance-vehicle.jpg);">
+	      <li id="homeslide1" class="is-active orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/performance-vehicle.jpg);">
 	        <div class="row">
 	        	<div class="medium-4 medium-offset-8 columns">
 	        		<h2 class="blue-heading">The Ideal Solution for Performance Cars</h2>
@@ -32,7 +35,7 @@
 	        	</div>
 	        </div>
 	      </li>
-	      <li class="orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/commercial-vehicles.jpg);">
+	      <li id="homeslide2" class="orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/commercial-vehicles.jpg);">
           <div class="row">
           	<div class="medium-4 medium-offset-8 columns">
           		<h2 class="blue-heading">The Ideal Solution for Fleets</h2>
@@ -41,7 +44,7 @@
           	</div>
           </div>
 	      </li>
-	      <li class="orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/luxury-classic.jpg);">
+	      <li id="homeslide3" class="orbit-slide" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/luxury-classic.jpg);">
           <div class="row">
           	<div class="medium-4 medium-offset-8 columns">
           		<h2 class="blue-heading">The Ideal Solution for Luxury &amp; Classic Cars</h2>

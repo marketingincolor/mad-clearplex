@@ -43,7 +43,7 @@
 						<?php endif; ?>
 						<i class="fa fa-bars cheeseburger" data-toggle="mobile-menu" aria-hidden="true"></i>
 						<!-- Mobile menu fullscreen modal -->
-						<div class="full reveal" id="mobile-menu" data-reveal  data-animation-in="slide-in-down bounce" data-animation-out="slide-out-up bounce">
+						<div class="full reveal" id="mobile-menu" data-reveal  data-animation-in="slide-in-right bounce" data-animation-out="slide-out-right bounce">
 								<!-- Display Mobile Menu -->
 						  	<?php wp_nav_menu( array( 'theme_location' => 'mobile-nav','menu_id' => 'mobile-menu-modal','menu_class' => 'mobile-menu-list','container' => 'ul' )); ?>
 						  <button class="close-button" data-close aria-label="Close reveal" type="button">

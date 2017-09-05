@@ -4,7 +4,7 @@
 
 		</section>
 
-		<div class="footer-container" data-sticky-footer>
+		<div class="footer-container desktop-footer hide-for-small-only" data-sticky-footer>
 			<footer class="footer">
 				<div class="row">
 					<div class="large-4 columns">
@@ -31,6 +31,37 @@
 							<li><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['youtube_link']; ?>">YouTube</a></li>
 						<?php } ?>
 						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<div class="footer-container mobile-footer show-for-small-only" data-sticky-footer>
+			<footer class="footer">
+				<div class="row">
+					<div class="large-4 columns text-center">
+						<img src="<?php bloginfo('template_directory'); ?>/assets/images/footer-logo.png" alt="ClearPlex by Madico">
+					</div>
+					<div class="large-2 columns">
+						<ul class="social-links">
+						<?php if ($options['facebook_link']) { ?>
+							<li><a href="<?php echo $options['facebook_link']; ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+						<?php }if($options['twitter_link']){ ?>
+							<li><a href="<?php echo $options['twitter_link']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<?php }if($options['gplus_link']){ ?>
+							<li><a href="<?php echo $options['gplus_link']; ?>"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						<?php }if($options['linkedin_link']){ ?>
+							<li><a href="<?php echo $options['linkedin_link']; ?>"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+						<?php }if($options['instagram_link']){ ?>
+							<li><a href="<?php echo $options['instagram_link']; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<?php }if($options['youtube_link']){ ?>
+							<li><a href="<?php echo $options['youtube_link']; ?>"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+						<?php } ?>
+						</ul>
+					</div>
+					<div class="large-4 columns text-center">
+						<p class="terms"><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
+						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>
