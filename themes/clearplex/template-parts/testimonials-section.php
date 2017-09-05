@@ -17,11 +17,17 @@
             <?php
               // Query custom post type 'testimonials' with category
               // commercial or consumer depending on current page
-              $slug = get_post_field( 'post_name', get_post() );
-              if ($slug = 'home') {
+              $slug = get_post_field('post_name', get_post());
+              if ($slug == 'home') {
                 $args = array(
                   'post_type'      => 'testimonials',
                   'posts_per_page' => -1,
+                );
+              }if($slug == 'dealer' || $slug == 'become-dealer'){
+                $args = array(
+                  'post_type'      => 'testimonials',
+                  'posts_per_page' => -1,
+                  'category_name'  => 'dealer'
                 );
               }else{
                 $args = array(
