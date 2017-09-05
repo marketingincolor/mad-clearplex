@@ -45,7 +45,7 @@
 						<!-- Mobile menu fullscreen modal -->
 						<div class="full reveal" id="mobile-menu" data-reveal  data-animation-in="slide-in-down bounce" data-animation-out="slide-out-up bounce">
 								<!-- Display Mobile Menu -->
-						  	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu','menu_id' => 'mobile-menu-modal','menu_class' => 'mobile-menu-list','container' => 'ul' )); ?>
+						  	<?php wp_nav_menu( array( 'theme_location' => 'mobile-nav','menu_id' => 'mobile-menu-modal','menu_class' => 'mobile-menu-list','container' => 'ul' )); ?>
 						  <button class="close-button" data-close aria-label="Close reveal" type="button">
 						    <span aria-hidden="true">&times;</span>
 						  </button>
