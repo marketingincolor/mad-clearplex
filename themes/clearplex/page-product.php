@@ -12,7 +12,7 @@
 			<h2 class="blue-heading"><?php the_field('top_heading'); ?></h2>
 		</div>
 		<div class="large-10 large-offset-1 columns text-center end">
-			<p class="gray-p"><?php the_field('top_body'); ?></p>
+			<p class="gray-p subheading"><?php the_field('top_body'); ?></p>
 		</div>
 	</div>
 </section>
@@ -98,20 +98,20 @@
 		</div>
 		<div class="medium-5 medium-offset-1 columns">
 			<ul>
-				<li><?php the_field('list_heading1'); ?><br><span class="list-subhead"><?php the_field('list_body1'); ?></span></li>
-				<li><?php the_field('list_heading3'); ?><br><span class="list-subhead"><?php the_field('list_body3'); ?></span></li>
-				<li><?php the_field('list_heading5'); ?><br><span class="list-subhead"><?php the_field('list_body5'); ?></span></li>
-				<li><?php the_field('list_heading7'); ?><br><span class="list-subhead"><?php the_field('list_body7'); ?></span></li>
-				<li><?php the_field('list_heading9'); ?><br><span class="list-subhead"><?php the_field('list_body9'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading1'); ?><br><span class="list-subhead"><?php the_field('list_body1'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading3'); ?><br><span class="list-subhead"><?php the_field('list_body3'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading5'); ?><br><span class="list-subhead"><?php the_field('list_body5'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading7'); ?><br><span class="list-subhead"><?php the_field('list_body7'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading9'); ?><br><span class="list-subhead"><?php the_field('list_body9'); ?></span></li>
 			</ul>
 		</div>
 		<div class="medium-4 columns end">
 			<ul>
-				<li><?php the_field('list_heading2'); ?><br><span class="list-subhead"><?php the_field('list_body2'); ?></span></li>
-				<li><?php the_field('list_heading4'); ?><br><span class="list-subhead"><?php the_field('list_body4'); ?></span></li>
-				<li><?php the_field('list_heading6'); ?><br><span class="list-subhead"><?php the_field('list_body6'); ?></span></li>
-				<li><?php the_field('list_heading8'); ?><br><span class="list-subhead"><?php the_field('list_body8'); ?></span></li>
-				<li><?php the_field('list_heading10'); ?><br><span class="list-subhead"><?php the_field('list_body10'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading2'); ?><br><span class="list-subhead"><?php the_field('list_body2'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading4'); ?><br><span class="list-subhead"><?php the_field('list_body4'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading6'); ?><br><span class="list-subhead"><?php the_field('list_body6'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading8'); ?><br><span class="list-subhead"><?php the_field('list_body8'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading10'); ?><br><span class="list-subhead"><?php the_field('list_body10'); ?></span></li>
 			</ul>
 		</div>
 	</div>
@@ -131,7 +131,7 @@
 		<div class="large-5 large-offset-7 medium-8 medium-offset-4 columns">
 			<h2 class="white-heading"><?php the_field('find_dealer_heading',8); ?></h2>
 			<p class="white-p"><?php the_field('find_dealer_body',8); ?></p>
-			<a href="<?php the_field('find_dealer_button_link,8'); ?>" class="btn"><?php the_field('find_dealer_button_text',8); ?></a>
+			<a href="<?php the_field('find_dealer_button_link',8); ?>" class="btn"><?php the_field('find_dealer_button_text',8); ?></a>
 		</div>
 	</div>
 </section>

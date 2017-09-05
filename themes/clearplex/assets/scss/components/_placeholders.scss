@@ -1,5 +1,5 @@
 %orange-btn{
-	border: 2px solid #ff794a;
+	border: 2px solid $orange;
 	border-radius: 25px;
 	transition: all 0.25s ease-in-out;
 	&:hover{
@@ -8,7 +8,7 @@
 	}
 }
 %learn-more{
-	padding: 7px 20px;
+	padding: 9px 20px 11px;
   color: #FFF;
   text-transform: uppercase;
   font-size: 13px;

@@ -9,11 +9,7 @@
 				<div class="row">
 					<div class="large-4 columns">
 						<img src="<?php bloginfo('template_directory'); ?>/assets/images/footer-logo.png" alt="ClearPlex by Madico">
-						<address>
-							<p>PO BOX 216, Draper, UT 84020</p>
-							<p>(801) 571-8243</p>
-						</address>
-						<p class="terms"><a href="<?php echo site_url(); ?>/terms-and-conditions">Terms and Conditions</a> | <a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
+						<p class="terms"><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
 						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
 					</div>
 					<div class="large-4 large-offset-2 columns">

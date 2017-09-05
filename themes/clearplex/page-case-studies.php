@@ -33,7 +33,8 @@
 						);
 						$loop = new WP_Query( $args );
 						while ( $loop->have_posts() ) : $loop->the_post();
-						c
+						$post_count = $loop->post_count;
+					  $count++;
 					?>
 
 				    <div class="medium-4 columns end">
@@ -42,12 +43,14 @@
 				    	<a href="<?php the_permalink(); ?>" class="study-link"><?php the_field('button_link_text',32); ?></a>
 				    </div>
 					  <?php
-
 					  	if ($count % 3 == 0) {
 					  		echo '</div>';
 					  	}
 					  	if ($post_count > $count && $count >= 3) {
 					  		echo '<div class="row case-study-row">';
+					  	}
+					  	if ($post_count > 3 && $post_count == $count && $count % 3 > 0) {
+					  		echo '</div>';
 					  	}
 					  ?>
 
@@ -58,15 +61,16 @@
 		  <div class="tabs-panel" id="panel2">
 		    
 				<?php
+					$count = 0;
 					$args = array( 
 						'post_type' => 'case_studies', 
 						'category_name' => get_field('category2'),
 						'posts_per_page' => -1
 					);
-					$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) : $loop->the_post();
+					$the_loop = new WP_Query( $args );
+					while ( $the_loop->have_posts() ) : $the_loop->the_post();
 					$count++;
-					$post_count = $loop->post_count;
+					$post_count = $the_loop->post_count;
 				?>
 
 			    <div class="medium-4 columns end">
@@ -82,6 +86,9 @@
 			    	if ($post_count > $count && $count >= 3) {
 			    		echo '<div class="row case-study-row">';
 			    	}
+			    	if ($post_count > 3 && $post_count == $count && $count % 3 > 0) {
+			    		echo '</div>';
+			    	}
 			    ?>
 
 			  <?php endwhile; wp_reset_postdata(); ?>
@@ -90,15 +97,16 @@
 		  <div class="tabs-panel" id="panel3">
 		    	
 				<?php
+					$count = 0;
 					$args = array( 
 						'post_type' => 'case_studies', 
 						'category_name' => get_field('category3'),
 						'posts_per_page' => -1
 					);
-					$loop = new WP_Query( $args );
-					while ( $loop->have_posts() ) : $loop->the_post();
+					$dealer_loop = new WP_Query( $args );
+					while ( $dealer_loop->have_posts() ) : $dealer_loop->the_post();
 					$count++;
-					$post_count = $loop->post_count;
+					$post_count = $dealer_loop->post_count;
 				?>
 
 			    <div class="medium-4 columns">
@@ -113,6 +121,9 @@
 			    	}
 			    	if ($post_count > $count && $count >= 3) {
 			    		echo '<div class="row case-study-row">';
+			    	}
+			    	if ($post_count > 3 && $post_count == $count && $count % 3 > 0) {
+			    		echo '</div>';
 			    	}
 			    ?>
 
