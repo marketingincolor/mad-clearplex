@@ -17,8 +17,8 @@
 	</div>
 </section>
 
-<!-- Top Row -->
-<section class="product-features-top" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/yellow-car-bg.jpg);">
+<!-- Top Row Desktop-->
+<section class="product-features-top show-for-large" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/yellow-car-bg.jpg);">
 	<div class="row-expanded clearfix">
 		<div class="medium-5 large-4 large-offset-1 columns end">
 			<ul>
@@ -30,9 +30,26 @@
 		</div>
 	</div>
 </section>
+
+<!-- Top Row Tablet/Mobile-->
+<section class="product-features-top hide-for-large">
+	<div class="row small-collapse">
+		<div class="small-12 columns end">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/top-row-mobile.jpg" alt="">
+		</div>
+		<div class="small-10 small-offset-1 columns end">
+			<ul>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('top_feature1'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('top_feature2'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('top_feature3'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('top_feature4'); ?></li>
+			</ul>
+		</div>
+	</div>
+</section>
 	
-<!-- Middle Row -->
-<section class="product-features-middle" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/middle-row-bg.jpg);">
+<!-- Middle Row Desktop -->
+<section class="product-features-middle show-for-large" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/middle-row-bg.jpg);">
 	<div class="row-expanded clearfix">
 		<div class="medium-5 medium-offset-6 large-4 large-offset-7 columns end">
 			<ul>
@@ -45,10 +62,44 @@
 	</div>
 </section>
 
-<!-- Bottom Row -->
-<section class="product-features-bottom" style="background-image: url(<?php the_field('bottom_row_bg_img'); ?>);">
+<!-- Middle Row Tablet/Mobile -->
+<section class="product-features-middle hide-for-large">
+	<div class="row small-collapse">
+		<div class="small-12 columns end">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/middle-row-mobile.jpg" alt="">
+		</div>
+		<div class="small-10 small-offset-1 columns end">
+			<ul>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('middle_feature1'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('middle_feature2'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('middle_feature3'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('middle_feature4'); ?></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Bottom Row Desktop -->
+<section class="product-features-bottom show-for-large" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/bottom-row-bg.jpg);">
 	<div class="row-expanded clearfix">
 		<div class="medium-5 large-4 large-offset-1 columns end">
+			<ul>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('bottom_feature1'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('bottom_feature2'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('bottom_feature3'); ?></li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('bottom_feature4'); ?></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Bottom Row Tablet/Mobile -->
+<section class="product-features-bottom hide-for-large">
+	<div class="row small-collapse">
+		<div class="small-12 columns end">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/bottom-row-mobile.jpg" alt="">
+		</div>
+		<div class="small-10 small-offset-1 columns end">
 			<ul>
 				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('bottom_feature1'); ?></li>
 				<li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('bottom_feature2'); ?></li>

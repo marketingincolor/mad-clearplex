@@ -877,14 +877,32 @@ address.gray-p{
 			padding: 20px 0;
 			text-indent: -0.8em;
 			color: $gray;
+			@include breakpoint(medium down){
+				padding: 20px 0 0 20px
+			}
 		}
 		i{
 			color: #89b8ea;
 		}
 	}
+	@include breakpoint(medium down){
+		padding-top: 0;
+		img{
+			width: 100%;
+		}
+		.small-10.small-offset-1{
+			padding-top: 6%;
+		}
+	}
+	&.hide-for-large{
+		background-color: #f5f5f5;
+	}
 }
 .product-features-bottom ul li{
 	color: $white;
+	@include breakpoint(medium down){
+		color: $gray
+	}
 }
 .performance-data{
 	padding: 10% 0;
