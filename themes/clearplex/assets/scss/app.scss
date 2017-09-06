@@ -66,7 +66,7 @@ h1,h2{
 	line-height: 1.6;
 	color: #787878;
 }
-section:not(.top-bg):not(.container):not(.vehicle-types){
+section:not(.top-bg):not(.container):not(.vehicle-types):not(.fast-dealer.show-for-small-only){
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -331,6 +331,11 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		@include breakpoint(medium down){
 			width: 90%;
 		}
+		@include breakpoint(medium only){
+			left: 50%;
+			transform: translateX(-50%);
+			top: 40%;
+		}
 		h1{
 			@include font(14);
 			text-transform: uppercase;
@@ -374,20 +379,36 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 .vehicle-types{
 	//mobile carousel
 	.orbit,.orbit-wrapper,.orbit-container,.orbit-container li{
+		@include breakpoint(medium down){
+			height: 800px;
+		}
 		@include breakpoint(small only){
 			height: 100vh;
 		}
 	}
 	.orbit-container li{
-		@include breakpoint(small only){
+		@include breakpoint(medium down){
 			padding-left: 20px;
 			padding-right: 20px;
 		}
-		.row{
-			@include breakpoint(small only){
+		&#homeslide2 .row{
+			@include breakpoint(medium down){
 				position: absolute;
-				top: 360px;
+				top: 550px;
 				width: 90%;
+			}
+			@include breakpoint(small only){
+				top: 360px;
+			}
+		}
+		.row{
+			@include breakpoint(medium down){
+				position: absolute;
+				top: 530px;
+				width: 90%;
+			}
+			@include breakpoint(small only){
+				top: 360px;
 			}
 		}
 	}
@@ -416,17 +437,17 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		}
 	}
 	#homeslide1{
-		@include breakpoint(small only){
+		@include breakpoint(medium down){
 			background-image: url(../images/performance-vehicle-mobile.jpg)!important;
 		}
 	}
 	#homeslide2{
-		@include breakpoint(small only){
+		@include breakpoint(medium down){
 			background-image: url(../images/fleet-vehicle-mobile.jpg)!important;
 		}
 	}
 	#homeslide3{
-		@include breakpoint(small only){
+		@include breakpoint(medium down){
 			background-image: url(../images/luxury-vehicle-mobile.jpg)!important;
 		}
 	}
@@ -443,6 +464,9 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		background-position: center center;
 		@media(min-width: 1700px){
 			background-position: -150px center;
+		}
+		@include breakpoint(medium only){
+			background-position: center -50px;
 		}
 		p{
 			@include margin(30,bottom);
@@ -462,6 +486,14 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	@include breakpoint(medium only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.fast-dealer.show-for-small-only,.about-home.show-for-small-only{
+	background-color: $gray;
+	padding-top: 0;
 }
 
 // testimonials section
@@ -479,6 +511,10 @@ address.gray-p{
 }
 .home-testimonials{
 	padding: 8% 0;
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.read-more{
 		color: $orange;
 		text-transform: uppercase;
@@ -488,6 +524,9 @@ address.gray-p{
 	.large-1.columns{
 		padding: 0;
 		padding-top: 10px;
+		@include breakpoint(medium down){
+			padding: 0 0 20px 10px;
+		}
 	}
 	address.gray-p{
 		@include font(14);
@@ -1254,9 +1293,15 @@ address.gray-p{
 		}
 		ul{
 			display: flex;
-			width: 80%;
 			margin: 0 auto;
 			text-align: center;
+			padding-bottom: 30px;
+			@include breakpoint(medium only){
+				width: 50%;
+			}
+			@include breakpoint(small only){
+			  width: 80%;
+			}
 		}
 		li{
 			flex-grow: 1;

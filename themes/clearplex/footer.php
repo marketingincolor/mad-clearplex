@@ -4,7 +4,7 @@
 
 		</section>
 
-		<div class="footer-container desktop-footer hide-for-small-only" data-sticky-footer>
+		<div class="footer-container desktop-footer show-for-large-only" data-sticky-footer>
 			<footer class="footer">
 				<div class="row">
 					<div class="large-4 columns">
@@ -36,7 +36,7 @@
 			</footer>
 		</div>
 
-		<div class="footer-container mobile-footer show-for-small-only" data-sticky-footer>
+		<div class="footer-container mobile-footer hide-for-large-only">
 			<footer class="footer">
 				<div class="row">
 					<div class="large-4 columns text-center">
