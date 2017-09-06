@@ -69,7 +69,9 @@
 		</div>
 
 	</article>
-	<?php get_sidebar('faq'); ?>
+		<div class="hide-for-small-only">
+		<?php get_sidebar('faq'); ?>
+		</div>
 	</div>
 </div>
 <?php get_footer(); ?>
