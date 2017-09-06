@@ -906,6 +906,10 @@ address.gray-p{
 }
 .performance-data{
 	padding: 10% 0;
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.gray-p{
 		padding-bottom: 7%;
 	}
@@ -933,6 +937,11 @@ address.gray-p{
 			}
 		}
 	}
+	.mobile-table{
+		td{
+			padding: 10px;
+		}
+	}
 	ul{
 		list-style-type: none;
 		margin:0;
@@ -943,6 +952,9 @@ address.gray-p{
 		color: $gray;
 		font-weight: 500;
 		text-indent: -0.8em;
+		@include breakpoint(small only){
+			padding: 20px 0 0 20px;
+		}
 		i{
 			color: #89b8ea;
 		}
@@ -956,6 +968,12 @@ address.gray-p{
 .product-optimize{
 	padding: 10% 0;
 	@extend %bg_center_cover;
+	.row:not(.small-collapse){
+		padding: 30px 20px 0;
+		.gray-p{
+			margin-bottom: 0;
+		}
+	}
 }
 
 // =======================================

@@ -118,7 +118,7 @@
 			<p class="gray-p"><?php the_field('performance_body'); ?></p>
 		</div>
 		<div class="small-12 columns">
-			<table class="unstriped stack" cellspacing="0">
+			<table class="unstriped show-for-medium" cellspacing="0">
 				<thead>
 					<th></th>
 					<th><?php the_field('first_column_top_heading'); ?><br><span class="table-subhead"><?php the_field('first_column_subheading'); ?></span></th>
@@ -146,6 +146,57 @@
 					</tr>
 				</tbody>
 			</table>
+			<!-- Mobile Table -->
+			<table class="unstriped show-for-small-only mobile-table" cellspacing="0">
+				<tbody>
+					<tr class="head-row">
+						<td colspan="2"><?php the_field('first_column_top_heading'); ?><br><span class="table-subhead"><?php the_field('first_column_subheading'); ?></span></td>
+					</tr>
+					<tr>
+						<td><?php the_field('first_row_heading'); ?></td>
+						<td><?php the_field('first_row_first_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td><?php the_field('second_row_heading'); ?></td>
+						<td><?php the_field('second_row_first_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td><?php the_field('third_row_heading'); ?></td>
+						<td><?php the_field('third_row_first_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td colspan="2"><?php the_field('second_column_top_heading'); ?><br><span class="table-subhead"><?php the_field('second_column_subheading'); ?></span></td>
+					</tr>
+					<tr>
+						<td><?php the_field('first_row_heading'); ?></td>
+						<td><?php the_field('first_row_second_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td><?php the_field('second_row_heading'); ?></td>
+						<td><?php the_field('second_row_second_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td><?php the_field('third_row_heading'); ?></td>
+						<td><?php the_field('third_row_second_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td colspan="2"><?php the_field('third_column_top_heading'); ?><br><span class="table-subhead"><?php the_field('second_column_subheading'); ?></span></td>
+					</tr>
+					<tr>
+						<td><?php the_field('first_row_heading'); ?></td>
+						<td><?php the_field('first_row_third_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td><?php the_field('second_row_heading'); ?></td>
+						<td><?php the_field('second_row_third_column_data'); ?></td>
+					</tr>
+					<tr>
+						<td><?php the_field('third_row_heading'); ?>
+						</td>
+						<td><?php the_field('third_row_third_column_data'); ?></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 		<div class="medium-5 medium-offset-1 columns">
 			<ul>
@@ -168,9 +219,25 @@
 	</div>
 </section>
 
-<section class="product-optimize" style="background-image: url(<?php the_field('optimize_bg_img'); ?>);">
+<!-- Desktop -->
+<section class="product-optimize show-for-large" style="background-image: url(<?php the_field('optimize_bg_img'); ?>);">
 	<div class="row">
 		<div class="medium-6 columns end">
+			<h2 class="blue-heading"><?php the_field('optimize_heading'); ?></h2>
+			<p class="gray-p"><?php the_field('optimize_body') ?></p>
+		</div>
+	</div>
+</section>
+
+<!-- Mobile/Tablet -->
+<section class="product-optimize hide-for-large">
+	<div class="row small-collapse">
+		<div class="small-12 columns">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/optimize-mobile.jpg" alt="ClearPlex optimize performance">
+		</div>
+	</div>
+	<div class="row">
+		<div class="small1-2 columns">
 			<h2 class="blue-heading"><?php the_field('optimize_heading'); ?></h2>
 			<p class="gray-p"><?php the_field('optimize_body') ?></p>
 		</div>
