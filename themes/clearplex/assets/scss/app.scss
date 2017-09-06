@@ -694,10 +694,18 @@ address.gray-p{
 // =======================================
 .dealer-intro{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 .dealer-videos{
 	padding: 10% 0;
 	@extend %bg_center_cover;
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.video-head-body{
 		margin-bottom: 7%;
 	}
@@ -716,9 +724,11 @@ address.gray-p{
 .sales-opp{
 	padding: 10% 0;
 	background-color: #f2f2f2;
-	.large-7{
-		@include breakpoint(small only){
-			@include margin(60,bottom);
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+		img{
+			@include margin(40,bottom);
 		}
 	}
 	.btn{
@@ -728,6 +738,10 @@ address.gray-p{
 
 .download-docs{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.doc-subhead{
 		margin-bottom: 7%;
 	}
@@ -735,12 +749,26 @@ address.gray-p{
 		position: relative;
 		padding: 30px 0;
 		border: 1px solid #d1d1d1;
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		.doc-list{
 			display: flex;
 			list-style-type: none;
 			align-items: center;
+			@include breakpoint(small only){
+				display: inline-block;
+				margin-left: 0;
+				.attachment-post-thumbnail{
+					@include margin(30,bottom);
+				}
+			}
 			li{
 				margin-right: 30px;
+				@include breakpoint(small only){
+					margin-right: 0;
+				}
 			}
 			.one-fifth{
 				flex-basis: 17.5%;
@@ -748,6 +776,9 @@ address.gray-p{
 			}
 			.three-fifths{
 				flex-basis: 65%;
+				@include breakpoint(small only){
+					text-align: center;
+				}
 			}
 			img{
 				box-shadow: 0 0 5px 1px #ccc;
@@ -846,17 +877,39 @@ address.gray-p{
 			padding: 20px 0;
 			text-indent: -0.8em;
 			color: $gray;
+			@include breakpoint(medium down){
+				padding: 20px 0 0 20px
+			}
 		}
 		i{
 			color: #89b8ea;
 		}
 	}
+	@include breakpoint(medium down){
+		padding-top: 0;
+		img{
+			width: 100%;
+		}
+		.small-10.small-offset-1{
+			padding-top: 6%;
+		}
+	}
+	&.hide-for-large{
+		background-color: #f5f5f5;
+	}
 }
 .product-features-bottom ul li{
 	color: $white;
+	@include breakpoint(medium down){
+		color: $gray
+	}
 }
 .performance-data{
 	padding: 10% 0;
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.gray-p{
 		padding-bottom: 7%;
 	}
@@ -884,6 +937,11 @@ address.gray-p{
 			}
 		}
 	}
+	.mobile-table{
+		td{
+			padding: 10px;
+		}
+	}
 	ul{
 		list-style-type: none;
 		margin:0;
@@ -894,6 +952,9 @@ address.gray-p{
 		color: $gray;
 		font-weight: 500;
 		text-indent: -0.8em;
+		@include breakpoint(small only){
+			padding: 20px 0 0 20px;
+		}
 		i{
 			color: #89b8ea;
 		}
@@ -907,6 +968,12 @@ address.gray-p{
 .product-optimize{
 	padding: 10% 0;
 	@extend %bg_center_cover;
+	.row:not(.small-collapse){
+		padding: 30px 20px 0;
+		.gray-p{
+			margin-bottom: 0;
+		}
+	}
 }
 
 // =======================================

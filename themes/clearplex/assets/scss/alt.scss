@@ -171,15 +171,13 @@
 // =======================================
 .sidebar-fixed{
 	position:fixed;
-	.active-button{
-		background-color: $orange !important;
-	}
+	
+}
+.active-button{
+	background-color: $orange !important;
 }
 .sidebar-absolute{
 	position: absolute;
-	.active-button{
-		background-color: $orange !important;
-	}
 }
 .about-sidebar{
 	.ca-title{
