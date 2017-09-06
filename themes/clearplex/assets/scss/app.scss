@@ -968,6 +968,9 @@ address.gray-p{
 .product-optimize{
 	padding: 10% 0;
 	@extend %bg_center_cover;
+	@include breakpoint(medium down){
+		padding-top: 0;
+	}
 	.row:not(.small-collapse){
 		padding: 30px 20px 0;
 		.gray-p{
