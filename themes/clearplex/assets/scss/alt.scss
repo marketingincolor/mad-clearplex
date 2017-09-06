@@ -18,6 +18,10 @@
   @include grid-row();
   margin-top: 10%;
   text-align:center;
+  @include breakpoint(medium down){
+  	padding-left: 30px;
+  	padding-right: 30px;
+  }
   .sub-img img { margin-bottom:3rem; }
 }
 .main-content .product-faqs {
@@ -52,6 +56,10 @@
 .page-template-page-become-dealer .container {
 	.become-dealer-content{
 		padding-bottom: 10%;
+		@include breakpoint(medium down){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 		.subheading {
 			margin-bottom: 30px;
 		}
@@ -62,6 +70,10 @@
 		max-height:900px;
 		padding:5% 0;
 		color:#fff;
+		@include breakpoint(medium down){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 		h5{
 			font-weight: 500;
 			text-transform: uppercase;
@@ -95,6 +107,12 @@
 		}
 		.owl-carousel{
 			@include margin(50,bottom);
+			@include breakpoint(medium down){
+				@include margin(30,bottom);
+			}
+			@include breakpoint(small only){
+				@include margin(0,bottom);
+			}
 		}
 	}
 	.home-testimonials {

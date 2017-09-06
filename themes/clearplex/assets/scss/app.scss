@@ -1133,6 +1133,12 @@ address.gray-p{
 #ninja_forms_required_items, .nf-field-container{
 	margin-bottom: 15px!important;
 }
+.nf-field-container.one-half{
+	@include breakpoint(small only){
+		width: 100% !important;
+		margin: 0 !important;
+	}
+}
 .label-above .nf-field-label{
 	margin-bottom: 1px !important;
 }
