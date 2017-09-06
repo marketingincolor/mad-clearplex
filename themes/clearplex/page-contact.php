@@ -6,8 +6,10 @@
 	get_template_part('template-parts/top-bg');
 ?>
 <div class="sub-head">
-	<div class="sub-img small-10 small-centered">
+	<div class="sub-img small-12 medium-10 small-centered">
 		<?php echo wp_get_attachment_image( get_post_thumbnail_id(), 'fp-large' );  ?>
+	</div>
+	<div class="sub-img small-12 medium-10 small-centered">
 		<h2 class="blue-heading"><?php echo ( get_post_meta( $post->ID, 'contact_title', true) ? get_post_meta( $post->ID, 'contact_title', true) : get_the_title() ); ?></h2>
 		<?php if ( have_posts() ) : ?>
 
@@ -22,16 +24,32 @@
 			<?php else : ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php endif; // End have_posts() check. ?>
+			<?php endif; ?>
+
 	</div>
 </div>
-<!-- standard loop -->
-<div class="main-wrap" role="main">
-	<div class="small-10 small-centered">
-	<article class="main-content">
-		<?php echo do_shortcode('[ninja_form id=1]'); ?>
-	</article>
-	<?php get_sidebar('contact'); ?>
+
+<div class="row show-for-small-only">
+	<div class="small-12 columns" style="padding: 0 30px;">
+		<article id="contact" class="widget widget_contact">
+			<h4 class="ca-title blue-heading">Madico, Inc. Headquarters</h4>
+			<p class="contact-address">
+			2630 Fairfield Ave South<br>
+			St. Petersburg, FL 33712<br>
+			(727)-372-2544</p>
+		</article>
 	</div>
 </div>
+
+<div class="row mobile-form" role="main">
+	<div class="medium-10 small-centered">
+		<article class="main-content">
+			<?php echo do_shortcode('[ninja_form id=1]'); ?>
+		</article>
+		<div class="hide-for-small-only">
+			<?php get_sidebar('contact'); ?>
+		</div>
+	</div>
+</div>
+
 <?php get_footer(); ?>

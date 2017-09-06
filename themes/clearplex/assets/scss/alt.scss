@@ -251,9 +251,20 @@
 		}
   }
 }
+.mobile-form{
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
 .page-template-page-contact .main-wrap,.page-template-page-faqs .container{
 	padding-bottom: 10%;
 	border-bottom: 2px solid #d1d1d1;
+}
+.page-template-page-contact .sub-head{
+	@include breakpoint(small only){
+		text-align: left;
+	}
 }
 .widget_contact{
 	.contact-address{
