@@ -72,17 +72,17 @@ function faqMenuSlider(){
 
 	if($(window).scrollTop() < consumerTop / 2){
 		$sidebar.removeClass('sidebar-fixed');
-		$buttons.removeClass('active-button');
-	} 
-	if ($(window).scrollTop() >= consumerTop / 2) {
+		// $buttons.removeClass('active-button');
+	}
+	if ($(window).scrollTop() >= consumerTop / 2 - 0) {
 		$sidebar.addClass('sidebar-fixed').css({'top':consumerTop / 2});
 		$('#commercial-button,#dealer-button').removeClass('active-button');
 		$('#consumer-button').addClass('active-button');
-	} 
+	}
 	if ($(window).scrollTop() >= commercialTop - sideNavFromTop - 100) {
 		$('#consumer-button,#dealer-button').removeClass('active-button');
 		$('#commercial-button').addClass('active-button');
-	} 
+	}
 	if ($(window).scrollTop() >= dealerTop - sideNavFromTop - 100) {
 		$('#consumer-button,#commercial-button').removeClass('active-button');
 		$('#dealer-button').addClass('active-button');
