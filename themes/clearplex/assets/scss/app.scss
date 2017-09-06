@@ -40,7 +40,7 @@ h1,h2{
 	@include font(36);
 	@include margin(15,bottom);
 	@include breakpoint(small only){
-		@include font(30);
+		@include font(28);
 	}
 }
 .blue-heading{
@@ -336,12 +336,18 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 			transform: translateX(-50%);
 			top: 40%;
 		}
+		@include breakpoint(small only){
+			left: 30px;
+		}
 		h1{
 			@include font(14);
 			text-transform: uppercase;
 		}
 		h2{
 			line-height: 40px;
+			@include breakpoint(small only){
+				@include font(28);
+			}
 		}
 		p{margin-bottom: 25px}
 	}
