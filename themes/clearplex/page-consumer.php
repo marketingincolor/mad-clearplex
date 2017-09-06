@@ -48,7 +48,7 @@
 			    	?>
 
 			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
+			    	<img src="<?php the_field('gray_icon'); ?>" alt="">
 			    	<h5><?php the_title(); ?></h5>
 			    	<?php the_content(); ?>
 			    </div>

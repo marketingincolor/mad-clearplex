@@ -25,6 +25,7 @@
 	.ltblue-heading {
 		color:#8db8e9;
 		@include font(24);
+		@include margin(30,bottom);
 	}
 	.question:before { content:"Q. "; }
 	.answer p:before { content:"A. "; }

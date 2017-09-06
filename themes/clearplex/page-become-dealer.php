@@ -40,33 +40,10 @@
 			      	if ( $the_query->have_posts() ) {
 			      		while ( $the_query->have_posts() ) {
 			      			$the_query->the_post();
-
-			      			$thispost = get_post( get_the_ID() ); 
-			      			$link = $thispost->post_name; 
-			      			switch ($link) {
-			      				case 'optically-clear':
-			      					$icon = 'window-icon-white.png';
-			      					break;
-			      				case 'absorbs-impact':
-			      					$icon = 'car-icon-white.png';
-			      					break;
-			      				case 'guaranteed':
-			      					$icon = 'guaranteed-icon-white.png';
-			      					break;
-			      				case 'transparent':
-			      					$icon = 'invisible-icon-white.png';
-			      					break;
-			      				case 'scratch-resistant':
-			      					$icon = 'scratch-icon-white.png';
-			      					break;
-			      				default:
-			      					$icon = 'invisible-icon-white.png';
-			      					break;
-			      			}
 			      	?>
 
 			      <div class="item text-center">
-			      	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/<?php echo $icon; ?>" alt="">
+			      	<img src="<?php the_field('white_icon'); ?>" alt="">
 			      	<h5><?php the_title(); ?></h5>
 			      	<?php the_content(); ?>
 			      </div>

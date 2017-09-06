@@ -4,8 +4,7 @@
   @include hide-for(medium);
 }
 
-.desktop-menu,
-.site-navigation .top-bar-left {
+.desktop-menu{
   @include show-for(medium);
 }
 

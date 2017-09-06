@@ -98,20 +98,20 @@
 		</div>
 		<div class="medium-5 medium-offset-1 columns">
 			<ul>
-				<li><?php the_field('list_heading1'); ?><br><span class="list-subhead"><?php the_field('list_body1'); ?></span></li>
-				<li><?php the_field('list_heading3'); ?><br><span class="list-subhead"><?php the_field('list_body3'); ?></span></li>
-				<li><?php the_field('list_heading5'); ?><br><span class="list-subhead"><?php the_field('list_body5'); ?></span></li>
-				<li><?php the_field('list_heading7'); ?><br><span class="list-subhead"><?php the_field('list_body7'); ?></span></li>
-				<li><?php the_field('list_heading9'); ?><br><span class="list-subhead"><?php the_field('list_body9'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading1'); ?><br><span class="list-subhead"><?php the_field('list_body1'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading3'); ?><br><span class="list-subhead"><?php the_field('list_body3'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading5'); ?><br><span class="list-subhead"><?php the_field('list_body5'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading7'); ?><br><span class="list-subhead"><?php the_field('list_body7'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading9'); ?><br><span class="list-subhead"><?php the_field('list_body9'); ?></span></li>
 			</ul>
 		</div>
 		<div class="medium-4 columns end">
 			<ul>
-				<li><?php the_field('list_heading2'); ?><br><span class="list-subhead"><?php the_field('list_body2'); ?></span></li>
-				<li><?php the_field('list_heading4'); ?><br><span class="list-subhead"><?php the_field('list_body4'); ?></span></li>
-				<li><?php the_field('list_heading6'); ?><br><span class="list-subhead"><?php the_field('list_body6'); ?></span></li>
-				<li><?php the_field('list_heading8'); ?><br><span class="list-subhead"><?php the_field('list_body8'); ?></span></li>
-				<li><?php the_field('list_heading10'); ?><br><span class="list-subhead"><?php the_field('list_body10'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading2'); ?><br><span class="list-subhead"><?php the_field('list_body2'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading4'); ?><br><span class="list-subhead"><?php the_field('list_body4'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading6'); ?><br><span class="list-subhead"><?php the_field('list_body6'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading8'); ?><br><span class="list-subhead"><?php the_field('list_body8'); ?></span></li>
+				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading10'); ?><br><span class="list-subhead"><?php the_field('list_body10'); ?></span></li>
 			</ul>
 		</div>
 	</div>
