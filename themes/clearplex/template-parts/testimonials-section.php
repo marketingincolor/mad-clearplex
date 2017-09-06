@@ -2,14 +2,14 @@
 	<div class="row">
 		<div class="large-8 large-offset-2 columns">
       <div class="row">
-        <div class="medium-1 columns show-for-large-only">
+        <div class="medium-1 columns show-for-large" style="padding: 0;position:relative;top:8px">
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/quote-icon.png" alt="" class="gray-quote">
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/white-quote-icon.png" alt="" class="white-quote">
         </div>
         <div class="medium-11 columns">
           <h2 class="blue-heading">What They're Saying About ClearPlex Windshield Protection Film</h2>
         </div>
-        <div class="large-1 columns hide-for-large-only">
+        <div class="large-1 columns hide-for-large">
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/quote-icon.png" alt="" class="gray-quote">
           <img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/white-quote-icon.png" alt="" class="white-quote">
         </div>
@@ -51,7 +51,7 @@
 
 			      <li class="orbit-slide">
 			        <div class="row">
-                <div class="medium-12 columns">
+                <div class="medium-11 large-offset-1 columns">
   	        			<p class="gray-p"><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
   	        			<address class="gray-p">
   	        			  <span class="author">-<?php the_field('testimonial_author',$id); ?></span><br>
@@ -64,7 +64,7 @@
             <?php $count++; }} wp_reset_postdata(); ?> 
 
 			    </ul>
-			    <div class="large-8 large-offset-1 medium-11 medium-offset-1 columns end">
+			    <div class="large-8 large-offset-1 medium-12 columns end">
 			    	<div class="row">
 			    		<div class="large-11 columns end" style="padding-left:0;">
 			    			<nav class="orbit-bullets">
