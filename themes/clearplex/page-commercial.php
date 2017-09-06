@@ -18,12 +18,29 @@
 	</div>
 </section>
 
-<section class="product-types" style="background-image: url(<?php the_field('vehicle_type_bg_img'); ?>);">
+<!-- Large Screens -->
+<section class="product-types show-for-large" style="background-image: url(<?php the_field('vehicle_type_bg_img'); ?>);">
 	<div class="row">
 		<div class="large-4 large-offset-8 columns">
 			<h2 class="blue-heading"><?php the_field('vehicle_type_heading'); ?></h2>
 			<p class="gray-p"><?php the_field('vehicle_type_body'); ?></p>
-			<a href="<?php the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
+			<a href="<?php echo site_url();the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
+		</div>
+	</div>
+</section>
+
+<!-- Mobile/Tablet -->
+<section class="product-types hide-for-large">
+	<div class="row small-collapse large-uncollapse">
+		<div class="small-12 columns">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/bus-truck-mobile.jpg" alt="clearplex commercial fleets">
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns" style="padding:30px">
+			<h2 class="blue-heading"><?php the_field('vehicle_type_heading'); ?></h2>
+			<p class="gray-p"><?php the_field('vehicle_type_body'); ?></p>
+			<a href="<?php echo site_url();the_field('vehicle_type_button_link'); ?>" class="btn"><?php the_field('vehicle_type_button_text'); ?></a>
 		</div>
 	</div>
 </section>
@@ -49,7 +66,7 @@
 			    	?>
 
 			    <div class="item text-center">
-			    	<img src="<?php bloginfo('template_directory'); ?>/assets/images/icons/scratch.png" alt="">
+			    	<img src="<?php the_field('gray_icon'); ?>" alt="">
 			    	<h5><?php the_title(); ?></h5>
 			    	<?php the_content(); ?>
 			    </div>
