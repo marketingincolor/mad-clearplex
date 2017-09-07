@@ -1011,6 +1011,10 @@ address.gray-p{
 .video-gallery{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.wp-post-image{
 		@include margin(20,bottom);
 		width: 100%;
