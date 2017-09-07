@@ -34,7 +34,6 @@
 
 		<?php endif; // End have_posts() check. ?>
 
-		<?php the_post_navigation(); ?>
 	</article>
 	<?php get_sidebar('singlecase'); ?>
 	</div>

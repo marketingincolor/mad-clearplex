@@ -69,5 +69,11 @@
 
 <?php wp_footer(); ?>
 
+<script>
+	$(document).on('closed.zf.reveal',function(){
+		$('#video-modal').find('video').trigger('pause');
+	});
+</script>
+
 </body>
 </html>
