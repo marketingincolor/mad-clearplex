@@ -20,7 +20,7 @@ get_template_part('template-parts/top-bg');
 		<div class="medium-10 medium-offset-1 columns">
 			<?php get_search_form(); ?>
 		</div>
-		<div class="large-8 large-offset-2 medium-10 medium-offset-1 columns end text-center">
+		<div class="medium-10 medium-offset-1 columns end text-center">
 			<ul>
 				<li><a href="<?php echo site_url(); ?>">Go To The Home Page &nbsp;&nbsp;<i class="fa fa-home" aria-hidden="true"></i></a></li>
 				<li><a href="<?php echo site_url(); ?>/become-dealer">Become A ClearPlex Dealer &nbsp;&nbsp;<i class="fa fa-check-square-o" aria-hidden="true"></i></a></li>

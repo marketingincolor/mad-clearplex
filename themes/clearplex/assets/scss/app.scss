@@ -986,6 +986,10 @@ address.gray-p{
 .terms-conditions{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h2{
 		margin-bottom: 5%;
 	}
@@ -1093,6 +1097,7 @@ address.gray-p{
 		li{
 			display: inline-block;
 			margin-right: 10px;
+			margin-bottom: 30px;
 			a{
 				background-color: $blue;
 				color: $white;
@@ -1299,6 +1304,9 @@ address.gray-p{
 			i{
 				@include font(46);
 				transition: color 0.25s ease-in-out;
+				@include breakpoint(small only){
+					@include font(35);
+				}
 				&:hover{
 					color: $orange;
 				}
