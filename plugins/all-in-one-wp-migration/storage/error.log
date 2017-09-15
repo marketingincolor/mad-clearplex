@@ -1,0 +1,165 @@
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/b68fdeed81fede51bd734104e363ef76a97d22): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/2f42902e53eae9d5db929e11e8632c7c243232): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/034a036673d6ab4c3500141ff2de5ffa23a0d2): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/d2ab56d2f1c624f0d8ac92bf2ab57481cd7989): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/65b2551200dba841e9ff610c89680d51294edf): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/0d21e993383f586f58a34635fae856d2c2131e): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/413b4c2b876ae77041d8b0211d08295a8b454b): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/558bb9aea9a41acb55b4b072d1b3bafc00391c): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/7c65fad8e31267ead8f237ab88ebe0c4ac7d7b): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/d84e064dd079c40211bfc0e5e4ee4b9d912237): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/2ed55f67bbf47b23181951e218eae3064e72a3): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/23708a8058369a66e955d87928121a9207d182): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/6e\/c19e9040a610d87a99a5c2c0082b42aee52837): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/442464b29cdb4a9ad0331828762f89d089fa79): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/dac05a1b2c5f769183e74a8ae66d6f83364e2c): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/bb7b44dc7fc660249fcbde020ed067f4208018): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/f49a3f1ea912ce258feb0e6ded8ca8e0fa302c): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/1e5d44b5ee7241a0e62728a042cd45e571fbba): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/eb547ce0c58ff72713a940b6a36752f1fdc999): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/a32fd2613eb086ade9344f7e8f006c40e9fc9a): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/e69b1fa034643c0743fb704ff1db8063792959): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/211938e8b27ae4c7a625a6630bcc2a3bbd83d5): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/09eb12d42734e6dde183a26cdfb5f6d5878c60): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/53ae1dadacfc1d11dcab0866593ade8bc52c36): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/a464326fe8dc2aaa19186a498035dc4608426f): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/b60b97f6623443f1f80f5d82de1867ff96ef0b): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/37e31093d76d4dffb1cae056a2618770f1627c): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/dcd48447188b53c895e5a5dacaf742e5468bc0): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/59b57f318a5450786b95aba12cc5e1f41df018): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/034996acac8d361015b0ac355ff6f275f5ecd4): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/1a8a176a7e40b7625628a855b0f9c4a8e6f871): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/6efb476495c6d6960a3ee585d01cef5c707cd8): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/47c1bb0a7f87b014c11623148027f535d2ddbd): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/0114b66756b3afcd257fd4cb9d3e0f3b9447aa): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/808f6061252547c1ce149a7533c7547367e829): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/a3be09d657a5dab8d35a532f02f1473aa8b6a7): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/e49817f18c17a872e35b3b35c71375c797a45d): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/df\/9f560a8822c64973a361fc0d44934c01e04f13): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/1965f60682f8c2b2cffda9ff614db6fb467174): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/f38e9ef6043fade26dd6efe9e4d97d50e78b8f): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/dc22745b94bef97ee0832bb091f239c364f896): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/0b123818d12c442bde02cd7887c790fd6763e2): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/614c35739cd93cb326069db072844c59417b63): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/07b158af7f7b9fd65aebb196ecb33769781acf): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/d9a91f9cf4df20d6dcbbb0f0bdf53f6a134727): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/44a5d1f0cf1f0b17027645e6784d354010f144): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/9577a693605aab794e37f25c8e116455a71d6a): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/685068f52e0ab2bcdf2d214ff6c8185f39c9b4): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/a74abb5df974df749c891e4e34b566b63a5e1e): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/28b261cf68bc0f7bddae713874818c01c8d0ce): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/319a741c768918d5e3c3b84824411a576196e9): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/bb72bdc105eb639b7d9c828b2dd76279151469): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/3e702c4d9c28fb78922cefa5daf91858b12c9a): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/63473a0cfd06237cc5ffb390c051ef30835216): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+
+Sep 15 2017 14:05:01
+{"Number":2,"Message":"fopen(\/Users\/nbeers\/projects\/clearplex\/wp-content\/.git\/objects\/e6\/305730bf47eaf5ef9224795d096feedc1181c0): failed to open stream: Permission denied","File":"\/Users\/nbeers\/projects\/clearplex\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-extractor.php","Line":416}
+

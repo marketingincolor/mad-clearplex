@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	if ($('body').hasClass('home')) {
 		owlCarousel();
+		scrollDown();
 	}
 	if ($('body').hasClass('page-template-page-consumer') || $('body').hasClass('page-template-page-commercial') || $('body').hasClass('page-template-page-become-dealer')) {
 		benefitsCarousel();
@@ -20,6 +21,16 @@ $(window).scroll(function(){
 		faqMenuSlider();
 	}
 });
+
+// Scroll down to second section on home page
+function scrollDown(){
+	$('.scroll-down').on('click',function(){
+		var height = $('.home-hero').outerHeight();
+		$('html,body').animate({
+      scrollTop: height
+    }, 750);
+	});
+}
 
 // Adds a disabled option to the beginning of <select> elements on Contact Page
 // in contact forms, since Ninja Forms can't do it.
@@ -61,17 +72,17 @@ function faqMenuSlider(){
 
 	if($(window).scrollTop() < consumerTop / 2){
 		$sidebar.removeClass('sidebar-fixed');
-		$buttons.removeClass('active-button');
-	} 
-	if ($(window).scrollTop() >= consumerTop / 2) {
+		// $buttons.removeClass('active-button');
+	}
+	if ($(window).scrollTop() >= consumerTop / 2 - 0) {
 		$sidebar.addClass('sidebar-fixed').css({'top':consumerTop / 2});
 		$('#commercial-button,#dealer-button').removeClass('active-button');
 		$('#consumer-button').addClass('active-button');
-	} 
+	}
 	if ($(window).scrollTop() >= commercialTop - sideNavFromTop - 100) {
 		$('#consumer-button,#dealer-button').removeClass('active-button');
 		$('#commercial-button').addClass('active-button');
-	} 
+	}
 	if ($(window).scrollTop() >= dealerTop - sideNavFromTop - 100) {
 		$('#consumer-button,#commercial-button').removeClass('active-button');
 		$('#dealer-button').addClass('active-button');
@@ -116,8 +127,9 @@ function videoMeta(){
 		var that = this;
 		$('#video-modal').bind('open.zf.reveal',function(){
 			var videoSrc   = $(that).parent().data('video');
+			var youtubeSrc   = $(that).parent().data('youtube');
 			var videoTitle = $(that).parent().data('title');
-			$('video').attr('src',videoSrc);
+			$('#video-modal').find('video').attr('src',videoSrc);
 			$('#video-modal').find('h1').text(videoTitle);
 		});
 		$('#video-modal').foundation('open');

@@ -30,7 +30,7 @@
 				?>
 
 				<div class="medium-4 columns<?php if ($count == $count_posts){echo ' end';} ?>">
-					<p class="gray-p test-body subheading">&ldquo;<?php echo get_the_content(); ?>&rdquo;</p>
+					<p class="gray-p test-body subheading">&ldquo;<?php echo wp_trim_words(get_the_content(),40,'...'); ?>&rdquo;</p>
 					<p class="read-more"><a href="<?php the_permalink(); ?>">Read More »</a></p>
 					<address class="gray-p">
 					  <span class="author">-<?php the_field('testimonial_author',$id); ?></span><br>

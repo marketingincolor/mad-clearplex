@@ -65,7 +65,7 @@
 		<div class="medium-10 small-centered columns text-center">
 			<h2 class="blue-heading"><?php the_field('dealer_faq_heading'); ?></h2>
 		</div>
-		<div class="medium-10 small-centered columns">
+		<div class="large-10 small-centered columns">
 
 			<?php get_template_part('template-parts/dealer-faqs'); ?>
 			

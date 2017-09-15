@@ -18,6 +18,10 @@
   @include grid-row();
   margin-top: 10%;
   text-align:center;
+  @include breakpoint(medium down){
+  	padding-left: 30px;
+  	padding-right: 30px;
+  }
   .sub-img img { margin-bottom:3rem; }
 }
 .main-content .product-faqs {
@@ -52,6 +56,10 @@
 .page-template-page-become-dealer .container {
 	.become-dealer-content{
 		padding-bottom: 10%;
+		@include breakpoint(medium down){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 		.subheading {
 			margin-bottom: 30px;
 		}
@@ -62,6 +70,10 @@
 		max-height:900px;
 		padding:5% 0;
 		color:#fff;
+		@include breakpoint(medium down){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 		h5{
 			font-weight: 500;
 			text-transform: uppercase;
@@ -95,6 +107,12 @@
 		}
 		.owl-carousel{
 			@include margin(50,bottom);
+			@include breakpoint(medium down){
+				@include margin(30,bottom);
+			}
+			@include breakpoint(small only){
+				@include margin(0,bottom);
+			}
 		}
 	}
 	.home-testimonials {
@@ -138,6 +156,9 @@
 			color: $black;
 		}
 	}
+	.single-testimonials .container{
+		border-bottom: 2px solid #d1d1d1;
+	}
 	.dealer-form {
 		background:linear-gradient(180deg, #004278, #002a4c);
 		color:#fff;
@@ -146,6 +167,10 @@
 			line-height: 1.6;
 			margin-bottom: 50px;
 		}
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 }
 // =======================================
@@ -153,15 +178,13 @@
 // =======================================
 .sidebar-fixed{
 	position:fixed;
-	.active-button{
-		background-color: $orange !important;
-	}
+	
+}
+.active-button{
+	background-color: $orange !important;
 }
 .sidebar-absolute{
 	position: absolute;
-	.active-button{
-		background-color: $orange !important;
-	}
 }
 .about-sidebar{
 	.ca-title{
@@ -235,9 +258,29 @@
 		}
   }
 }
-.page-template-page-contact .main-wrap,.page-template-page-faqs .container{
+.page-template-page-contact .container{
+	border-bottom: 2px solid #d1d1d1;
+	padding-bottom: 40px;
+}
+.mobile-form{
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.page-template-page-contact .main-wrap,.page-template-page-faqs .container,.page-template-page-about .container{
 	padding-bottom: 10%;
 	border-bottom: 2px solid #d1d1d1;
+}
+.page-template-page-contact .sub-head{
+	@include breakpoint(small only){
+		text-align: left;
+	}
+}
+.page-template-page-about .sub-head{
+	@include breakpoint(small only){
+		padding: 0;
+	}
 }
 .widget_contact{
 	.contact-address{

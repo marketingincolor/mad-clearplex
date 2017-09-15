@@ -40,7 +40,7 @@ h1,h2{
 	@include font(36);
 	@include margin(15,bottom);
 	@include breakpoint(small only){
-		@include font(30);
+		@include font(28);
 	}
 }
 .blue-heading{
@@ -66,7 +66,7 @@ h1,h2{
 	line-height: 1.6;
 	color: #787878;
 }
-section:not(.top-bg):not(.container){
+section:not(.top-bg):not(.container):not(.vehicle-types):not(.fast-dealer.show-for-small-only){
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -139,6 +139,9 @@ label{
 		z-index: 99;
 		padding-top: 1%;
 		@media(max-width: 890px){
+			height: 130px;
+		}
+		@media(max-width: 414px){
 			height: 100px;
 		}
 		.top-bar-left {
@@ -153,9 +156,8 @@ label{
 		  }
 		}
 		.cheeseburger{
-			top: 13px !important;
+			top: 0px !important;
 			@media(max-width: 400px){
-				top: 7px !important;
 				font-size: 20px !important;
 			}
 		}
@@ -299,12 +301,14 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		 		padding: 9px 15px;
 		 		padding-left: 20px;
 		 		padding-right: 20px;
+		 		font-weight: 500;
+		 		font-size: 0.9rem;
 	  	}
 	 	}
 	}
 	.close-button{
-		top: 40px;
-		right: 40px;
+		top: 20px;
+		right: 65px;
 		color: $white;
 		@include font(40);
 	}
@@ -317,8 +321,7 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 .home-hero{
 	height: 700px;
 	@extend %bg_center_cover;
-	.item{
-		position: relative;
+	@include breakpoint(small only){
 		height: 100vh;
 	}
 	.slide-meta{
@@ -326,14 +329,45 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		top: 50%;
 		transform: translateY(-50%);
 		color: $white;
+		@include breakpoint(medium down){
+			width: 78%;
+		}
+		@include breakpoint(medium only){
+			left: 50%;
+			transform: translateX(-50%);
+			top: 40%;
+		}
+		@include breakpoint(small only){
+			left: 30px;
+		}
 		h1{
 			@include font(14);
 			text-transform: uppercase;
 		}
 		h2{
 			line-height: 40px;
+			@include breakpoint(medium down){
+				line-height: 35px;
+			}
+			@include breakpoint(small only){
+				@include font(26);
+			}
+			@media (max-width:320px){
+				@include font(22);
+			}
 		}
 		p{margin-bottom: 25px}
+	}
+	.scroll-down{
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		img{
+			cursor: pointer;
+			padding: 15px;
+		}
 	}
 	.owl-nav{
 		position: absolute;
@@ -356,6 +390,51 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 
 // vehicle types carousel section
 .vehicle-types{
+	//mobile carousel
+	.orbit,.orbit-wrapper,.orbit-container,.orbit-container li{
+		@include breakpoint(medium down){
+			height: 800px;
+		}
+		@include breakpoint(small only){
+			height: 100vh;
+		}
+	}
+	.first-slide{
+		@include breakpoint(medium down){
+			position: relative;
+			top: -20px;
+		}
+	}
+	.orbit-container li{
+		@include breakpoint(medium down){
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		&#homeslide2 .row{
+			@include breakpoint(medium down){
+				position: absolute;
+				top: 550px;
+				width: 90%;
+			}
+			@include breakpoint(small only){
+				top: 360px;
+			}
+		}
+		.row{
+			@include breakpoint(medium down){
+				position: absolute;
+				top: 530px;
+				width: 90%;
+			}
+			@include breakpoint(small only){
+				top: 360px;
+			}
+		}
+	}
 	.move-next,.move-prev{
 		padding: 6px 11px;
 		background-color: white;
@@ -364,6 +443,11 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		border: 2px solid $orange;
 		margin-right: 5px;
 		transition: all 0.25s ease-in-out;
+		@include breakpoint(small only){
+			padding: 8px 13px;
+			top: 1px;
+			position: relative;
+		}
 		&:hover{
 			background-color: $orange;
 			i{
@@ -373,6 +457,21 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		i{
 			color: $gray;
 			position: relative;
+		}
+	}
+	#homeslide1{
+		@include breakpoint(medium down){
+			background-image: url(../images/performance-vehicle-mobile.jpg)!important;
+		}
+	}
+	#homeslide2{
+		@include breakpoint(medium down){
+			background-image: url(../images/fleet-vehicle-mobile.jpg)!important;
+		}
+	}
+	#homeslide3{
+		@include breakpoint(medium down){
+			background-image: url(../images/luxury-vehicle-mobile.jpg)!important;
 		}
 	}
 	.move-next i{
@@ -388,6 +487,9 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		background-position: center center;
 		@media(min-width: 1700px){
 			background-position: -150px center;
+		}
+		@include breakpoint(medium only){
+			background-position: center -50px;
 		}
 		p{
 			@include margin(30,bottom);
@@ -407,6 +509,18 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.fast-dealer.show-for-small-only,.about-home.show-for-small-only{
+	background-color: $gray;
+	padding-top: 0;
 }
 
 // testimonials section
@@ -424,6 +538,14 @@ address.gray-p{
 }
 .home-testimonials{
 	padding: 8% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.read-more{
 		color: $orange;
 		text-transform: uppercase;
@@ -433,6 +555,9 @@ address.gray-p{
 	.large-1.columns{
 		padding: 0;
 		padding-top: 10px;
+		@include breakpoint(medium down){
+			padding: 0 0 20px 10px;
+		}
 	}
 	address.gray-p{
 		@include font(14);
@@ -470,9 +595,18 @@ address.gray-p{
 // ====== 4.) Consumer/Commercial  =======
 // =======================================
 .best-windshield{
-	padding: 7% 0;
+	padding: 8% 0;
 	h2{
 		@include margin(50,bottom);
+		@include breakpoint(medium down){
+			@include margin(25,bottom);
+		}
+	}
+	@include breakpoint(medium down){
+		padding: 12% 50px 8%;
+	}
+	@include breakpoint(small only){
+		padding: 12% 20px 8%;
 	}
 }
 .product-types{
@@ -487,10 +621,20 @@ address.gray-p{
 		color: $gray;
 		font-weight: 500;
 	}
-
+	&.hide-for-large{
+		img{
+			width: 100%;
+		}
+	}
+	@include breakpoint(medium down){
+		padding-top: 0;
+	}
 }
 .product-benefits{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding: 0 0 10%;
+	}
 	.owl-carousel .owl-item img{
 		width: auto;
 		margin: 0 auto 20px;
@@ -515,6 +659,14 @@ address.gray-p{
 	}
 	.owl-next{
 		right: 0;
+		@include breakpoint(medium down){
+			right: 10px;
+		}
+	}
+	.owl-prev{
+		@include breakpoint(medium down){
+			left: 10px;
+		}	
 	}
 }
 .page-template-page-consumer .home-testimonials,.page-template-page-commercial .home-testimonials{
@@ -545,6 +697,9 @@ address.gray-p{
 	padding: 8% 0;
 	.blue-heading{
 		@include margin(50,bottom);
+		@include breakpoint(medium down){
+			@include margin(25,bottom);
+		}
 	}
 	.question{
 		color: #346094;
@@ -556,12 +711,22 @@ address.gray-p{
 		@include margin(50,bottom);
 		color: $gray;
 		font-family: 'Montserrat';
+		@include breakpoint(medium down){
+			@include margin(40,bottom);
+		}
 		li{
 			font-weight: 400;
 			line-height: 1.5;
-			font-size: 16px;
+			@include font(14);
 			font-family: 'Montserrat';
 		}
+	}
+	@include breakpoint(medium down){
+		padding: 8% 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
@@ -571,16 +736,43 @@ address.gray-p{
 	.white-p{
 		margin-bottom: 30px;
 	}
+	@include breakpoint(medium down){
+		padding: 15% 50px 20%;
+	}
+	@include breakpoint(small only){
+		padding: 15% 20px 20%;
+	}
 }
 // =======================================
 // ============= 5.) Dealer  =============
 // =======================================
 .dealer-intro{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.blue-heading{
+		@include breakpoint(small only){
+			margin-bottom: 0;
+		}
+	}
 }
 .dealer-videos{
 	padding: 10% 0;
 	@extend %bg_center_cover;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.video-head-body{
 		margin-bottom: 7%;
 	}
@@ -594,15 +786,28 @@ address.gray-p{
 	}
 	.video-body{
 		@include font(14);
+		@include breakpoint(small only){
+			margin-bottom: 20px;
+		}
+		&:last-child{
+			@include breakpoint(small only){
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 .sales-opp{
 	padding: 10% 0;
 	background-color: #f2f2f2;
-	.large-7{
-		@include breakpoint(small only){
-			@include margin(60,bottom);
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+		img{
+			@include margin(40,bottom);
 		}
+	}
+	@include breakpoint(small only){
+		padding: 10% 20px 15%;
 	}
 	.btn{
 		color: $gray;
@@ -611,6 +816,14 @@ address.gray-p{
 
 .download-docs{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.doc-subhead{
 		margin-bottom: 7%;
 	}
@@ -618,12 +831,26 @@ address.gray-p{
 		position: relative;
 		padding: 30px 0;
 		border: 1px solid #d1d1d1;
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		.doc-list{
 			display: flex;
 			list-style-type: none;
 			align-items: center;
+			@include breakpoint(small only){
+				display: inline-block;
+				margin-left: 0;
+				.attachment-post-thumbnail{
+					@include margin(30,bottom);
+				}
+			}
 			li{
 				margin-right: 30px;
+				@include breakpoint(small only){
+					margin-right: 0;
+				}
 			}
 			.one-fifth{
 				flex-basis: 17.5%;
@@ -631,6 +858,9 @@ address.gray-p{
 			}
 			.three-fifths{
 				flex-basis: 65%;
+				@include breakpoint(small only){
+					text-align: center;
+				}
 			}
 			img{
 				box-shadow: 0 0 5px 1px #ccc;
@@ -683,6 +913,7 @@ address.gray-p{
 // =======================================
 .testimonials-page{
 	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
 	.blue-heading{
 		margin-bottom: 7%;
 	}
@@ -718,6 +949,13 @@ address.gray-p{
 // =======================================
 .clear-choice{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding: 15% 20px 10%;
+	}
 }
 .product-features-top,.product-features-middle,.product-features-bottom{
 	@extend %bg_center_cover;
@@ -729,19 +967,46 @@ address.gray-p{
 			padding: 20px 0;
 			text-indent: -0.8em;
 			color: $gray;
+			@include breakpoint(medium down){
+				padding: 20px 0 0 20px
+			}
 		}
 		i{
 			color: #89b8ea;
 		}
 	}
+	@include breakpoint(medium down){
+		padding-top: 0;
+		img{
+			width: 100%;
+		}
+		.small-10.small-offset-1{
+			padding-top: 6%;
+		}
+	}
+	&.hide-for-large{
+		background-color: #f5f5f5;
+	}
 }
 .product-features-bottom ul li{
 	color: $white;
+	@include breakpoint(medium down){
+		color: $gray
+	}
 }
 .performance-data{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding: 15% 50px 10%;
+	}
+	@include breakpoint(small only){
+		padding: 15% 20px 10%;
+	}
 	.gray-p{
 		padding-bottom: 7%;
+		@include breakpoint(medium down){
+			padding-bottom: 4%;
+		}
 	}
 	table tr,table td{
 		color: $gray;
@@ -767,6 +1032,15 @@ address.gray-p{
 			}
 		}
 	}
+	.mobile-table{
+		td{
+			padding: 10px;
+		}
+		.table-subhead{
+			@include font(12);
+			font-weight: 300;
+		}
+	}
 	ul{
 		list-style-type: none;
 		margin:0;
@@ -777,6 +1051,9 @@ address.gray-p{
 		color: $gray;
 		font-weight: 500;
 		text-indent: -0.8em;
+		@include breakpoint(small only){
+			padding: 20px 0 0 20px;
+		}
 		i{
 			color: #89b8ea;
 		}
@@ -790,6 +1067,23 @@ address.gray-p{
 .product-optimize{
 	padding: 10% 0;
 	@extend %bg_center_cover;
+	@include breakpoint(medium down){
+		padding-top: 0;
+	}
+	.row:not(.small-collapse){
+		@include breakpoint(medium down){
+			padding: 30px 50px 0;
+		}
+		@include breakpoint(small only){
+			padding: 30px 20px 0;
+		}
+		.gray-p{
+			margin-bottom: 0;
+		}
+	}
+	&.hide-for-large img{
+		width: 100%;
+	}
 }
 
 // =======================================
@@ -798,6 +1092,14 @@ address.gray-p{
 .terms-conditions{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h2{
 		margin-bottom: 5%;
 	}
@@ -823,6 +1125,14 @@ address.gray-p{
 .video-gallery{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.wp-post-image{
 		@include margin(20,bottom);
 		width: 100%;
@@ -877,6 +1187,14 @@ address.gray-p{
 .page-error{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h2{
 		@include margin(20,bottom);
 	}
@@ -901,6 +1219,7 @@ address.gray-p{
 		li{
 			display: inline-block;
 			margin-right: 10px;
+			margin-bottom: 30px;
 			a{
 				background-color: $blue;
 				color: $white;
@@ -924,6 +1243,14 @@ address.gray-p{
 .search-results-section{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	hr,form{
 		@include margin(50,bottom);
 	}
@@ -939,6 +1266,14 @@ address.gray-p{
 // =======================================
 .case-study-feed{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.blue-heading{
 		margin-bottom: 20px;
 	}
@@ -1016,6 +1351,12 @@ address.gray-p{
 #ninja_forms_required_items, .nf-field-container{
 	margin-bottom: 15px!important;
 }
+.nf-field-container.one-half{
+	@include breakpoint(small only){
+		width: 100% !important;
+		margin: 0 !important;
+	}
+}
 .label-above .nf-field-label{
 	margin-bottom: 1px !important;
 }
@@ -1076,6 +1417,14 @@ address.gray-p{
 .success{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h1,.read-test{
 		@include font(60);
 		@include breakpoint(small only){
@@ -1101,6 +1450,9 @@ address.gray-p{
 			i{
 				@include font(46);
 				transition: color 0.25s ease-in-out;
+				@include breakpoint(small only){
+					@include font(35);
+				}
 				&:hover{
 					color: $orange;
 				}
@@ -1143,6 +1495,14 @@ address.gray-p{
 .become-distributor{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.gray-p{
 		margin-bottom: 7%;
 	}
@@ -1192,5 +1552,25 @@ address.gray-p{
 	}
 	.social-links li{
 		padding: 6px 0;
+	}
+	&.mobile-footer{
+		i{
+			font-size: 35px;
+		}
+		ul{
+			display: flex;
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 30px;
+			@include breakpoint(medium only){
+				width: 50%;
+			}
+			@include breakpoint(small only){
+			  width: 80%;
+			}
+		}
+		li{
+			flex-grow: 1;
+		}
 	}
 }

@@ -8,7 +8,7 @@
 
 ?>
 <aside class="sidebar about-sidebar">
-	<div class="small-11 small-offset-1">
+	<div class="medium-11 medium-offset-1 small-12">
 	<article id="testimonial" class="widget widget_testimonial">
 		<?php get_template_part('template-parts/testimonials-side'); ?>
 	</article>
