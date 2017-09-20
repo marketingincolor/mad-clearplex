@@ -647,6 +647,10 @@ address.gray-p{
 	@include breakpoint(small only){
 		padding: 12% 20px 8%;
 	}
+	@include breakpoint(medium down){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 .product-types{
 	padding: 10% 0;
@@ -1039,11 +1043,17 @@ address.gray-p{
 }
 .performance-data{
 	padding: 10% 0;
+<<<<<<< HEAD
 	@include breakpoint(medium down){
 		padding: 15% 50px 10%;
 	}
 	@include breakpoint(small only){
 		padding: 15% 20px 10%;
+=======
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+>>>>>>> c04d385d5f19ab496e489ba51ada0e2c8bc50f10
 	}
 	.gray-p{
 		padding-bottom: 7%;

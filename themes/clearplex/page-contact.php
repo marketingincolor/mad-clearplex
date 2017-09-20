@@ -26,6 +26,7 @@
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
+
 		<article id="contact" class="">
 			<h3 class="ca-title blue-heading">Madico, Inc. Headquarters</h5>
 			<p class="contact-address gray-p">

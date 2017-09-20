@@ -10,7 +10,7 @@
 					<div class="large-4 columns">
 						<img src="<?php bloginfo('template_directory'); ?>/assets/images/footer-logo.png" alt="ClearPlex by Madico">
 						<p class="terms"><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
-						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
+						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All Rights Reserved.</p>
 					</div>
 					<div class="large-4 large-offset-2 columns">
 						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' )); ?>
@@ -50,17 +50,17 @@
 						?>
 					</div>
 					<div class="small-12 columns text-center">
-							<select id="footer-dropdown" onChange="window.location.href=this.value;this.style.backgroundImage = 'none';this.style.paddingLeft = '25px'">
-									<option selected="true" disabled="disabled"></option>
-								<?php
-							    foreach($menu_items as $item){
-						        // set up title and url
-						        $title = $item->title;
-						        $link = $item->url;
-						        echo '<option value="'.$link.'">'.$title.'</option>';
-						      }
-								?>
-							</select>
+						<select id="footer-dropdown" onChange="window.location.href=this.value;this.style.backgroundImage = 'none';this.style.paddingLeft = '25px'">
+								<option selected="true" disabled="disabled"></option>
+							<?php
+						    foreach($menu_items as $item){
+					        // set up title and url
+					        $title = $item->title;
+					        $link = $item->url;
+					        echo '<option value="'.$link.'">'.$title.'</option>';
+					      }
+							?>
+						</select>
 					</div>
 					<div class="large-2 columns">
 						<ul class="social-links">

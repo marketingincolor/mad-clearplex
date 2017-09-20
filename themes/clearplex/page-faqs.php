@@ -206,8 +206,6 @@
 		</div>
 	</article>
 
-
-
 		<div class="hide-for-small-only">
 		<?php get_sidebar('faq'); ?>
 		</div>
