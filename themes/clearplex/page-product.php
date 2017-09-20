@@ -2,6 +2,7 @@
 	/*
 	Template Name: Product
 	*/
+	$header_bg = '/assets/images/top-bg-about.jpg';
 	get_header(); 
 	get_template_part('template-parts/top-bg');
 ?>
@@ -207,7 +208,7 @@
 				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading9'); ?><br><span class="list-subhead"><?php the_field('list_body9'); ?></span></li>
 			</ul>
 		</div>
-		<div class="medium-4 columns end">
+		<div class="medium-4 medium-offset-1 large-offset-0 columns end">
 			<ul>
 				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading2'); ?><br><span class="list-subhead"><?php the_field('list_body2'); ?></span></li>
 				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading4'); ?><br><span class="list-subhead"><?php the_field('list_body4'); ?></span></li>

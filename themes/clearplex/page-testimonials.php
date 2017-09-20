@@ -2,6 +2,7 @@
 	/*
 	Template Name: Testimonials
 	*/
+	$header_bg = '/assets/images/top-bg-testimonials.jpg';
 	get_header(); 
 	get_template_part('template-parts/top-bg');
 ?>

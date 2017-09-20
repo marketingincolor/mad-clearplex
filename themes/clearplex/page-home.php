@@ -2,6 +2,7 @@
 	/*
 	Template Name: Home
 	*/
+	
 	get_header(); 
 	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
 ?>
@@ -11,7 +12,7 @@
 		<div class="medium-9 columns">
 			<div class="slide-meta">
 				<h1>CLEARPLEX<sup>&reg;</sup> Windshield<br class="show-for-small-only"> Protection Film</h1>
-				<h2>Enhance your Vehicle with the World's<br class="hide-for-small-only"> Best Performing Windshield Protection</h2>
+				<h2>Enhance your Vehicle with the World's<br class="show-for-large-only"> Best Performing Windshield Protection</h2>
 				<p>Because it's more than a car, it's a prized possession.</p>
 				<a href="<?php echo site_url(); ?>/product" class="btn">Learn More</a>
 			</div>
@@ -60,7 +61,7 @@
 
 <section class="fast-dealer hide-for-small-only" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/fast-dealer.jpg);">
 	<div class="row">
-		<div class="medium-8 large-5 columns">
+		<div class="large-5 columns">
 			<h2 class="white-heading">Expand Your Portfolio and Improve Profits with ClearPlex Windshield Protection Film.</h2>
 			<p class="white-p">ClearPlex film is a natural, easy tie-in if you currently sell paint protection film and/or window film.</p>
 			<a href="<?php echo site_url(); ?>/become-dealer" class="btn">Become A Dealer</a>
@@ -87,7 +88,7 @@
 
 <section class="about-home hide-for-small-only" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/about-home-bg.jpg);">
 	<div class="row">
-		<div class="medium-7 columns">
+		<div class="large-7 columns">
 			<h2 class="white-heading">About Madico<sup>&reg;</sup></h2>
 			<p class="white-p">ClearPlex Windhshield Protection Film is brought to you by Madico, a pioneer and world leader in the development of window protection systems. As an award-winning organization, we have been manufacturing high performance, complex, multilayer films engineered to exceed customer expectations since 1903.</p>
 			<a href="<?php echo site_url(); ?>/about" class="btn">More About Madico</a>

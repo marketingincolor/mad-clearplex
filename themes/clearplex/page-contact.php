@@ -2,6 +2,7 @@
 	/*
 	Template Name: Contact
 	*/
+	$header_bg = '/assets/images/top-bg-contact.jpg';
 	get_header();
 	get_template_part('template-parts/top-bg');
 ?>
@@ -25,7 +26,13 @@
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
-
+		<article id="contact" class="">
+			<h3 class="ca-title blue-heading">Madico, Inc. Headquarters</h5>
+			<p class="contact-address gray-p">
+			2630 Fairfield Ave South<br>
+			St. Petersburg, FL 33712<br>
+			(727)-372-2544</p>
+		</article>
 	</div>
 </div>
 
@@ -46,7 +53,7 @@
 		<article class="main-content">
 			<?php echo do_shortcode('[ninja_form id=1]'); ?>
 		</article>
-		<div class="hide-for-small-only">
+		<div class="show-for-large-only">
 			<?php get_sidebar('contact'); ?>
 		</div>
 	</div>

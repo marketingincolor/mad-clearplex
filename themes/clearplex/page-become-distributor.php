@@ -2,6 +2,7 @@
 	/*
 	Template Name: Become Distributor
 	*/
+	$header_bg = '/assets/images/top-bg-become-distributor.jpg';
 	get_header();
 	get_template_part('template-parts/top-bg');
 ?>
@@ -14,7 +15,7 @@
 		</div>
 		<div class="large-6 medium-8 small-10 small-centered">
 			<?php echo do_shortcode('[ninja_form id=2]'); ?>
-			<p class="text-center"><a href="<?php the_field('distributor_terms_link'); ?>"><?php the_field('distributor_terms_text'); ?></a></p>
+			<p class="text-center"><a href="<?php echo site_url();the_field('distributor_terms_link'); ?>"><?php the_field('distributor_terms_text'); ?></a></p>
 		</div>
 	</div>
 </section>

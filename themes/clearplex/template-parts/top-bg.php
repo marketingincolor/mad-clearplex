@@ -19,9 +19,9 @@ $root = get_bloginfo('template_directory').'/assets/images/';
 			break;
 		case 'commercial':
 		case 'consumer':
-		case 'product':
 			$img = 'top-bg-truck.jpg';
 			break;
+		case 'product':
 		case 'about':
 			$img = 'top-bg-about.jpg';
 			break;
@@ -40,7 +40,7 @@ $root = get_bloginfo('template_directory').'/assets/images/';
     case 'dealer-success':
 			$img = 'top-bg-dealer-success.jpg';
 			break;
-    case 'faq':
+    case 'faqs':
 			$img = 'top-bg-faq.jpg';
 			break;
     case 'listing':

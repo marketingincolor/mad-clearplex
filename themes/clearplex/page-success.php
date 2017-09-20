@@ -2,6 +2,7 @@
 	/*
 	Template Name: Success
 	*/
+	$header_bg = '/assets/images/top-bg-dealer-success.jpg';
 	get_header();
 	get_template_part('template-parts/top-bg');
 	$options = get_option('mic_theme_options');

@@ -7,13 +7,15 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<?php if(is_page(array(225,206,202,218,38,214,342,314,310,138,136,130))) { ?>
+			<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+		<?php } ?>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -32,7 +34,7 @@
 				<div class="small-12 columns">
 					<div class="top-bar-left">
 						<div class="site-desktop-title top-bar-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/images/nav-logo.png" alt="Protection Pro"></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/images/nav-logo.png" alt="ClearPlex"></a>
 						</div>
 					</div>
 					<div class="top-bar-right">
