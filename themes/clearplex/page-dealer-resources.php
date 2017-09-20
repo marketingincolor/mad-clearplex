@@ -2,6 +2,7 @@
 	/*
 	Template Name: Dealer Resources
 	*/
+	$header_bg = '/assets/images/top-bg-windshield.jpg';
 	get_header(); 
 	get_template_part('template-parts/top-bg');
 ?>

@@ -2,7 +2,8 @@
 	/*
 	Template Name: Commercial
 	*/
-	get_header();
+	$header_bg = '/assets/images/top-bg-truck.jpg';
+	get_header('find-dealer');
 	get_template_part('template-parts/top-bg');
 ?>
 
@@ -94,7 +95,7 @@
 
 <section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-bg.jpg);">
 	<div class="row">
-		<div class="large-5 medium-8 columns">
+		<div class="large-5 columns">
 			<h2 class="white-heading"><?php the_field('find_dealer_heading'); ?></h2>
 			<p class="white-p"><?php the_field('find_dealer_body'); ?></p>
 			<a href="<?php the_field('find_dealer_button_link'); ?>" class="btn"><?php the_field('find_dealer_button_text'); ?></a>

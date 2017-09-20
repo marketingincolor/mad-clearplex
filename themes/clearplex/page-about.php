@@ -2,6 +2,7 @@
 	/*
 	Template Name: About
 	*/
+	$header_bg = '/assets/images/top-bg-about.jpg';
 	get_header(); 
 	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
 	get_template_part('template-parts/top-bg');

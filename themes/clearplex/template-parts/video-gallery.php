@@ -16,7 +16,7 @@
 	if ($video_query->have_posts()) : while ($video_query->have_posts()) : $video_query->the_post();
 	?>
 
-	<div class="column column-block" title="Play Video" data-title="<?php the_title(); ?>" data-video="<?php the_field('video_link'); ?>">
+	<div class="column column-block" title="Play Video" data-title="<?php the_title(); ?>" data-video="<?php the_field('video_link'); ?>" data-youtube="<?php the_field('video_url'); ?>">
 		<a href="#!"><?php the_post_thumbnail(); ?></a>
 		<a href="#!"><h5 class="video-title white-heading"><?php the_title(); ?></h5></a>
 		<p class="video-body white-p"><?php echo get_the_content(); ?></p>

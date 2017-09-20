@@ -2,7 +2,9 @@
 	/*
 	Template Name: Become Dealer
 	*/
-	get_header(); 
+	
+	$header_bg = '/assets/images/top-bg-become-dealer.jpg';
+	get_header();
 	get_template_part('template-parts/top-bg');
 ?>
 

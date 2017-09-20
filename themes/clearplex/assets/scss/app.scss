@@ -64,7 +64,7 @@ h1,h2{
 }
 .subheading{
 	line-height: 1.6;
-	color: #787878;
+	color: $gray;
 }
 section:not(.top-bg):not(.container):not(.vehicle-types):not(.fast-dealer.show-for-small-only){
 	padding-left: 20px;
@@ -122,6 +122,39 @@ label{
 // =======================================
 // ======= 2.) Navigation Styles =========
 // =======================================
+.top-bar{
+	background-image: none !important;
+}
+.top-bar.slide-down{
+	@extend %bg_center_cover;
+}
+.home .top-bar.slide-down,.page-template-page-dealer .slide-down{
+	background-image: url(../images/top-bg-windshield.jpg) !important;
+}
+.page-template-page-consumer .slide-down,.page-template-page-commercial .slide-down{
+	background-image: url(../images/top-bg-truck.jpg) !important;
+}
+.page-template-page-become-dealer .slide-down{
+	background-image: url(../images/top-bg-become-dealer.jpg) !important;
+}
+.page-template-page-faqs .slide-down{
+	background-image: url(../images/top-bg-faq.jpg) !important;
+}
+.page-template-page-contact .slide-down{
+	background-image: url(../images/top-bg-contact.jpg) !important;
+}
+.page-template-page-about .slide-down,.page-template-page-product .slide-down,.page-template-page-terms .slide-down{
+	background-image: url(../images/top-bg-about.jpg) !important;
+}
+.page-template-page-case-studies .slide-down{
+	background-image: url(../images/top-bg-case-studies.jpg) !important;
+}
+.page-template-page-become-distributor .slide-down{
+	background-image: url(../images/top-bg-become-distributor.jpg) !important;
+}
+.page-template-page-write-review .slide-down{
+	background-image: url(../images/top-bg-about.jpg) !important;
+}
 
 .top-bar{
 	background-color:$clear;
@@ -156,9 +189,8 @@ label{
 		  }
 		}
 		.cheeseburger{
-			top: 13px !important;
+			top: 0px !important;
 			@media(max-width: 400px){
-				top: 7px !important;
 				font-size: 20px !important;
 			}
 		}
@@ -302,12 +334,14 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		 		padding: 9px 15px;
 		 		padding-left: 20px;
 		 		padding-right: 20px;
+		 		font-weight: 500;
+		 		font-size: 0.9rem;
 	  	}
 	 	}
 	}
 	.close-button{
-		top: 40px;
-		right: 40px;
+		top: 20px;
+		right: 65px;
 		color: $white;
 		@include font(40);
 	}
@@ -320,7 +354,7 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 .home-hero{
 	height: 700px;
 	@extend %bg_center_cover;
-	@include breakpoint(medium down){
+	@include breakpoint(small only){
 		height: 100vh;
 	}
 	.slide-meta{
@@ -328,9 +362,7 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		top: 50%;
 		transform: translateY(-50%);
 		color: $white;
-		@include breakpoint(medium down){
-			width: 90%;
-		}
+		width: 78%;
 		@include breakpoint(medium only){
 			left: 50%;
 			transform: translateX(-50%);
@@ -345,8 +377,14 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		}
 		h2{
 			line-height: 40px;
+			@include breakpoint(medium down){
+				line-height: 35px;
+			}
 			@include breakpoint(small only){
-				@include font(28);
+				@include font(26);
+			}
+			@media (max-width:320px){
+				@include font(22);
 			}
 		}
 		p{margin-bottom: 25px}
@@ -392,8 +430,18 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 			height: 100vh;
 		}
 	}
+	.first-slide{
+		@include breakpoint(medium down){
+			position: relative;
+			top: -20px;
+		}
+	}
 	.orbit-container li{
 		@include breakpoint(medium down){
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		@include breakpoint(small only){
 			padding-left: 20px;
 			padding-right: 20px;
 		}
@@ -404,7 +452,7 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 				width: 90%;
 			}
 			@include breakpoint(small only){
-				top: 360px;
+				top: 490px;
 			}
 		}
 		.row{
@@ -414,7 +462,7 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 				width: 90%;
 			}
 			@include breakpoint(small only){
-				top: 360px;
+				top: 490px;
 			}
 		}
 	}
@@ -471,8 +519,14 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		@media(min-width: 1700px){
 			background-position: -150px center;
 		}
-		@include breakpoint(medium only){
+		@media (max-width:1024px){
+			background-position: center -150px;
+		}
+		@media (max-width:800px){
 			background-position: center -50px;
+		}
+		@include breakpoint(small only){
+			background-position: center center;
 		}
 		p{
 			@include margin(30,bottom);
@@ -492,7 +546,11 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	@include breakpoint(medium only){
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -500,6 +558,8 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 .fast-dealer.show-for-small-only,.about-home.show-for-small-only{
 	background-color: $gray;
 	padding-top: 0;
+	padding: 0 !important;
+	padding-bottom: 30px!important;
 }
 
 // testimonials section
@@ -518,6 +578,10 @@ address.gray-p{
 .home-testimonials{
 	padding: 8% 0;
 	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -570,9 +634,18 @@ address.gray-p{
 // ====== 4.) Consumer/Commercial  =======
 // =======================================
 .best-windshield{
-	padding: 7% 0;
+	padding: 8% 0;
 	h2{
 		@include margin(50,bottom);
+		@include breakpoint(medium down){
+			@include margin(25,bottom);
+		}
+	}
+	@include breakpoint(medium down){
+		padding: 12% 50px 8%;
+	}
+	@include breakpoint(small only){
+		padding: 12% 20px 8%;
 	}
 	@include breakpoint(medium down){
 		padding-left: 20px;
@@ -592,6 +665,7 @@ address.gray-p{
 		font-weight: 500;
 	}
 	&.hide-for-large{
+		background-color: #F2F2F2;
 		img{
 			width: 100%;
 		}
@@ -602,6 +676,9 @@ address.gray-p{
 }
 .product-benefits{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding: 10% 0 5%;
+	}
 	.owl-carousel .owl-item img{
 		width: auto;
 		margin: 0 auto 20px;
@@ -626,6 +703,14 @@ address.gray-p{
 	}
 	.owl-next{
 		right: 0;
+		@include breakpoint(medium down){
+			right: 10px;
+		}
+	}
+	.owl-prev{
+		@include breakpoint(medium down){
+			left: 10px;
+		}	
 	}
 }
 .page-template-page-consumer .home-testimonials,.page-template-page-commercial .home-testimonials{
@@ -648,6 +733,9 @@ address.gray-p{
 	.product-faqs{
 		padding: 3% 0;
 	}
+	.main-content.show-for-small-only{
+		padding:0;
+	}
 	.product-faqs .answer li {
 		font-weight: 300;
 	}
@@ -656,6 +744,9 @@ address.gray-p{
 	padding: 8% 0;
 	.blue-heading{
 		@include margin(50,bottom);
+		@include breakpoint(medium down){
+			@include margin(25,bottom);
+		}
 	}
 	.question{
 		color: #346094;
@@ -667,6 +758,9 @@ address.gray-p{
 		@include margin(50,bottom);
 		color: $gray;
 		font-family: 'Montserrat';
+		@include breakpoint(medium down){
+			@include margin(40,bottom);
+		}
 		li{
 			font-weight: 400;
 			line-height: 1.5;
@@ -675,7 +769,11 @@ address.gray-p{
 		}
 	}
 	@include breakpoint(medium down){
-		padding: 8% 20px;
+		padding: 8% 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
@@ -686,7 +784,10 @@ address.gray-p{
 		margin-bottom: 30px;
 	}
 	@include breakpoint(medium down){
-		padding: 8% 20px 10%;
+		padding: 15% 50px 20%;
+	}
+	@include breakpoint(small only){
+		padding: 15% 20px 20%;
 	}
 }
 // =======================================
@@ -695,14 +796,27 @@ address.gray-p{
 .dealer-intro{
 	padding: 10% 0;
 	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	.blue-heading{
+		@include breakpoint(small only){
+			margin-bottom: 0;
+		}
 	}
 }
 .dealer-videos{
 	padding: 10% 0;
 	@extend %bg_center_cover;
 	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -719,17 +833,28 @@ address.gray-p{
 	}
 	.video-body{
 		@include font(14);
+		@include breakpoint(small only){
+			margin-bottom: 20px;
+		}
+		&:last-child{
+			@include breakpoint(small only){
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 .sales-opp{
 	padding: 10% 0;
 	background-color: #f2f2f2;
 	@include breakpoint(medium down){
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 50px;
+		padding-right: 50px;
 		img{
 			@include margin(40,bottom);
 		}
+	}
+	@include breakpoint(small only){
+		padding: 10% 20px 15%;
 	}
 	.btn{
 		color: $gray;
@@ -739,6 +864,10 @@ address.gray-p{
 .download-docs{
 	padding: 10% 0;
 	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -831,6 +960,7 @@ address.gray-p{
 // =======================================
 .testimonials-page{
 	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
 	.blue-heading{
 		margin-bottom: 7%;
 	}
@@ -866,6 +996,13 @@ address.gray-p{
 // =======================================
 .clear-choice{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding: 15% 20px 10%;
+	}
 }
 .product-features-top,.product-features-middle,.product-features-bottom{
 	@extend %bg_center_cover;
@@ -906,12 +1043,23 @@ address.gray-p{
 }
 .performance-data{
 	padding: 10% 0;
+<<<<<<< HEAD
+	@include breakpoint(medium down){
+		padding: 15% 50px 10%;
+	}
+	@include breakpoint(small only){
+		padding: 15% 20px 10%;
+=======
 	@include breakpoint(small only){
 		padding-left: 20px;
 		padding-right: 20px;
+>>>>>>> c04d385d5f19ab496e489ba51ada0e2c8bc50f10
 	}
 	.gray-p{
 		padding-bottom: 7%;
+		@include breakpoint(medium down){
+			padding-bottom: 4%;
+		}
 	}
 	table tr,table td{
 		color: $gray;
@@ -940,6 +1088,10 @@ address.gray-p{
 	.mobile-table{
 		td{
 			padding: 10px;
+		}
+		.table-subhead{
+			@include font(12);
+			font-weight: 300;
 		}
 	}
 	ul{
@@ -972,10 +1124,18 @@ address.gray-p{
 		padding-top: 0;
 	}
 	.row:not(.small-collapse){
-		padding: 30px 20px 0;
+		@include breakpoint(medium down){
+			padding: 30px 50px 0;
+		}
+		@include breakpoint(small only){
+			padding: 30px 20px 0;
+		}
 		.gray-p{
 			margin-bottom: 0;
 		}
+	}
+	&.hide-for-large img{
+		width: 100%;
 	}
 }
 
@@ -985,6 +1145,14 @@ address.gray-p{
 .terms-conditions{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h2{
 		margin-bottom: 5%;
 	}
@@ -996,6 +1164,7 @@ address.gray-p{
 		@include font(16);
 		@include margin(30,bottom);
 		color: $gray;
+		line-height: 1.6;
   }
 	.first-word{
 		text-transform: uppercase;
@@ -1010,6 +1179,14 @@ address.gray-p{
 .video-gallery{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.wp-post-image{
 		@include margin(20,bottom);
 		width: 100%;
@@ -1064,6 +1241,14 @@ address.gray-p{
 .page-error{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h2{
 		@include margin(20,bottom);
 	}
@@ -1088,6 +1273,7 @@ address.gray-p{
 		li{
 			display: inline-block;
 			margin-right: 10px;
+			margin-bottom: 30px;
 			a{
 				background-color: $blue;
 				color: $white;
@@ -1111,6 +1297,14 @@ address.gray-p{
 .search-results-section{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	hr,form{
 		@include margin(50,bottom);
 	}
@@ -1126,6 +1320,14 @@ address.gray-p{
 // =======================================
 .case-study-feed{
 	padding: 10% 0;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.blue-heading{
 		margin-bottom: 20px;
 	}
@@ -1137,6 +1339,27 @@ address.gray-p{
 		float: none;
 		background-color: $clear;
 		display: inline-block;
+		.gray-p{
+			@include breakpoint(small only){
+				margin-bottom: 0;
+			}
+		}
+	}
+	.question {
+		color: $blue;
+		@include font(16);
+		font-weight: 500;
+	}
+	.answer{
+		font-weight: 300;
+		@include font(16);
+		font-family: "Montserrat";
+		margin-bottom: 30px;
+	}
+	.tabs-panel {
+		@include breakpoint(small only){
+			padding: 0;
+		}
 	}
 	.tabs-title > a:focus, .tabs-title > a[aria-selected='true']{
 		background-color: $clear;
@@ -1269,6 +1492,14 @@ address.gray-p{
 .success{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	h1,.read-test{
 		@include font(60);
 		@include breakpoint(small only){
@@ -1294,6 +1525,9 @@ address.gray-p{
 			i{
 				@include font(46);
 				transition: color 0.25s ease-in-out;
+				@include breakpoint(small only){
+					@include font(35);
+				}
 				&:hover{
 					color: $orange;
 				}
@@ -1336,6 +1570,14 @@ address.gray-p{
 .become-distributor{
 	padding: 10% 0;
 	border-bottom: 2px solid #d1d1d1;
+	@include breakpoint(medium down){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.gray-p{
 		margin-bottom: 7%;
 	}
@@ -1387,6 +1629,8 @@ address.gray-p{
 		padding: 6px 0;
 	}
 	&.mobile-footer{
+		padding-left: 30px;
+		padding-right: 30px;
 		i{
 			font-size: 35px;
 		}
@@ -1401,9 +1645,28 @@ address.gray-p{
 			@include breakpoint(small only){
 			  width: 80%;
 			}
+			@media(max-width: 320px){
+				width: 100%;
+			}
 		}
 		li{
 			flex-grow: 1;
+		}
+		#footer-dropdown{
+			background-image: url(../images/footer-menu-bg.png);
+			background-size:cover;
+			background-position:center center;
+			border:2px solid $blue;
+			border-radius:3px;
+			padding:0;
+			color: $blue;
+			font-family: 'Montserrat';
+			width: 300px;
+			max-width: 100%;
+			@include margin(30,bottom);
+			@media(max-width:360px){
+				padding: 5px;
+			}
 		}
 	}
 }

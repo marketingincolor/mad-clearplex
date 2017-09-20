@@ -10,7 +10,7 @@
 					<div class="large-4 columns">
 						<img src="<?php bloginfo('template_directory'); ?>/assets/images/footer-logo.png" alt="ClearPlex by Madico">
 						<p class="terms"><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
-						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
+						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All Rights Reserved.</p>
 					</div>
 					<div class="large-4 large-offset-2 columns">
 						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' )); ?>
@@ -41,6 +41,26 @@
 				<div class="row">
 					<div class="large-4 columns text-center">
 						<img src="<?php bloginfo('template_directory'); ?>/assets/images/footer-logo.png" alt="ClearPlex by Madico">
+						<!-- Get mobile menu and put into a select dropdown -->
+						<?php
+							$menu_name  = 'footer-menu';
+							$locations  = get_nav_menu_locations();
+							$menu       = wp_get_nav_menu_object($locations[$menu_name]);
+							$menu_items = wp_get_nav_menu_items($menu->term_id, array('order' => 'DESC'));
+						?>
+					</div>
+					<div class="small-12 columns text-center">
+						<select id="footer-dropdown" onChange="window.location.href=this.value;this.style.backgroundImage = 'none';this.style.paddingLeft = '25px'">
+								<option selected="true" disabled="disabled"></option>
+							<?php
+						    foreach($menu_items as $item){
+					        // set up title and url
+					        $title = $item->title;
+					        $link = $item->url;
+					        echo '<option value="'.$link.'">'.$title.'</option>';
+					      }
+							?>
+						</select>
 					</div>
 					<div class="large-2 columns">
 						<ul class="social-links">
@@ -68,6 +88,12 @@
 		</div>
 
 <?php wp_footer(); ?>
+
+<script>
+	$(document).on('closed.zf.reveal',function(){
+		$('#video-modal').find('video').trigger('pause');
+	});
+</script>
 
 </body>
 </html>

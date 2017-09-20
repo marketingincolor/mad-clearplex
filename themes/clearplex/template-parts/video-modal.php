@@ -3,6 +3,7 @@
   <div class="flex-video widescreen">
   	<h2></h2>
     <video src="<?php echo home_url();the_field('video_url'); ?>" controls autoplay></video>
+    <!-- <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe> -->
   </div>
   <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>

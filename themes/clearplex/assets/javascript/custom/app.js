@@ -127,8 +127,9 @@ function videoMeta(){
 		var that = this;
 		$('#video-modal').bind('open.zf.reveal',function(){
 			var videoSrc   = $(that).parent().data('video');
+			var youtubeSrc   = $(that).parent().data('youtube');
 			var videoTitle = $(that).parent().data('title');
-			$('video').attr('src',videoSrc);
+			$('#video-modal').find('video').attr('src',videoSrc);
 			$('#video-modal').find('h1').text(videoTitle);
 		});
 		$('#video-modal').foundation('open');

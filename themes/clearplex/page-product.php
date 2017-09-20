@@ -2,6 +2,7 @@
 	/*
 	Template Name: Product
 	*/
+	$header_bg = '/assets/images/top-bg-about.jpg';
 	get_header(); 
 	get_template_part('template-parts/top-bg');
 ?>
@@ -207,7 +208,7 @@
 				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading9'); ?><br><span class="list-subhead"><?php the_field('list_body9'); ?></span></li>
 			</ul>
 		</div>
-		<div class="medium-4 columns end">
+		<div class="medium-4 medium-offset-1 large-offset-0 columns end">
 			<ul>
 				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading2'); ?><br><span class="list-subhead"><?php the_field('list_body2'); ?></span></li>
 				<li><li><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;<?php the_field('list_heading4'); ?><br><span class="list-subhead"><?php the_field('list_body4'); ?></span></li>
@@ -237,7 +238,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="small1-2 columns">
+		<div class="small-12 columns">
 			<h2 class="blue-heading"><?php the_field('optimize_heading'); ?></h2>
 			<p class="gray-p"><?php the_field('optimize_body') ?></p>
 		</div>
@@ -246,7 +247,7 @@
 
 <section class="find-dealer" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/images/find-dealer-consumer.jpg);">
 	<div class="row">
-		<div class="large-5 large-offset-7 medium-8 medium-offset-4 columns">
+		<div class="large-5 large-offset-7 medium-8 columns">
 			<h2 class="white-heading"><?php the_field('find_dealer_heading',8); ?></h2>
 			<p class="white-p"><?php the_field('find_dealer_body',8); ?></p>
 			<a href="<?php the_field('find_dealer_button_link',8); ?>" class="btn"><?php the_field('find_dealer_button_text',8); ?></a>

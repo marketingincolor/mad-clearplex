@@ -2,6 +2,7 @@
 	/*
 	Template Name: Write Review
 	*/
+	$header_bg = '/assets/images/top-bg-about.jpg';
 	get_header();
 	get_template_part('template-parts/top-bg');
 ?>
