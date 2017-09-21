@@ -18,17 +18,6 @@
 	</div>
 </section>
 
-<section class="dealer-videos" style="background-image: url(<?php the_field('dealer_video_bg'); ?>);">
-	<div class="row">
-		<div class="large-12 columns text-center">
-			<h2 class="white-heading"><?php the_field('dealer_video_title'); ?></h2>
-			<p class="white-p video-head-body"><?php the_field('dealer_video_body'); ?></p>
-		</div>
-
-		<?php get_template_part('template-parts/video-gallery'); ?>
-		
-	</div>
-</section>
 
 <section class="sales-opp">
 	<div class="row">
@@ -50,6 +39,18 @@
 			<?php the_field('dealer_opportunity_body'); ?>
 			<a href="<?php echo site_url();the_field('dealer_opportunity_button_link'); ?>" class="btn"><?php the_field('dealer_opportunity_button_text') ?></a>
 		</div>
+	</div>
+</section>
+
+<section class="dealer-videos" style="background-image: url(<?php the_field('dealer_video_bg'); ?>);">
+	<div class="row">
+		<div class="large-12 columns text-center">
+			<h2 class="white-heading"><?php the_field('dealer_video_title'); ?></h2>
+			<p class="white-p video-head-body"><?php the_field('dealer_video_body'); ?></p>
+		</div>
+
+		<?php get_template_part('template-parts/video-gallery'); ?>
+		
 	</div>
 </section>
 
