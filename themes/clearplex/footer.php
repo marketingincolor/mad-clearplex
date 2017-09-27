@@ -94,6 +94,8 @@
 		$('#video-modal').find('video').trigger('pause');
 	});
 </script>
+<?php echo $options['gtm_code_body'];
+      echo $options['other_footer_script']; ?>
 
 </body>
 </html>

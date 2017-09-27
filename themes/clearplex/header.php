@@ -6,16 +6,19 @@
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
- */
+ */$options = get_option('mic_theme_options');
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
+		<?php echo $options['gtm_code_head']; ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php if(is_page(array(225,206,202,218,38,214,342,314,310,138,136,130))) { ?>
 			<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 		<?php } ?>
+		<?php echo $options['other_head_script']; ?>
+		<?php echo $options['ga_code']; ?>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

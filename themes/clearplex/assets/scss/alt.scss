@@ -265,6 +265,12 @@
 		padding-top: 0;
 	}
 }
+.page-template-page-contact .main-content{
+	@include breakpoint(medium down){
+		float: none;
+		width: 100%;
+	}
+}
 .mobile-form{
 	@include breakpoint(small only){
 		padding-left: 20px;
