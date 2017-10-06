@@ -9,7 +9,10 @@ $root = get_bloginfo('template_directory').'/assets/images/';
 	//}//if (is_single('videos')) {
 		//$img = 'top-bg-videos.jpg';
 	//}
-} else{
+}elseif (is_front_page()) {
+	$img = 'top-bg-home.jpg';
+} 
+else{
 	switch ($slug) {
 		case 'testimonials':
 			$img = 'top-bg-testimonials.jpg';
@@ -18,8 +21,10 @@ $root = get_bloginfo('template_directory').'/assets/images/';
 			$img = 'top-bg-windshield.jpg';
 			break;
 		case 'commercial':
-		case 'consumer':
 			$img = 'top-bg-truck.jpg';
+			break;
+		case 'consumer':
+			$img = 'consumer-top-bg.jpg';
 			break;
 		case 'product':
 		case 'about':
@@ -43,6 +48,7 @@ $root = get_bloginfo('template_directory').'/assets/images/';
     case 'faqs':
 			$img = 'top-bg-faq.jpg';
 			break;
+    case 'sitemap':
     case 'listing':
 			$img = 'top-bg-listing.jpg';
 			break;
@@ -54,7 +60,7 @@ $root = get_bloginfo('template_directory').'/assets/images/';
 			break;
 
 		default:
-			$img = 'top-bg-about.jpg';
+			$img = 'top-bg-home.jpg';
 			break;
 	}
 }

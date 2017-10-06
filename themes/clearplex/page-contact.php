@@ -2,7 +2,6 @@
 	/*
 	Template Name: Contact
 	*/
-	$header_bg = '/assets/images/top-bg-contact.jpg';
 	get_header();
 	get_template_part('template-parts/top-bg');
 ?>
