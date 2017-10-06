@@ -19,6 +19,7 @@
 14.) Success
 15.) Become Distributor
 16.) Footer
+17.) Sitemap
 
 */
 
@@ -128,7 +129,10 @@ label{
 .top-bar.slide-down{
 	@extend %bg_center_cover;
 }
-.home .top-bar.slide-down,.page-template-page-dealer-resources .slide-down{
+.home .top-bar.slide-down{
+	background-image: url(../images/top-bg-home.jpg) !important;
+}
+.page-template-page-dealer-resources .slide-down{
 	background-image: url(../images/top-bg-windshield.jpg) !important;
 }
 .page-template-page-consumer .slide-down,.page-template-page-commercial .slide-down{
@@ -568,8 +572,11 @@ address.gray-p{
 	font-style: normal;
 	color: $gray;
 	.author{
-		font-weight: 600;
+		font-weight: 500;
 		text-transform: uppercase;
+	}
+	.job{
+		font-weight: 500;
 	}
 }
 .home-testimonials{
@@ -761,7 +768,7 @@ address.gray-p{
 		li{
 			font-weight: 400;
 			line-height: 1.5;
-			@include font(14);
+			@include font(16);
 			font-family: 'Montserrat';
 		}
 	}
@@ -1658,6 +1665,24 @@ address.gray-p{
 			@media(max-width:360px){
 				padding: 5px;
 			}
+		}
+	}
+}
+
+// =======================================
+// ============= 17.) Sitemap ============
+// =======================================
+.sitemap{
+	padding: 10% 0;
+	border-bottom: 2px solid #d1d1d1;
+	h1{
+		margin-bottom: 5%
+	}
+	ul{
+		list-style-type: none;
+		margin: 0;
+		li{
+			padding: 5px 0;
 		}
 	}
 }

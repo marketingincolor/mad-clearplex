@@ -52,9 +52,9 @@
 			      <li class="orbit-slide">
 			        <div class="row">
                 <div class="medium-11 large-offset-1 columns">
-  	        			<p class="gray-p"><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+  	        			<p class="gray-p"><?php echo wp_trim_words(get_field('testimonial_excerpt'), 40, '...'); ?></p>
   	        			<address class="gray-p">
-  	        			  <span class="author"><?php the_field('testimonial_author',$id); ?></span><br>
+  	        			  <span class="author">&mdash;<?php the_field('testimonial_author',$id); ?></span><br>
   	        			  <span class="job"><?php the_field('testimonial_job',$id); ?></span>
   	        			</address>
   	        		</div>
