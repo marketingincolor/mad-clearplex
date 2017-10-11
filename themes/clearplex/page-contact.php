@@ -49,14 +49,25 @@
 </div>
 
 <div class="row mobile-form" role="main">
-	<div class="medium-10 small-centered columns clearfix">
-		<article class="main-content">
+	<div class="medium-10 large-8 small-centered columns clearfix">
+		<article>
 			<?php echo do_shortcode('[ninja_form id=1]'); ?>
 		</article>
-		<div class="show-for-large">
-			<?php get_sidebar('contact'); ?>
-		</div>
 	</div>
 </div>
 
 <?php get_footer(); ?>
+
+<script>
+	setTimeout(function(){
+		$('#nf-field-10').on('change',function(){
+			if ($(this).val() == 'US') {}
+			setTimeout(function(){
+				$('#nf-field-55').find('option:first').before('<option disabled="disabled" selected="selected">Select State</option>');
+			},200);
+		var country = $(this).find('option:selected').text();
+		$(this).attr('value',country)
+		});
+		$('#nf-field-55').find('option:first').before('<option disabled="disabled" selected="selected">Select State</option>');
+	},500)
+</script>
