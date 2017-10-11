@@ -67,7 +67,7 @@ h1,h2{
 	line-height: 1.6;
 	color: $gray;
 }
-section:not(.top-bg):not(.container):not(.vehicle-types):not(.fast-dealer.show-for-small-only){
+section:not(.top-bg):not(.container):not(.vehicle-types):not(.fast-dealer.show-for-small-only):not(.home-hero){
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -375,9 +375,10 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 		h1{
 			@include font(14);
 			text-transform: uppercase;
+			font-weight: 400;
 		}
 		h2{
-			line-height: 40px;
+			line-height: 45px;
 			@include breakpoint(medium down){
 				line-height: 35px;
 			}

@@ -42,7 +42,7 @@
 	</div>
 </section>
 
-<section class="dealer-videos" style="background-image: url(<?php the_field('dealer_video_bg'); ?>);">
+<section id="dealer-videos" class="dealer-videos" style="background-image: url(<?php the_field('dealer_video_bg'); ?>);">
 	<div class="row">
 		<div class="large-12 columns text-center">
 			<h2 class="white-heading"><?php the_field('dealer_video_title'); ?></h2>

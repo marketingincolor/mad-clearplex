@@ -31,7 +31,7 @@
 </style>
 
 <section class="home-hero">
-	<video src="http://dev.marketingincolor.com/cplex/wp-content/uploads/2017/08/ClearPlex-Video-Background.mp4" autoplay="" loop="" muted="" preload="auto"></video>
+	<video src="http://dev.marketingincolor.com/cplex/wp-content/uploads/2017/10/ClearPlex-Loop-1.mp4" autoplay="" loop="" muted="" preload="auto"></video>
 	<div class="center">
 		<div class="small-12 columns">
 			<div class="slide-meta">
