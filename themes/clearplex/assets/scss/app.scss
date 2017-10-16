@@ -423,51 +423,6 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 
 // vehicle types carousel section
 .vehicle-types{
-	//mobile carousel
-	.orbit,.orbit-wrapper,.orbit-container,.orbit-container li{
-		@include breakpoint(medium down){
-			height: 800px;
-		}
-		@include breakpoint(small only){
-			height: 100vh;
-		}
-	}
-	.first-slide{
-		@include breakpoint(medium down){
-			position: relative;
-			top: -20px;
-		}
-	}
-	.orbit-container li{
-		@include breakpoint(medium down){
-			padding-left: 50px;
-			padding-right: 50px;
-		}
-		@include breakpoint(small only){
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-		&#homeslide2 .row{
-			@include breakpoint(medium down){
-				position: absolute;
-				top: 550px;
-				width: 90%;
-			}
-			@include breakpoint(small only){
-				top: 490px;
-			}
-		}
-		.row{
-			@include breakpoint(medium down){
-				position: absolute;
-				top: 530px;
-				width: 90%;
-			}
-			@include breakpoint(small only){
-				top: 490px;
-			}
-		}
-	}
 	.move-next,.move-prev{
 		padding: 6px 11px;
 		background-color: white;
@@ -492,21 +447,6 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 			position: relative;
 		}
 	}
-	#homeslide1{
-		@include breakpoint(medium down){
-			background-image: url(../images/performance-vehicle-mobile.jpg)!important;
-		}
-	}
-	#homeslide2{
-		@include breakpoint(medium down){
-			background-image: url(../images/fleet-vehicle-mobile.jpg)!important;
-		}
-	}
-	#homeslide3{
-		@include breakpoint(medium down){
-			background-image: url(../images/luxury-vehicle-mobile.jpg)!important;
-		}
-	}
 	.move-next i{
 		left: 2px;
 	}
@@ -515,20 +455,8 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 	}
 	.orbit-slide{
 		padding: 10% 0;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-		@media(min-width: 1700px){
-			background-position: -150px center;
-		}
-		@media (max-width:1024px){
-			background-position: center -150px;
-		}
-		@media (max-width:800px){
-			background-position: center -50px;
-		}
 		@include breakpoint(small only){
-			background-position: center center;
+			padding: 10% 20px;
 		}
 		p{
 			@include margin(30,bottom);

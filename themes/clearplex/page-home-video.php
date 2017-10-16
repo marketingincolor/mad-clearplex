@@ -31,7 +31,7 @@
 </style>
 
 <section class="home-hero">
-	<video src="http://dev.marketingincolor.com/cplex/wp-content/uploads/2017/10/ClearPlex-Loop-1.mp4" autoplay="" loop="" muted="" preload="auto"></video>
+	<video src="http://dev.marketingincolor.com/cplex/wp-content/uploads/2017/10/ClearPlex-Loop-3.mp4" autoplay="" loop="" muted="" preload="auto"></video>
 	<div class="center">
 		<div class="small-12 columns">
 			<div class="slide-meta">
@@ -51,27 +51,36 @@
 	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-auto-play="false">
 	  <div class="orbit-wrapper">
 	    <ul class="orbit-container">
-	      <li id="homeslide1" class="is-active orbit-slide" style="background-image: url(<?php the_field('performance_image'); ?>);">
+	      <li id="homeslide1" class="is-active orbit-slide">
 	        <div class="row">
-	        	<div class="large-4 large-offset-8 columns first-slide">
+	        	<div class="large-8 columns">
+	        		<img src="<?php the_field('performance_image'); ?>" alt="Clearplex performance car">
+	        	</div>
+	        	<div class="large-4 columns first-slide">
 	        		<h2 class="blue-heading"><?php the_field('performance_title'); ?></h2>
 	        		<p class="gray-p"><?php the_field('performance_body'); ?></p>
 	        		<a href="<?php echo site_url();the_field('performance_button_url'); ?>" class="btn"><?php the_field('performance_button_text'); ?></a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
 	        	</div>
 	        </div>
 	      </li>
-	      <li id="homeslide2" class="orbit-slide" style="background-image: url(<?php the_field('fleet_image'); ?>);">
+	      <li id="homeslide2" class="orbit-slide">
           <div class="row">
-          	<div class="large-4 large-offset-8 columns">
+          	<div class="large-8 columns">
+          		<img src="<?php the_field('fleet_image'); ?>" alt="Clearplex fleet vehicles">
+          	</div>
+          	<div class="large-4 columns">
           		<h2 class="blue-heading"><?php the_field('fleet_title'); ?></h2>
           		<p class="gray-p"><?php the_field('fleet_body'); ?></p>
           		<a href="<?php echo site_url();the_field('fleet_button_link'); ?>" class="btn"><?php the_field('fleet_button_text'); ?></a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
           	</div>
           </div>
 	      </li>
-	      <li id="homeslide3" class="orbit-slide" style="background-image: url(<?php the_field('luxury_image'); ?>);">
+	      <li id="homeslide3" class="orbit-slide">
           <div class="row">
-          	<div class="large-4 large-offset-8 columns">
+          	<div class="large-8 columns">
+          		<img src="<?php the_field('luxury_image'); ?>" alt="Clearplex classic luxury car">
+          	</div>
+          	<div class="large-4 columns">
           		<h2 class="blue-heading"><?php the_field('luxury_title'); ?></h2>
           		<p class="gray-p"><?php the_field('luxury_body'); ?></p>
           		<a href="<?php echo site_url();the_field('luxury	_button_link'); ?>" class="btn"><?php the_field('luxury_button_text'); ?></a><a href="#!" class="move-prev"><i class='fa fa-chevron-left'></i></a><a href="#!" class="move-next"><i class='fa fa-chevron-right'></i></a>
