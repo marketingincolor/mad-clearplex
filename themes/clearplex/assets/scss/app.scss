@@ -671,6 +671,7 @@ address.gray-p{
 	}
 	.product-faqs .answer li {
 		font-weight: 300;
+		@include font(14);
 	}
 }
 .product-faqs{
@@ -697,7 +698,7 @@ address.gray-p{
 		li{
 			font-weight: 400;
 			line-height: 1.5;
-			@include font(16);
+			@include font(14);
 			font-family: 'Montserrat';
 		}
 	}
