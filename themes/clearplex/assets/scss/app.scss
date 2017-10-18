@@ -360,9 +360,28 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 	display: flex;
   align-items: center;
   justify-content: center;
+  background: #00467f;
+  overflow: hidden;
+  position: relative;
 	@extend %bg_center_cover;
 	@include breakpoint(small only){
 		height: 100vh;
+	}
+	video{
+		min-width: 100%;
+		min-height: 100%;
+		z-index: 0;
+		opacity: 0.5;
+		object-fit: fill;
+	}
+	.center{
+		position: absolute;
+		max-width: 75rem;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 1;
 	}
 	.slide-meta{
 		color: $white;
@@ -423,6 +442,9 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 
 // vehicle types carousel section
 .vehicle-types{
+	.vehicle-slide{
+		
+	}
 	.move-next,.move-prev{
 		padding: 6px 11px;
 		background-color: white;
