@@ -20,3 +20,18 @@
 </section>
 
 <?php get_footer(); ?>
+
+<script>
+  // Change state and/or country fields after load
+	setTimeout(function(){
+		$('#nf-field-39').on('change',function(){
+			if ($(this).val() == 'US') {}
+			setTimeout(function(){
+				$('#nf-field-56').find('option:first').before('<option disabled="disabled" selected="selected">Select State</option>');
+			},200);
+		var country = $(this).find('option:selected').text();
+		$(this).attr('value',country)
+		});
+		$('#nf-field-56').find('option:first').before('<option disabled="disabled" selected="selected">Select State</option>');
+	},500)
+</script>

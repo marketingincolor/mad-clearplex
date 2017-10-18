@@ -32,7 +32,7 @@
 <section class="product-types hide-for-large">
 	<div class="row small-collapse large-uncollapse">
 		<div class="small-12 columns">
-			<img src="<?php bloginfo('template_directory'); ?>/assets/images/consumer-cars-mobile.jpg" alt="clearplex commercial fleets">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/classic-performance-mobile.jpg" alt="clearplex classic performance">
 		</div>
 	</div>
 	<div class="row">
