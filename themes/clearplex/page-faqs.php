@@ -22,8 +22,10 @@
 			<h2 class="ltblue-heading">Consumer</h2>
 			<?php
 			$args = array(
-				'post_type' => 'faq', 
-				'category_name' => 'consumer',
+				'post_type'      => 'faq',
+				'orderby'        => 'menu_order',
+				'order'          => 'ASC',
+				'category_name'  => 'consumer',
 				'posts_per_page' => -1
 			);
 			$loop = new WP_Query( $args );
@@ -39,8 +41,10 @@
 			<h2 class="ltblue-heading">Commercial</h2>
 			<?php 
 			$args = array( 
-				'post_type' => 'faq', 
-				'category_name' => 'commercial',
+				'post_type'      => 'faq',
+				'orderby'        => 'menu_order',
+				'order'          => 'ASC',
+				'category_name'  => 'commercial',
 				'posts_per_page' => -1
 			);
 			$loop = new WP_Query( $args );
@@ -56,8 +60,10 @@
 			<h2 class="ltblue-heading">Dealer</h2>
 			<?php 
 			$args = array( 
-				'post_type' => 'faq', 
-				'category_name' => 'dealer, become-dealer',
+				'post_type'      => 'faq',
+				'orderby'        => 'menu_order',
+				'order'          => 'ASC',
+				'category_name'  => 'dealer, become-dealer',
 				'posts_per_page' => -1
 			);
 			$loop = new WP_Query( $args );
