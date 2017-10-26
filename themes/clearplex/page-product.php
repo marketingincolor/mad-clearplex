@@ -250,7 +250,7 @@
 		<div class="large-5 large-offset-7 medium-8 columns">
 			<h2 class="white-heading"><?php the_field('find_dealer_heading',8); ?></h2>
 			<p class="white-p"><?php the_field('find_dealer_body',8); ?></p>
-			<a href="<?php the_field('find_dealer_button_link',8); ?>" class="btn"><?php the_field('find_dealer_button_text',8); ?></a>
+			<a href="<?php echo site_url();the_field('find_dealer_button_link',8); ?>" class="btn"><?php the_field('find_dealer_button_text',8); ?></a>
 		</div>
 	</div>
 </section>

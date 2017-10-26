@@ -96,7 +96,7 @@
 		<div class="large-5 large-offset-7 columns">
 			<h2 class="white-heading"><?php the_field('find_dealer_heading'); ?></h2>
 			<p class="white-p"><?php the_field('find_dealer_body'); ?></p>
-			<a href="<?php the_field('find_dealer_button_link'); ?>" class="btn"><?php the_field('find_dealer_button_text'); ?></a>
+			<a href="<?php echo site_url();the_field('find_dealer_button_link'); ?>" class="btn"><?php the_field('find_dealer_button_text'); ?></a>
 		</div>
 	</div>
 </section>
