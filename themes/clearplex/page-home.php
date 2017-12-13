@@ -70,10 +70,15 @@
 
 <section class="fast-dealer hide-for-small-only" style="background-image: url(<?php the_field('dealer_desktop_image'); ?>);">
 	<div class="row">
-		<div class="large-5 columns">
-			<h2 class="white-heading"><?php the_field('dealer_title'); ?></h2>
-			<p class="white-p"><?php the_field('dealer_body'); ?></p>
-			<a href="<?php echo site_url();the_field('dealer_button_link'); ?>" class="btn"><?php the_field('dealer_button_text'); ?></a>
+		<div class="medium-5 columns">
+			<h2 class="white-heading"><?php the_field('left_dealer_title'); ?></h2>
+			<p class="white-p"><?php the_field('left_dealer_body'); ?></p>
+			<a href="<?php the_field('left_dealer_button_link'); ?>" target="_blank" class="btn"><?php the_field('left_dealer_button_text'); ?></a>
+		</div>
+		<div class="medium-5 medium-offset-2 columns">
+			<h2 class="white-heading"><?php the_field('right_dealer_title'); ?></h2>
+			<p class="white-p"><?php the_field('right_dealer_body'); ?></p>
+			<a href="<?php echo site_url();the_field('right_dealer_button_link'); ?>" class="btn"><?php the_field('right_dealer_button_text'); ?></a>
 		</div>
 	</div>
 </section>
@@ -81,7 +86,7 @@
 <section class="fast-dealer show-for-small-only">
 	<div class="row small-collapse">
 		<div class="small-12 columns">
-			<img src="<?php the_field('dealer_desktop_image'); ?>" alt="clearplex dealer">
+			<img src="<?php the_field('dealer_mobile_image'); ?>" alt="clearplex dealer">
 		</div>
 	</div>
 	<div class="row" style="padding:20px">

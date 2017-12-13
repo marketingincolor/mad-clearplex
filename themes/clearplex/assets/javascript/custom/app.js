@@ -123,20 +123,25 @@ function benefitsCarousel(){
 
 // Add video metadata to modal
 function videoMeta(){
-	$('.column-block').find('a').on('click',function(){
+	$('#dealer-videos').find('.medium-6.columns').on('click',function(){
 		var that = this;
-		$('#video-modal').bind('open.zf.reveal',function(){
-			var videoSrc   = $(that).parent().data('video');
-			var youtubeSrc   = $(that).parent().data('youtube');
-			var videoTitle = $(that).parent().data('title');
-			$('#video-modal').find('video').attr('src',videoSrc);
-			$('#video-modal').find('h1').text(videoTitle);
+	// 	$('#video-modal').bind('open.zf.reveal',function(){
+	// 		var videoSrc   = $(that).data('video');
+		var youtubeSrc = $(that).data('youtube');
+	// 		var videoTitle = $(that).data('title');
+	// 		$('#video-modal').find('iframe').attr('src',youtubeSrc);
+	// 		$('#video-modal').find('h1').text(videoTitle);
+	// 	});
+	// 	$('#video-modal').foundation('open');
+		$('#video-modal').bind('closed.zf.reveal',function(){
+			var youtubeSrc = $(that).data('youtube');
+			$('#video-modal').find('iframe').attr('src','');
+			$('#video-modal').find('iframe').attr('src',youtubeSrc);
 		});
-		$('#video-modal').foundation('open');
 	});
-	$('#dealer-video').click(function(){
-		$('#video-modal').foundation('open');
-	});
+	// $('#dealer-video').click(function(){
+	// 	$('#video-modal').foundation('open');
+	// });
 }
 
 function ajaxLoadMoreVideos(){

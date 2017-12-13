@@ -17,7 +17,9 @@
 					</div>
 					<div class="large-2 columns">
 						<ul class="social-links">
-						<?php if ($options['facebook_link']) { ?>
+						<?php	if($options['instagram_link']){ ?>
+							<li><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['instagram_link']; ?>">Instagram</a></li>
+						<?php }if ($options['facebook_link']) { ?>
 							<li><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['facebook_link']; ?>">Facebook</a></li>
 						<?php }if($options['twitter_link']){ ?>
 							<li><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['twitter_link']; ?>">Twitter</a></li>
@@ -25,8 +27,6 @@
 							<li><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['gplus_link']; ?>">Google+</a></li>
 						<?php }if($options['linkedin_link']){ ?>
 							<li><i class="fa fa-linkedin-square" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['linkedin_link']; ?>">LinkedIn</a></li>
-						<?php }if($options['instagram_link']){ ?>
-							<li><i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['instagram_link']; ?>">Instagram</a></li>
 						<?php }if($options['youtube_link']){ ?>
 							<li><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp;&nbsp;<a href="<?php echo $options['youtube_link']; ?>">YouTube</a></li>
 						<?php } ?>
@@ -94,7 +94,7 @@
 		$('#video-modal').find('video').trigger('pause');
 	});
 </script>
-<?php echo $options['gtm_code_body'];
+<?php 
       echo $options['other_footer_script']; ?>
 
 </body>
