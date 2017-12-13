@@ -2,8 +2,22 @@
 	/*
 	Template Name: Become Distributor
 	*/
-	get_header(); 
-	$bg_img = wp_get_attachment_url(get_post_thumbnail_id( $post->ID ));
+	$header_bg = '/assets/images/top-bg-become-distributor.jpg';
+	get_header();
+	get_template_part('template-parts/top-bg');
 ?>
+
+<section class="become-distributor">
+	<div class="row">
+		<div class="large-8 small-10 small-centered text-center">
+			<h1 class="blue-heading"><?php the_field('distributor_heading'); ?></h1>
+			<p class="gray-p subheading"><?php the_field('distributor_body'); ?></p>
+		</div>
+		<div class="large-6 medium-8 small-10 small-centered">
+			<?php echo do_shortcode('[ninja_form id=2]'); ?>
+			<p class="text-center"><a href="<?php echo site_url();the_field('distributor_terms_link'); ?>"><?php the_field('distributor_terms_text'); ?></a></p>
+		</div>
+	</div>
+</section>
 
 <?php get_footer(); ?>

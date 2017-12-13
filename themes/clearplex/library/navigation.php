@@ -8,9 +8,12 @@
  */
 
 register_nav_menus( array(
-	'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
-	'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
-	'footer-menu' => esc_html__( 'Footer Menu', 'foundationpress' ),
+	'top-bar-r'    => esc_html__( 'Right Top Bar', 'foundationpress' ),
+	'top-bar-r2'   => esc_html__( 'Right Top Bar 2', 'foundationpress' ),
+	'mobile-nav'   => esc_html__( 'Mobile', 'foundationpress' ),
+	'mobile-nav-2' => esc_html__( 'Mobile Consumer', 'foundationpress' ),
+	'mobile-nav-dropdown' => esc_html__( 'Mobile Dropdown', 'foundationpress' ),
+	'footer-menu'  => esc_html__( 'Footer Menu', 'foundationpress' ),
 ));
 
 
@@ -33,6 +36,20 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 	}
 }
 
+if ( ! function_exists( 'foundationpress_top_bar_r2' ) ) {
+	function foundationpress_top_bar_r2() {
+		wp_nav_menu( array(
+			'container'      => false,
+			'menu_class'     => 'dropdown menu',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'theme_location' => 'top-bar-r2',
+			'depth'          => 3,
+			'fallback_cb'    => false,
+			'walker'         => new Foundationpress_Top_Bar_Walker(),
+		));
+	}
+}
+
 
 /**
  * Mobile navigation - topbar (default) or offcanvas
@@ -48,6 +65,35 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 			'fallback_cb'    => false,
 			'walker'         => new Foundationpress_Mobile_Walker(),
 		));
+	}
+}
+
+if ( ! function_exists( 'foundationpress_mobile_nav_2' ) ) {
+	function foundationpress_mobile_nav_2() {
+		wp_nav_menu( array(
+			'container'      => false,                         // Remove nav container
+			'menu'           => __( 'mobile-nav-2', 'foundationpress' ),
+			'menu_class'     => 'vertical menu',
+			'theme_location' => 'mobile-nav-2',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+			'fallback_cb'    => false,
+			'walker'         => new Foundationpress_Mobile_Walker(),
+		));
+	}
+}
+
+if ( ! function_exists( 'foundationpress_mobile_nav_dropdown' ) ) {
+	function foundationpress_mobile_nav_dropdown() {
+		wp_nav_menu(array(
+			'container'      => false,
+		  'menu'           => __( 'mobile-nav-dropdown', 'foundationpress' ),
+		  'menu_class'     => 'vertical menu',
+		  'theme_location' => 'mobile-nav-dropdown',
+		  'walker'         => new Walker_Nav_Menu_Dropdown(),
+		  'items_wrap'     => '<select id="drop-nav"><option value="">Select a page...</option>%3$s</select>',
+		));
+    
+    
 	}
 }
 

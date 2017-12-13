@@ -1,0 +1,300 @@
+// =======================================
+// ========== Table of Contents ==========
+// =======================================
+/*
+
+1.) General Styles
+2.) Sidebar Styles
+3.) 
+4.) 
+5.) 
+
+*/
+// =======================================
+// ========= 1.) General Styles ==========
+// =======================================
+
+.sub-head {
+  @include grid-row();
+  margin-top: 10%;
+  text-align:center;
+  @include breakpoint(medium down){
+  	padding-left: 30px;
+  	padding-right: 30px;
+  }
+  .sub-img img { margin-bottom:3rem; }
+}
+.main-content .product-faqs {
+	padding-top:0;
+	.ltblue-heading {
+		color:#8db8e9;
+		@include font(24);
+		@include margin(30,bottom);
+	}
+	.question:before { content:"Q. "; }
+	.answer p:before { content:"A. "; }
+}
+.page-template-page-faqs{
+	.product-faqs .answer{
+		@include margin(40,bottom);
+	}
+}
+.entry-content p{
+	@include font(16);
+	line-height: 1.6;
+}
+.cs-functions {
+	.blue-button { 
+		background-color:#064579;
+		color:#fff;
+		padding:1rem 2rem;
+		border-radius:25px;
+		margin-right:1em;
+	}
+}
+
+.page-template-page-become-dealer .container {
+	.become-dealer-content{
+		padding-bottom: 10%;
+		@include breakpoint(medium down){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.subheading {
+			margin-bottom: 30px;
+		}
+	}
+	.become-dealer-icons {
+		background-image: url(../images/product-benefits.jpg);
+		@extend %bg_center_cover;
+		max-height:900px;
+		padding:5% 0;
+		color:#fff;
+		@include breakpoint(medium down){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		h5{
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+		p{
+			@include font(16);
+		}
+		img{
+			margin: 0 auto 20px;
+			width: auto;
+		}
+		.owl-prev,.owl-next{
+			@include vertical-center;
+			i{
+				@include font(18);
+				cursor: pointer;
+			}
+		}
+		.owl-next{
+			right: 0;
+		}
+		.doc-subhead {
+			margin:2em 0em 3em;
+			@include font(24);
+			.button {
+				@extend %orange-btn;
+			}
+		}
+		.icons {
+			@include grid-layout-center-last(3);
+		}
+		.owl-carousel{
+			@include margin(50,bottom);
+			@include breakpoint(medium down){
+				@include margin(30,bottom);
+			}
+			@include breakpoint(small only){
+				@include margin(0,bottom);
+			}
+		}
+	}
+	.home-testimonials {
+		.white-quote { display:none; }
+	}
+	.product-faqs {
+		background-color:#f2f2f2;
+			.button {
+				background-color:transparent;
+				border:2px solid #dc582a;
+				border-radius:25px;
+				margin:.5em 2em;
+				color: inherit;
+				text-transform:uppercase;
+				font-weight:500;
+			}
+	}
+	.download-docs {
+		padding:5% 0;
+		.columns .doc-row {
+			border:1px solid #d1d1d1;
+			&:last-child{
+				margin-bottom: 8%;
+			}
+		}
+		.columns .no-border-bottom{
+			border-bottom: none;
+		}
+		.columns .btm-margin{
+			margin-bottom: 7%;
+		}
+		.download-link {
+			margin-top:2em;
+			.button {
+				background-color:#fff;
+				color:inherit;
+				border:2px solid #dc582a;
+			}
+		}
+		.btn {
+			color: $black;
+		}
+	}
+	.single-testimonials .container{
+		border-bottom: 2px solid #d1d1d1;
+	}
+	.dealer-form {
+		background:linear-gradient(180deg, #004278, #002a4c);
+		color:#fff;
+		padding:10% 0;
+		.form-body{
+			line-height: 1.6;
+			margin-bottom: 50px;
+		}
+		@include breakpoint(small only){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}
+// =======================================
+// ========= 1.) Sidebar Styles ==========
+// =======================================
+.sidebar-fixed{
+	position:fixed;
+	
+}
+.active-button{
+	background-color: $orange !important;
+}
+.sidebar-absolute{
+	position: absolute;
+}
+.about-sidebar{
+	.ca-title{
+		@include font(18);
+		font-weight: 500;
+	}
+}
+.widget_sidenav {
+	padding-bottom:1.5rem;
+	.page-buttons {
+		display:inline-block;
+		border-left:2px solid #d1d1d1;
+		margin-left:1rem;
+		a {
+			width:100%;
+			text-transform:uppercase;
+			position:relative;
+			top:-2px;
+			color: #dc582a;
+  		font-weight: 500;
+  		display:inline-block;
+  		margin:1.5rem 0rem;
+  		font-size: 0.9em;
+  		button {
+  			background-color:#fff;
+			border:2px solid #d1d1d1;
+			border-radius:50%;
+			width:1.2rem;
+			height:1.2rem;
+			display:inline-block;
+			position:relative;
+			left:-0.65rem;
+			vertical-align:middle;
+  		}
+		}
+		a:hover {
+			color: #dc582a;
+    		font-weight: 500;
+		}
+	}
+}
+.widget_links {
+	a button { 
+		cursor:pointer; 
+		border:2px solid #dc582a;
+		padding:0.825rem 1.5rem;
+		border-radius:25px;
+	}
+}
+.widget_testimonial {
+	padding:1.5rem 0rem;
+	.white-quote { display:none; }
+	.gray-quote { margin-bottom:1rem; }
+	.gray-p { 
+	  @include font(14);
+  }
+  .orbit-bullets {
+  	text-align: left;
+		button {
+			background-color:#fff;
+			border:2px solid #d1d1d1;
+			cursor:pointer;
+			height:15px;
+			width:15px;
+		}
+		button.is-active {
+			background-color:#dc582a;
+			border:medium none;
+			position:relative;
+			top:2px;
+		}
+  }
+}
+.page-template-page-contact .container{
+	border-bottom: 2px solid #d1d1d1;
+	padding-bottom: 40px;
+	.widget_testimonial{
+		padding-top: 0;
+	}
+}
+.page-template-page-contact .main-content{
+	@include breakpoint(medium down){
+		float: none;
+		width: 100%;
+	}
+}
+.mobile-form{
+	@include breakpoint(small only){
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.page-template-page-contact .main-wrap,.page-template-page-faqs .container,.page-template-page-about .container{
+	padding-bottom: 10%;
+	border-bottom: 2px solid #d1d1d1;
+}
+.page-template-page-contact .sub-head{
+	@include breakpoint(small only){
+		text-align: left;
+	}
+}
+.page-template-page-about .sub-head{
+	@include breakpoint(small only){
+		padding: 0;
+	}
+}
+.widget_contact{
+	.contact-address{
+		font-weight: 300;
+		color: $gray;
+		@include font(14);
+	}
+}

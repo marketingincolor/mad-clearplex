@@ -6,17 +6,24 @@
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
- */
-
+ */$options = get_option('mic_theme_options');
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<?php echo $options['gtm_code_head']; ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<?php if(is_page(array(225,206,202,218,38,214,342,314,310,138,136,130))) { ?>
+			<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+		<?php } ?>
+		<?php echo $options['other_head_script']; ?>
+		<?php echo $options['ga_code']; ?>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<?php echo $options['gtm_code_body']; ?>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
@@ -32,7 +39,7 @@
 				<div class="small-12 columns">
 					<div class="top-bar-left">
 						<div class="site-desktop-title top-bar-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/images/nav-logo.png" alt="Protection Pro"></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('template_directory'); ?>/assets/images/nav-logo.png" alt="ClearPlex"></a>
 						</div>
 					</div>
 					<div class="top-bar-right">
@@ -43,9 +50,9 @@
 						<?php endif; ?>
 						<i class="fa fa-bars cheeseburger" data-toggle="mobile-menu" aria-hidden="true"></i>
 						<!-- Mobile menu fullscreen modal -->
-						<div class="full reveal" id="mobile-menu" data-reveal  data-animation-in="slide-in-down bounce" data-animation-out="slide-out-up bounce">
+						<div class="full reveal" id="mobile-menu" data-reveal  data-animation-in="slide-in-right bounce" data-animation-out="slide-out-right bounce">
 								<!-- Display Mobile Menu -->
-						  	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu','menu_id' => 'mobile-menu-modal','menu_class' => 'mobile-menu-list','container' => 'ul' )); ?>
+						  	<?php wp_nav_menu( array( 'theme_location' => 'mobile-nav','menu_id' => 'mobile-menu-modal','menu_class' => 'mobile-menu-list','container' => 'ul' )); ?>
 						  <button class="close-button" data-close aria-label="Close reveal" type="button">
 						    <span aria-hidden="true">&times;</span>
 						  </button>
@@ -54,6 +61,9 @@
 				</div>
 			</div>
 		</nav>
+		<script>
+			templateURL = '<?php bloginfo("template_directory"); ?>';
+		</script>
 	</header>
 
 	<section class="container">

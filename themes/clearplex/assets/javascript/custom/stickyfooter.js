@@ -1,18 +1,18 @@
 /* Sticky Footer */
 
-(function($) {
+// (function($) {
 
-  var $footer = $('[data-sticky-footer]'); // only search once
+//   var $footer = $('[data-sticky-footer]'); // only search once
 
-  $(window).bind('load resize orientationChange', function () {
+//   $(window).bind('load resize orientationChange', function () {
 
-    var pos = $footer.position(),
-        height = ($(window).height() - pos.top) - ($footer.height() -1);
+//     var pos = $footer.position(),
+//         height = ($(window).height() - pos.top) - ($footer.height() -1);
 
-    if (height > 0) {
-       $footer.css('margin-top', height);
-    }
+//     if (height > 0) {
+//        $footer.css('margin-top', height);
+//     }
 
-  });
+//   });
 
-})(jQuery);
+// })(jQuery);
