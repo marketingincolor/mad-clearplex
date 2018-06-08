@@ -3,12 +3,8 @@
 $slug = get_post_field( 'post_name', get_post());
 $root = get_bloginfo('template_directory').'/assets/images/';
 
-// if (is_single()) {
-	if (is_single('case-studies')) {
-		$img = 'top-bg-case-studies.jpg';
-	//}//if (is_single('videos')) {
-		//$img = 'top-bg-videos.jpg';
-	//}
+if (is_single('case-studies')) {
+	$img = 'top-bg-case-studies.jpg';
 }elseif (is_front_page()) {
 	$img = 'top-bg-home.jpg';
 } 
