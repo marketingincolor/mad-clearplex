@@ -135,8 +135,14 @@ label{
 .page-template-page-dealer-resources .slide-down{
 	background-image: url(../images/top-bg-windshield.jpg) !important;
 }
-.page-template-page-consumer .slide-down,.page-template-page-commercial .slide-down{
+.page-template-page-testimonials .slide-down{
+	background-image: url(../images/top-bg-testimonials.jpg) !important;
+}
+.page-template-page-commercial .slide-down{
 	background-image: url(../images/top-bg-truck.jpg) !important;
+}
+.page-template-page-consumer .slide-down{
+	background-image: url(../images/consumer-top-bg.jpg) !important;
 }
 .page-template-page-become-dealer .slide-down{
 	background-image: url(../images/top-bg-become-dealer.jpg) !important;
@@ -442,8 +448,10 @@ body:not(.home) .top-bar.slide-down .top-bar-right .cheeseburger{
 
 // vehicle types carousel section
 .vehicle-types{
-	.vehicle-slide{
-		
+	.orbit-container{
+		@media(max-width:480px){
+			height: 550px!important;
+		}
 	}
 	.move-next,.move-prev{
 		padding: 6px 11px;
