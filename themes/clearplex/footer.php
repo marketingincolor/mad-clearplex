@@ -81,7 +81,7 @@
 					</div>
 					<div class="large-4 columns text-center">
 						<p class="terms"><a href="<?php echo site_url(); ?>/privacy-policy">Privacy Policy</a></p>
-						<p>&copy; <?php echo Date('Y'); ?> ClearPlex by Madico. All rights reserved.</p>
+						<p>&copy; <?php echo Date('Y'); ?> ClearPlex<sup>&reg;</sup> by Madico<sup>&reg;</sup>. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>
